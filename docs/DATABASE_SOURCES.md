@@ -6,7 +6,6 @@ Fuentes necesarias para reconstruir las bases de datos de RestedXP-Traslation V5
 
 | Prioridad | Fuente | URL | Uso |
 |---:|---|---|---|
-| 1 | Cliente WoW en vivo | Runtime vía RXPNameFixer | Nombre exacto que acepta el cliente |
 | 2 | Wowhead TBC ES | https://www.wowhead.com/tbc/es/npc=<ID> | Verificación externa por ID |
 | 3 | QuestieDB | https://github.com/Questie/QuestieDB/releases | DB local principal |
 | 4 | RXPGuides | https://github.com/RestedXP/RXPGuides/releases | Locale/NPCnames del addon |

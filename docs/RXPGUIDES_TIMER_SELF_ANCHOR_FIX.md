@@ -42,4 +42,4 @@ luaparse: OK
 
 Una actualización de RXPGuides puede reemplazar `Timers.lua`; en ese caso habrá que reaplicar corrección si versión oficial todavía contiene bug.
 
-Este error pertenece al administrador de timers de RXPGuides. RXPNameFixer no crea `LibCandyBar` ni llama `StartTimer`, aunque un refresco de layout puede hacer visible estado duplicado ya existente.
+

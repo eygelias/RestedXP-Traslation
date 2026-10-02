@@ -3,7 +3,6 @@
 Traductor local para guías de **RestedXP / RXPGuides**. Convierte guías `.lua` de inglés a varios idiomas manteniendo la sintaxis interna que RestedXP necesita para funcionar dentro de World of Warcraft Classic.
 
 > Foco principal: traducir guías RestedXP.
-> `RXPNameFixer` viene incluido solo como addon companion opcional para corregir casos de NPCs en tiempo real dentro del juego.
 
 ## Qué hace
 
@@ -50,7 +49,6 @@ Guías traducidas listas para copiar al addon
 - RXPGuides locale files
 - CMaNGOS / TBC DB
 - Overrides manuales
-- Cache opcional del cliente WoW vía RXPNameFixer
 
 Archivos generados principales:
 
@@ -116,7 +114,6 @@ build_exe.bat                  # Build Windows con PyInstaller
 database/                      # DB local actual
 docs/DATABASE_SOURCES.md       # Links oficiales de databases
 rxpguides_locale/              # NPCnames/esES extraídos de RXPGuides
-addon_companion/RXPNameFixer/  # Addon opcional runtime
 input/                         # Coloca aquí guías originales
 output/                        # Salida traducida
 ```
@@ -234,60 +231,6 @@ C:\Program Files (x86)\World of Warcraft\_anniversary_\Interface\AddOns\RXPGuide
 ```
 
 Haz backup antes de reemplazar archivos.
-
-### Paso 8 — Opcional: RXPNameFixer
-
-Si algún NPC queda con nombre incorrecto en el juego, puedes instalar el companion:
-
-```text
-addon_companion/RXPNameFixer/
-```
-
-Copiar a:
-
-```text
-C:\Program Files (x86)\World of Warcraft\_anniversary_\Interface\AddOns\RXPNameFixer\
-```
-
-Dentro del juego, tras instalar/actualizar archivos, haz **un solo** `/reload` para cargar v2.8:
-
-```text
-/reload
-/rxpnf stats
-/rxpnf test
-```
-
-Después no requiere `/reload` al cambiar de paso, objetivo o zona. RXPNameFixer v2.8:
-
-- Hookea directamente `addon.targeting.UpdateMacro` (RXPGuides guarda `EditMacro` en un local).
-- Obtiene el objeto privado real mediante `AceAddon:GetAddon("RXPGuides")`; `_G.RXPGuides` solo es la API pública vacía.
-- Lee listas reales mediante `addon.targeting.GetCurrentTargets()`.
-- Empareja `.complete QUEST,OBJ` con `.mob` siguiente solo cuando objetivo localizado tiene forma segura de nombre NPC.
-- Rechaza frases gramaticales y mappings autoembebidos (`Electromental → Electromentales recolectados`).
-- Cuando un `Nombre::ID` resuelve nombre real, registra mapping y sincroniza requisitos, descripción y macro en la misma pasada.
-- Cualquier cambio de step fuerza reconstrucción de `RXPTargeting` fuera de combate.
-- Aprende nombre correcto al seleccionar un NPC, priorizando ID exacto.
-- Nunca sustituye un mob pendiente por cualquier NPC targeteado: entidades distintas requieren ID exacto.
-- Mouseover y nameplates solo alimentan cache; no crean reemplazos.
-- Limpia automáticamente mappings corruptos aprendidos por v2.2.
-- Normaliza el prefijo interno `*` de baja prioridad a máximo uno; evita acumulación en cada ticker.
-- Trata variantes con sufijo como aliases adicionales (`Huargo gris` + `Huargo gris alfa`), nunca como reemplazos de texto.
-- Migra mappings de variante creados por v2.4 y evita repeticiones como `alfa alfa alfa`.
-- Si descubre un typo compartido (`Umbropantano` → `Umbrapantano`), lo propaga a todos los mobs del grupo.
-- Corrige macro `RXPTargeting`, listas internas y texto activo.
-- Actualiza Target Frame y difiere cambios si estás en combate.
-- Revisa cambios cada 0.75 s.
-
-Comandos de diagnóstico:
-
-```text
-/rxpnf stats
-/rxpnf test
-/rxpnf sync
-/rxpnf log
-```
-
-Este addon no reemplaza el traductor. Solo corrige casos runtime cuando el cliente WoW conoce el nombre real.
 
 ## Build EXE Windows
 
