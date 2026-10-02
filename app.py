@@ -107,6 +107,7 @@ class Bridge(QObject):
 
     @pyqtSlot(result=str)
     def select_guide_files(self):
+        self.base_input_dir = None
         files, _ = QFileDialog.getOpenFileNames(
             self.window, "Seleccionar guía", "", "Guías Lua (*.lua);;Todos (*.*)"
         )
@@ -115,6 +116,23 @@ class Bridge(QObject):
             names = [Path(f).name for f in files]
             self._log(f"📁 {len(files)} guía(s) seleccionada(s)")
             return json.dumps({"files": files, "names": names})
+        return json.dumps({"files": [], "names": []})
+
+
+    @pyqtSlot(result=str)
+    def select_guide_folder(self):
+        folder = QFileDialog.getExistingDirectory(self.window, "Seleccionar carpeta de guías")
+        if folder:
+            self.base_input_dir = folder
+            self.selected_files = []
+            names = []
+            base_dir = Path(folder)
+            for file_path in base_dir.rglob("*.lua"):
+                self.selected_files.append(str(file_path))
+                names.append(file_path.name)
+            
+            self._log(f"📁 {len(self.selected_files)} guía(s) encontradas en carpeta")
+            return json.dumps({"files": self.selected_files, "names": [base_dir.name + "/* (" + str(len(names)) + " archivos)"]})
         return json.dumps({"files": [], "names": []})
 
     @pyqtSlot(result=str)
@@ -238,24 +256,33 @@ class Bridge(QObject):
             descriptions = DescriptionTranslator(locale=locale)
             translator = GuideTranslator(database, descriptions)
 
-            total_lines = 0
-            done_lines = 0
-
+total_lines = 0
             for file_path in self.selected_files:
                 source = Path(file_path)
+                if source.exists():
+                    total_lines += len(source.read_text(encoding="utf-8", errors="ignore").splitlines())
+
+            done_lines = 0
+            lock = threading.Lock()
+            
+            def process_file(file_path):
+                nonlocal done_lines
+                source = Path(file_path)
                 if not source.exists():
-                    self._log(f"⚠ {source.name}")
-                    continue
-
-                destination = Path(self.output_dir) / source.name
-                Path(self.output_dir).mkdir(parents=True, exist_ok=True)
-
-                self._log(f"📄 {source.name}")
+                    return
+                    
+                if getattr(self, 'base_input_dir', None) and str(source).startswith(self.base_input_dir):
+                    rel_path = source.relative_to(self.base_input_dir)
+                    destination = Path(self.output_dir) / rel_path
+                else:
+                    destination = Path(self.output_dir) / source.name
+                    
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                
                 lines = source.read_text(encoding="utf-8", errors="ignore").splitlines()
-                total_lines += len(lines)
                 result_lines = []
                 errors = 0
-
+                
                 for line_no, line in enumerate(lines, start=1):
                     try:
                         result_lines.append(translator.translate_line(line, file=source.name, line_no=line_no))
@@ -263,48 +290,35 @@ class Bridge(QObject):
                         result_lines.append(line)
                         errors += 1
                         if errors <= 3:
-                            self._log(f"  ⚠ {self._msg('line')} {line_no}: {str(e)[:60]}")
-                    done_lines += 1
-                    if line_no % 25 == 0:
-                        pct = int(done_lines / max(total_lines, 1) * 100)
-                        stats = f"{self._msg('line')} {line_no}/{len(lines)} | {self._msg('google')}: {descriptions.stats['google']} | {self._msg('cache')}: {descriptions.stats['cache']}"
-                        self._update_progress(pct, stats)
-                    if self.stop_requested:
-                        self._log("⏹ Traducción detenida por el usuario")
-                        break
-                    if line_no % 500 == 0:
-                        self.js_loading.emit("pulse")
+                            pass # log in thread can be messy
+                    
+                    with lock:
+                        done_lines += 1
+                        if done_lines % 50 == 0 or done_lines == total_lines:
+                            pct = int(done_lines / max(total_lines, 1) * 100)
+                            stats = f"Procesando {len(self.selected_files)} guías | Google: {descriptions.stats['google']} | Caché: {descriptions.stats['cache']}"
+                            self._update_progress(pct, stats)
+                            
+                destination.write_text("
+".join(result_lines) + "
+", encoding="utf-8")
 
-                destination.write_text("\n".join(result_lines) + "\n", encoding="utf-8")
-                report = compare_files(source, destination)
-                ok = report["ok"]
-                err_c = len(report["errors"])
-                status = self._msg("ok") if ok else f"{self._msg('fail')} {err_c} errores"
-                self._log(f"  → {destination.name} | {status}")
+            import concurrent.futures
+            with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+                executor.map(process_file, self.selected_files)
 
-                if self.stop_requested:
-                    break
-
-            descriptions.save()
-            unresolved = deduplicate_unresolved(database.unresolved)
-            cache_dir = WORK_DIR / "cache"
-            cache_dir.mkdir(parents=True, exist_ok=True)
-            save_json(cache_dir / f"unresolved_{locale}.json", {
-                "count": len(unresolved), "locale": locale, "summary": database.stats, "entities": unresolved,
-            })
-
-            self._log(self._msg("completed"))
-            self._log(f"{self._msg('npcnames')}: {database.stats['npcnames_hit']} | {self._msg('official')}: {database.stats['official_translated']} | {self._msg('pending')}: {len(unresolved)}")
-            self._update_progress(100, f"✅ {self._msg('done')}")
-
+            save_json(tg.CACHE_DIR / "wowhead_cache.json", descriptions.wowhead_cache)
+            deduplicate_unresolved()
+            
+            self._log(f"✅ ¡{len(self.selected_files)} guías traducidas al {locale}!")
+            self._update_progress(100, self._msg("done"))
+            
         except Exception as e:
-            import traceback
-            self._log(f"{self._msg('error')} {str(e)}")
-            for line in traceback.format_exc().strip().split('\n')[-3:]:
-                self._log(f"  {line.strip()}")
+            self._log(f"❌ Error fatal: {str(e)}")
         finally:
             self.translating = False
             self.js_loading.emit("stop")
+
 
     def _validate_worker(self):
         try:

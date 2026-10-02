@@ -499,7 +499,8 @@
             <div class="file-row">
                 <span class="file-label" data-i18n="lbl-guide">Guía:</span>
                 <span class="file-input" id="guidePath">[Seleccionar guía...]</span>
-                <button class="btn-standard" onclick="selectGuide()"><span data-i18n="btn-folder">📁 Carpeta</span></button>
+                <button class="btn-standard" onclick="selectGuideFolder()"><span data-i18n="btn-folder">📁 Carpeta</span></button>
+                <button class="btn-standard" onclick="selectGuide()"><span data-i18n="btn-files">📄 Archivos</span></button>
             </div>
             <div class="file-row" style="margin-bottom: 0;">
                 <span class="file-label" data-i18n="lbl-output">Salida:</span>
@@ -823,6 +824,16 @@
                 bridge = channel.objects.bridge;
                 addLog('✅ RXP Translator V5 — Listo');
             });
+        }
+    }
+
+    
+    async function selectGuideFolder() {
+        if (!bridge) return;
+        const raw = await bridge.select_guide_folder();
+        const result = JSON.parse(raw);
+        if (result.files.length > 0) {
+            document.getElementById('guidePath').textContent = result.names.join(', ');
         }
     }
 
