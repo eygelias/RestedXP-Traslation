@@ -268,3 +268,7 @@ No se incluyen credenciales, tokens ni guías comerciales privadas. Las database
 ## Licencia
 
 MIT. Ver `LICENSE`.
+
+
+---
+**SEO Tags:** $tags
