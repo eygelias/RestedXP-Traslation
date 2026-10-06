@@ -18,8 +18,10 @@ from PyQt5.QtWebChannel import QWebChannel
 # ── Paths ──
 if getattr(sys, 'frozen', False):
     BASE_DIR = Path(sys.executable).parent
+    RESOURCE_DIR = Path(sys._MEIPASS)
 else:
     BASE_DIR = Path(__file__).resolve().parent
+    RESOURCE_DIR = BASE_DIR
 
 WORK_DIR = Path(os.environ.get('RXP_WORKDIR', Path(sys.executable).parent if getattr(sys, 'frozen', False) else BASE_DIR))
 sys.path.insert(0, str(BASE_DIR))
@@ -730,6 +732,7 @@ class MainWindow(QMainWindow):
 
     def _find_html(self):
         candidates = [
+            RESOURCE_DIR / "RXP_Guide_Translator_ES.html",
             BASE_DIR / "RXP_Guide_Translator_ES.html",
             WORK_DIR / "RXP_Guide_Translator_ES.html",
         ]
