@@ -1,5 +1,5 @@
 """
-app.py - RXP Translator V5
+app.py - RXP Translator V6
 Interfaz con PyQt5 + QWebEngineView (Chromium embebido).
 No se congela, renderiza HTML exacto, soporta frameless.
 """
@@ -17,7 +17,7 @@ from PyQt5.QtWebChannel import QWebChannel
 
 # ── Paths ──
 if getattr(sys, 'frozen', False):
-    BASE_DIR = Path(sys._MEIPASS)
+    BASE_DIR = Path(sys.executable).parent
 else:
     BASE_DIR = Path(__file__).resolve().parent
 
@@ -28,8 +28,8 @@ from locales_config import SUPPORTED_LOCALES, get_output_suffix, get_locale_conf
 
 # ── Messages (same as before) ──
 MSG = {
-    "esES": {"ready": "✅ RXP Translator V5 — Listo", "no_guides": "⚠ Selecciona una guía", "translating": "═══ Traduciendo a {}", "completed": "═══ Completado ═══", "no_pairs": "⚠ No hay archivos traducidos para validar. Traduce primero.", "validating": "═══ Validando ═══", "ok": "✅ OK", "fail": "❌ ERROR", "busy": "⚠ Operación en progreso...", "starting": "▶ Iniciando...", "done": "✅ Traducción completada", "error": "❌ ERROR:", "line": "Línea", "google": "Google", "cache": "Caché", "npcnames": "NPCnames", "official": "Oficial", "pending": "Pendientes"},
-    "en": {"ready": "✅ RXP Translator V5 — Ready", "no_guides": "⚠ Select a guide", "translating": "═══ Translating to {}", "completed": "═══ Completed ═══", "no_pairs": "⚠ No translated files to validate. Translate first.", "validating": "═══ Validating ═══", "ok": "✅ OK", "fail": "❌ ERROR", "busy": "⚠ Operation in progress...", "starting": "▶ Starting...", "done": "✅ Translation completed", "error": "❌ ERROR:", "line": "Line", "google": "Google", "cache": "Cache", "npcnames": "NPCnames", "official": "Official", "pending": "Pending"},
+    "esES": {"ready": "✅ RXP Translator V6 — Listo", "no_guides": "⚠ Selecciona una guía", "translating": "═══ Traduciendo a {}", "completed": "═══ Completado ═══", "no_pairs": "⚠ No hay archivos traducidos para validar. Traduce primero.", "validating": "═══ Validando ═══", "ok": "✅ OK", "fail": "❌ ERROR", "busy": "⚠ Operación en progreso...", "starting": "▶ Iniciando...", "done": "✅ Traducción completada", "error": "❌ ERROR:", "line": "Línea", "google": "Google", "cache": "Caché", "npcnames": "NPCnames", "official": "Oficial", "pending": "Pendientes"},
+    "en": {"ready": "✅ RXP Translator V6 — Ready", "no_guides": "⚠ Select a guide", "translating": "═══ Translating to {}", "completed": "═══ Completed ═══", "no_pairs": "⚠ No translated files to validate. Translate first.", "validating": "═══ Validating ═══", "ok": "✅ OK", "fail": "❌ ERROR", "busy": "⚠ Operation in progress...", "starting": "▶ Starting...", "done": "✅ Translation completed", "error": "❌ ERROR:", "line": "Line", "google": "Google", "cache": "Cache", "npcnames": "NPCnames", "official": "Official", "pending": "Pending"},
     "ptBR": {"ready": "✅ Pronto", "no_guides": "⚠ Selecione um guia", "translating": "═══ Traduzindo para {}", "completed": "═══ Concluído ═══", "no_pairs": "⚠ Nenhum arquivo traduzido.", "validating": "═══ Validando ═══", "ok": "✅ OK", "fail": "❌ ERRO", "busy": "⚠ Em andamento...", "starting": "▶ Iniciando...", "done": "✅ Tradução concluída", "error": "❌ ERRO:", "line": "Linha", "google": "Google", "cache": "Cache", "npcnames": "NPCnames", "official": "Oficial", "pending": "Pendentes"},
     "deDE": {"ready": "✅ Bereit", "no_guides": "⚠ Guide wählen", "translating": "═══ Übersetze nach {}", "completed": "═══ Abgeschlossen ═══", "no_pairs": "⚠ Keine übersetzten Dateien.", "validating": "═══ Validiere ═══", "ok": "✅ OK", "fail": "❌ FEHLER", "busy": "⚠ Läuft...", "starting": "▶ Startet...", "done": "✅ Übersetzung abgeschlossen", "error": "❌ FEHLER:", "line": "Zeile", "google": "Google", "cache": "Cache", "npcnames": "NPCnames", "official": "Offiziell", "pending": "Ausstehend"},
     "frFR": {"ready": "✅ Prêt", "no_guides": "⚠ Sélectionnez un guide", "translating": "═══ Traduction vers {}", "completed": "═══ Terminé ═══", "no_pairs": "⚠ Aucun fichier traduit.", "validating": "═══ Validation ═══", "ok": "✅ OK", "fail": "❌ ERREUR", "busy": "⚠ En cours...", "starting": "▶ Démarrage...", "done": "✅ Traduction terminée", "error": "❌ ERREUR:", "line": "Ligne", "google": "Google", "cache": "Cache", "npcnames": "NPCnames", "official": "Officiel", "pending": "En attente"},
@@ -186,8 +186,8 @@ class Bridge(QObject):
         if self.window:
             self.window._dragging = False
 
-    @pyqtSlot(str, str, result=str)
-    def translate(self, locale, categories_json):
+    @pyqtSlot(str, str, str, result=str)
+    def translate(self, wow_version, locale, categories_json):
         if self.translating:
             self._log(self._msg("busy"))
             return '{"status":"busy"}'
@@ -197,7 +197,7 @@ class Bridge(QObject):
         self.translating = True
         self.stop_requested = False
         self.js_loading.emit("start")
-        threading.Thread(target=self._translate_worker, args=(locale,), daemon=True).start()
+        threading.Thread(target=self._translate_worker, args=(wow_version, locale), daemon=True).start()
         return '{"status":"started"}'
 
     @pyqtSlot(result=str)
@@ -225,8 +225,13 @@ class Bridge(QObject):
             self._log("⚠ Selecciona la carpeta del addon RXPGuides primero")
             return '{"status":"error"}'
         
-        # Check if localization_strings.lua exists
-        strings_file = Path(addon_dir) / "locale" / "localization_strings.lua"
+                # Check if localization_strings.lua exists
+        addon_path = Path(addon_dir)
+        if not (addon_path / "locale").exists() and (addon_path / "RXPGuides" / "locale").exists():
+            addon_path = addon_path / "RXPGuides"
+            addon_dir = str(addon_path)
+            
+        strings_file = addon_path / "locale" / "localization_strings.lua" 
         if not strings_file.exists():
             self._log(f"⚠ No encontré localization_strings.lua en {addon_dir}")
             return '{"status":"error"}'
@@ -236,7 +241,7 @@ class Bridge(QObject):
         threading.Thread(target=self._translate_addon_worker, args=(locale, addon_dir), daemon=True).start()
         return '{"status":"started"}'
 
-    def _translate_worker(self, locale):
+    def _translate_worker(self, wow_version, locale):
         try:
             import translate_guides as tg
             from translate_guides import (LocalDatabase, DescriptionTranslator, GuideTranslator,
@@ -245,18 +250,19 @@ class Bridge(QObject):
             tg._ZONE_PATTERNS.clear()
             tg._QUESTIE_ZONES.clear()
             tg.TARGET_LOCALE = locale
+            tg.TARGET_WOW_VERSION = wow_version
             tg.OUTPUT_SUFFIX = get_output_suffix(locale)
             locale_name = get_locale_config(locale)["name"]
 
-            self._log(self._msg("translating").format(f"{locale_name} ({locale})"))
+            self._log(self._msg("translating").format(f"{locale_name} ({locale}) - {wow_version}"))
             self._update_progress(0, self._msg("starting"))
 
             ensure_dirs()
-            database = LocalDatabase(locale=locale)
+            database = LocalDatabase(wow_version=wow_version, locale=locale)
             descriptions = DescriptionTranslator(locale=locale)
             translator = GuideTranslator(database, descriptions)
 
-total_lines = 0
+            total_lines = 0
             for file_path in self.selected_files:
                 source = Path(file_path)
                 if source.exists():
@@ -299,18 +305,53 @@ total_lines = 0
                             stats = f"Procesando {len(self.selected_files)} guías | Google: {descriptions.stats['google']} | Caché: {descriptions.stats['cache']}"
                             self._update_progress(pct, stats)
                             
-                destination.write_text("
-".join(result_lines) + "
-", encoding="utf-8")
+                destination.write_text("\n".join(result_lines) + "\n", encoding="utf-8")
 
             import concurrent.futures
             with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
                 executor.map(process_file, self.selected_files)
 
-            save_json(tg.CACHE_DIR / "wowhead_cache.json", descriptions.wowhead_cache)
-            deduplicate_unresolved()
+            descriptions.save()
+            unresolved = deduplicate_unresolved(database.unresolved)
+            save_json(tg.CACHE_DIR / f"unresolved_{locale}.json", {
+                "count": len(unresolved),
+                "locale": locale,
+                "items": unresolved
+            })
             
             self._log(f"✅ ¡{len(self.selected_files)} guías traducidas al {locale}!")
+            
+            # Update TOC files
+            toc_files = list(addon_path.glob("*.toc"))
+            for toc_file in toc_files:
+                toc_content = toc_file.read_text(encoding="utf-8-sig")
+                modified = False
+                
+                # Check for Title
+                title_match = re.search(r'^## Title:\s*(.*)', toc_content, re.MULTILINE)
+                if title_match:
+                    title_eng = title_match.group(1).strip()
+                    title_loc = f"## Title-{locale}:"
+                    if title_loc not in toc_content:
+                        tr_title = translator.translate(title_eng)
+                        if tr_title:
+                            toc_content = re.sub(r'(^## Title:\s*.*?$)', f'\\1\n{title_loc} {tr_title}', toc_content, flags=re.MULTILINE)
+                            modified = True
+                            
+                # Check for Notes
+                notes_match = re.search(r'^## Notes:\s*(.*)', toc_content, re.MULTILINE)
+                if notes_match:
+                    notes_eng = notes_match.group(1).strip()
+                    notes_loc = f"## Notes-{locale}:"
+                    if notes_loc not in toc_content:
+                        tr_notes = translator.translate(notes_eng)
+                        if tr_notes:
+                            toc_content = re.sub(r'(^## Notes:\s*.*?$)', f'\\1\n{notes_loc} {tr_notes}', toc_content, flags=re.MULTILINE)
+                            modified = True
+                            
+                if modified:
+                    toc_file.write_text(toc_content, encoding="utf-8")
+                    self._log(f"\ud83d\udcdd {toc_file.name} actualizado con metadatos traducidos")
             self._update_progress(100, self._msg("done"))
             
         except Exception as e:
@@ -364,8 +405,14 @@ total_lines = 0
             from pathlib import Path
             
             addon_path = Path(addon_dir)
+            
+            # Detectar si el usuario seleccion la carpeta contenedora en lugar de RXPGuides
+            if not (addon_path / "locale").exists() and (addon_path / "RXPGuides" / "locale").exists():
+                addon_path = addon_path / "RXPGuides"
+                self._log("Carpeta RXPGuides detectada automticamente.")
+                
             locale_dir = addon_path / "locale"
-            strings_file = locale_dir / "localization_strings.lua"
+            strings_file = locale_dir / "localization_strings.lua" 
             
             self._log(f"═══ Traduciendo interfaz del addon a {locale} ═══")
             
@@ -416,30 +463,36 @@ total_lines = 0
                 return
             
             # Step 2: Setup translator
-            google_targets = {
-                "esES": "es", "esMX": "es", "ptBR": "pt",
-                "deDE": "de", "frFR": "fr", "ruRU": "ru",
-                "koKR": "ko", "zhCN": "zh-CN", "zhTW": "zh-TW",
-            }
-            google_target = google_targets.get(locale, "es")
+            import translate_guides as tg
+            translator = tg.DescriptionTranslator(locale)
             
-            has_translator = False
-            try:
-                from deep_translator import GoogleTranslator
-                has_translator = True
-            except ImportError:
-                self._log("⚠ deep_translator no disponible. Usando strings originales.")
+            # Load permanent database
+            ui_db = {}
+            db_path = tg.DATABASE_DIR / "addon_ui.json"
+            if db_path.exists():
+                try:
+                    import json
+                    ui_db = json.loads(db_path.read_text(encoding="utf-8")).get("ui", {})
+                except Exception:
+                    pass
             
             translated_count = 0
             skipped_count = 0
+            
+            def get_ui_translation(eng_text):
+                # 1. Try permanent DB
+                if eng_text in ui_db and locale in ui_db[eng_text]:
+                    return ui_db[eng_text][locale]
+                # 2. Fallback to API (Google/MyMemory)
+                return translator.translate(eng_text)
             
             # Step 3: Generate translated locale file
             output_file = locale_dir / f"{locale}.lua"
             lines = []
             lines.append("local addonName, addon = ...")
             lines.append("")
-            lines.append(f"-- Traducción automática para {locale}")
-            lines.append("-- Generado por RXP Translator V5")
+            lines.append(f"-- Traduccin automtica para {locale}")
+            lines.append("-- Generado por RXP Translator V6")
             lines.append(f'local L = LibStub("AceLocale-3.0"):NewLocale(addonName, "{locale}", false)')
             lines.append("if not L then return end")
             lines.append("")
@@ -458,20 +511,11 @@ total_lines = 0
                 ("RXPTargetFrame_EnemyButton4", "Enemy Active Target 4"),
             ]
             
-            translated_bindings = {}
-            for btn, default_name in binding_names:
-                if has_translator:
-                    try:
-                        tr = GoogleTranslator(source="en", target=google_target).translate(default_name)
-                        translated_bindings[btn] = tr if tr else default_name
-                    except Exception:
-                        translated_bindings[btn] = default_name
-                else:
-                    translated_bindings[btn] = default_name
-            
             lines.append("-- Binding names")
-            for btn, name in translated_bindings.items():
-                safe_name = name.replace('"', '\\"')
+            for btn, default_name in binding_names:
+                tr = get_ui_translation(default_name)
+                name = tr if tr else default_name
+                safe_name = name.replace('"', '\"')
                 lines.append(f'_G["BINDING_NAME_" .. "CLICK {btn}:LeftButton"] = "{safe_name}"')
             lines.append("")
             
@@ -481,19 +525,15 @@ total_lines = 0
                 "Turn in": "Turn in", "Collect": "Collect", "Buy": "Buy",
                 "Use": "Use", "Set": "Set"
             }
-            translated_words = {}
-            if has_translator:
-                for eng, val in words_default.items():
-                    try:
-                        tr = GoogleTranslator(source="en", target=google_target).translate(val)
-                        translated_words[eng] = tr if tr else val
-                    except Exception:
-                        translated_words[eng] = val
-            else:
-                translated_words = words_default
             
             lines.append("L.delimiter = ' '")
-            words_str = ", ".join(f'["{k}"] = "{v}"' for k, v in translated_words.items())
+            words_str_list = []
+            for eng, val in words_default.items():
+                tr = get_ui_translation(val)
+                translated_val = tr if tr else val
+                words_str_list.append(f'["{eng}"] = "{translated_val}"')
+            
+            words_str = ", ".join(words_str_list)
             lines.append(f"L.words = {{ {words_str} }}")
             lines.append("")
             
@@ -502,19 +542,14 @@ total_lines = 0
             self._log(f"Traduciendo {total} strings...")
             
             for i, (key, value) in enumerate(all_strings.items()):
-                if has_translator and len(value) >= 3:
-                    try:
-                        translated = GoogleTranslator(source="en", target=google_target).translate(value)
-                        if translated:
-                            safe_key = key.replace('\\', '\\\\').replace('"', '\\"')
-                            safe_val = translated.replace('\\', '\\\\').replace('"', '\\"')
-                            lines.append(f'L["{safe_key}"] = "{safe_val}"')
-                            translated_count += 1
-                        else:
-                            safe_key = key.replace('\\', '\\\\').replace('"', '\\"')
-                            lines.append(f'L["{safe_key}"] = "{value}"')
-                            skipped_count += 1
-                    except Exception:
+                if len(value) >= 3:
+                    tr = get_ui_translation(value)
+                    if tr:
+                        safe_key = key.replace('\\', '\\\\').replace('"', '\\"')
+                        safe_val = tr.replace('\\', '\\\\').replace('"', '\\"')
+                        lines.append(f'L["{safe_key}"] = "{safe_val}"')
+                        translated_count += 1
+                    else:
                         safe_key = key.replace('\\', '\\\\').replace('"', '\\"')
                         lines.append(f'L["{safe_key}"] = "{value}"')
                         skipped_count += 1
@@ -527,34 +562,26 @@ total_lines = 0
                     pct = int((i + 1) / total * 90)
                     self._update_progress(pct, f"Traduciendo: {i+1}/{total}")
                     self._log(f"  {i+1}/{total}...")
+                    translator.save()
+            
+            translator.save()
             
             # Alliance/Horde
-            if has_translator:
-                try:
-                    al = GoogleTranslator(source="en", target=google_target).translate("Alliance")
-                    ho = GoogleTranslator(source="en", target=google_target).translate("Horde")
-                    lines.append(f'L["Alliance"] = "{al if al else "Alliance"}"')
-                    lines.append(f'L["Horde"] = "{ho if ho else "Horde"}"')
-                except Exception:
-                    lines.append('L["Alliance"] = "Alliance"')
-                    lines.append('L["Horde"] = "Horde"')
-            else:
-                lines.append('L["Alliance"] = "Alliance"')
-                lines.append('L["Horde"] = "Horde"')
-            
+            al = get_ui_translation("Alliance")
+            ho = get_ui_translation("Horde")
+            lines.append(f'L["Alliance"] = "{al if al else "Alliance"}"')
+            lines.append(f'L["Horde"] = "{ho if ho else "Horde"}"')
             # Write the file
             output_file.write_text("\n".join(lines) + "\n", encoding="utf-8")
             self._log(f"✅ {output_file.name} ({translated_count} traducidos, {skipped_count} sin traducir)")
             
-            # esMX: copy from esES
-            if locale == "esMX":
-                eses_file = locale_dir / "esES.lua"
-                if eses_file.exists():
-                    esmx_content = eses_file.read_text(encoding="utf-8-sig")
-                    esmx_content = esmx_content.replace('"esES"', '"esMX"')
-                    esmx_file = locale_dir / "esMX.lua"
-                    esmx_file.write_text(esmx_content, encoding="utf-8")
-                    self._log("✅ esMX.lua generado como copia de esES")
+            # Generar ambos archivos en espaol (esES y esMX) si se traduce cualquiera
+            if locale in ("esES", "esMX"):
+                other_locale = "esMX" if locale == "esES" else "esES"
+                other_content = output_file.read_text(encoding="utf-8-sig").replace(f'"{locale}"', f'"{other_locale}"')
+                other_file = locale_dir / f"{other_locale}.lua"
+                other_file.write_text(other_content, encoding="utf-8")
+                self._log(f"\u2705 {other_locale}.lua generado autmticamente como copia")
             
             # Update locales.xml
             locales_xml = locale_dir / "locales.xml"
@@ -580,6 +607,38 @@ total_lines = 0
                         locale_lua.write_text(locale_content, encoding="utf-8")
                         self._log(f"✅ Locale.lua actualizado")
             
+                        # Update TOC files
+            toc_files = list(addon_path.glob("*.toc"))
+            for toc_file in toc_files:
+                toc_content = toc_file.read_text(encoding="utf-8-sig")
+                modified = False
+                
+                # Check for Title
+                title_match = re.search(r'^## Title:\s*(.*)', toc_content, re.MULTILINE)
+                if title_match:
+                    title_eng = title_match.group(1).strip()
+                    title_loc = f"## Title-{locale}:"
+                    if title_loc not in toc_content:
+                        tr_title = translator.translate(title_eng)
+                        if tr_title:
+                            toc_content = re.sub(r'(^## Title:\s*.*?$)', f'\\1\n{title_loc} {tr_title}', toc_content, flags=re.MULTILINE)
+                            modified = True
+                            
+                # Check for Notes
+                notes_match = re.search(r'^## Notes:\s*(.*)', toc_content, re.MULTILINE)
+                if notes_match:
+                    notes_eng = notes_match.group(1).strip()
+                    notes_loc = f"## Notes-{locale}:"
+                    if notes_loc not in toc_content:
+                        tr_notes = translator.translate(notes_eng)
+                        if tr_notes:
+                            toc_content = re.sub(r'(^## Notes:\s*.*?$)', f'\\1\n{notes_loc} {tr_notes}', toc_content, flags=re.MULTILINE)
+                            modified = True
+                            
+                if modified:
+                    toc_file.write_text(toc_content, encoding="utf-8")
+                    self._log(f"?? {toc_file.name} actualizado con metadatos traducidos")
+            
             self._update_progress(100, f"✅ Interfaz traducida a {locale}")
             self._log("═══ Traducción del addon completada ═══")
             
@@ -597,13 +656,13 @@ class MainWindow(QMainWindow):
     def __init__(self, bridge):
         super().__init__()
         self.bridge = bridge
-        self.setWindowTitle("RXP Translator V5")
+        self.setWindowTitle("RXP Translator V6")
 
         # ── Frameless + transparent ──
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground, True)
-        self.resize(480, 620)
-        self.setMinimumSize(460, 550)
+        self.resize(580, 660)
+        self.setMinimumSize(540, 600)
         self.setContentsMargins(0, 0, 0, 0)
 
         # Try icon
@@ -713,7 +772,7 @@ def main():
     QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
 
     app = QApplication(sys.argv)
-    app.setApplicationName("RXP Translator V5")
+    app.setApplicationName("RXP Translator V6")
 
     # ── Set icon for taskbar + title bar + task manager ──
     from PyQt5.QtGui import QIcon
@@ -726,7 +785,7 @@ def main():
         # Windows-specific: set AppUserModelID so taskbar shows the correct icon
         try:
             import ctypes
-            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("RXPTranslatorV5")
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("RXPTranslatorV6")
         except Exception:
             pass
 

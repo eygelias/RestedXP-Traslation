@@ -36,20 +36,25 @@ from locales_config import (
     get_google_target, get_output_suffix, get_locale_config,
 )
 
-BASE_DIR = Path(__file__).resolve().parent
+import sys
+if getattr(sys, 'frozen', False):
+    BASE_DIR = Path(sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent
 INPUT_DIR = BASE_DIR / "input"
 OUTPUT_DIR = BASE_DIR / "output"
 DATABASE_DIR = BASE_DIR / "database"
 CACHE_DIR = BASE_DIR / "cache"
 
 QUESTIEDB_FILE = DATABASE_DIR / "questiedb_es.json"
-ZONES_FILE = DATABASE_DIR / "zones_es.json"
+ZONES_FILE = DATABASE_DIR / "zones_all.json"
 SPELLS_FILE = DATABASE_DIR / "spells_es.json"
 OVERRIDES_FILE = DATABASE_DIR / "manual_overrides.json"
 ADDON_PHRASES_FILE = DATABASE_DIR / "addon_phrases.json"
 
 # Multi-idioma: se configura desde línea de comandos
 TARGET_LOCALE = DEFAULT_LOCALE
+TARGET_WOW_VERSION = "forever"
 OUTPUT_SUFFIX = "_esES"
 USE_GOOGLE_TRANSLATOR = True
 USE_MYMEMORY_FALLBACK = True
@@ -233,77 +238,6 @@ ZONE_TRANSLATIONS = {
     "Dungeon Cleave": "Dungeon Cleave",
     "Leveling": "Subida de nivel",
 }
-
-# Compile zone translation patterns sorted by length (longest first)
-_ZONE_PATTERNS: list[tuple[re.Pattern, str]] = []
-_QUESTIE_ZONES: dict[str, str] = {}
-
-
-def _load_questie_zones() -> dict[str, str]:
-    """Carga zonas desde zones_{locale}.json o zones_all.json."""
-    global _QUESTIE_ZONES
-    if _QUESTIE_ZONES:
-        return _QUESTIE_ZONES
-
-    # Intentar archivo específico del locale
-    locale_file = DATABASE_DIR / f"zones_{TARGET_LOCALE}.json"
-    all_file = DATABASE_DIR / "zones_all.json"
-    fallback_file = DATABASE_DIR / "zones_questie.json"
-
-    for questie_file in [locale_file, all_file, fallback_file]:
-        if questie_file.exists():
-            try:
-                data = json.loads(questie_file.read_text(encoding="utf-8"))
-                zones = data.get("zones", {})
-                for en, info in zones.items():
-                    if isinstance(info, dict):
-                        translated = info.get(TARGET_LOCALE) or info.get("es") or ""
-                        if translated:
-                            _QUESTIE_ZONES[en] = translated
-                    elif isinstance(info, str):
-                        _QUESTIE_ZONES[en] = info
-                if _QUESTIE_ZONES:
-                    break
-            except Exception:
-                pass
-    return _QUESTIE_ZONES
-
-
-def _build_zone_patterns() -> list[tuple[re.Pattern, str]]:
-    global _ZONE_PATTERNS
-    if _ZONE_PATTERNS:
-        return _ZONE_PATTERNS
-
-    # Primero: Questie zones (más completas, incluye subzonas)
-    questie = _load_questie_zones()
-    merged = dict(questie)
-
-    # Segundo: ZONE_TRANSLATIONS manual (override para abreviaturas y casos especiales)
-    for en, es in ZONE_TRANSLATIONS.items():
-        if en not in merged:
-            merged[en] = es
-
-    sorted_zones = sorted(merged.items(), key=lambda p: len(p[0]), reverse=True)
-    for en, es in sorted_zones:
-        if en != es:
-            try:
-                pattern = re.compile(re.escape(en), re.IGNORECASE)
-                _ZONE_PATTERNS.append((pattern, es))
-            except re.error:
-                pass  # Skip patterns with invalid regex
-    return _ZONE_PATTERNS
-
-
-def translate_zone_names(text: str) -> str:
-    """Replaces English zone/dungeon names with Spanish equivalents."""
-    _build_zone_patterns()  # Asegurar que están cargados
-    result = text
-    for pattern, translated in _ZONE_PATTERNS:
-        # Escape backslashes in replacement to avoid regex errors
-        safe_translated = translated.replace("\\", "\\\\")
-        result = pattern.sub(safe_translated, result)
-    return result
-
 
 # ─────────────────────────────────────────────────────────
 # Reglas de traducción ampliadas (V5)
@@ -517,8 +451,10 @@ class PlaceholderStore:
 
 
 class LocalDatabase:
-    def __init__(self, locale: str = "esES") -> None:
-        raw = load_json(QUESTIEDB_FILE, {})
+    def __init__(self, wow_version: str = "forever", locale: str = "esES") -> None:
+        self.locale = locale
+        db_file = DATABASE_DIR / f"questiedb_{wow_version}.json"
+        raw = load_json(db_file, {})
         self.sections: Dict[str, Dict[str, dict]] = {}
 
         for section in ["quests", "npcs", "items", "objects"]:
@@ -527,7 +463,13 @@ class LocalDatabase:
 
         zones_raw = load_json(ZONES_FILE, {})
         spells_raw = load_json(SPELLS_FILE, {})
-        self.sections["zones"] = zones_raw.get("zones", {}) if isinstance(zones_raw, dict) else {}
+        if "expansions" in zones_raw:
+            all_zones = zones_raw["expansions"].get("all", {}).copy()
+            exp_zones = zones_raw["expansions"].get(wow_version, {})
+            all_zones.update(exp_zones)
+            self.sections["zones"] = all_zones
+        else:
+            self.sections["zones"] = zones_raw.get("zones", {}) if isinstance(zones_raw, dict) else {}
         self.sections["spells"] = spells_raw.get("spells", {}) if isinstance(spells_raw, dict) else {}
 
         overrides = load_json(OVERRIDES_FILE, {})
@@ -537,118 +479,6 @@ class LocalDatabase:
         addon_raw = load_json(ADDON_PHRASES_FILE, {})
         self.addon_phrases = addon_raw.get("phrases", {}) if isinstance(addon_raw, dict) else {}
 
-        # ═══════════════════════════════════════════════════════════
-        # CMaNGOS: FUENTE PRIMARIA (datos oficiales del juego)
-        # ═══════════════════════════════════════════════════════════
-        merged_file = DATABASE_DIR / f"merged_{locale}.json"
-        merged_data = load_json(merged_file, {})
-        
-        if isinstance(merged_data, dict) and merged_data:
-            npcs_section = self.sections.get("npcs", {})
-            items_section = self.sections.get("items", {})
-            quests_section = self.sections.get("quests", {})
-            objects_section = self.sections.get("objects", {})
-            
-            cmangos_creatures = merged_data.get("cmangos_creatures", {})
-            cmangos_items = merged_data.get("cmangos_items", {})
-            cmangos_quests = merged_data.get("cmangos_quests", {})
-            cmangos_gameobjects = merged_data.get("cmangos_gameobjects", {})
-            
-            # Add CMaNGOS creatures to NPCs section
-            for cid, name in cmangos_creatures.items():
-                if name and not name.startswith("["):
-                    npc_id = f"cmangos_{cid}"
-                    if npc_id not in npcs_section:
-                        npcs_section[npc_id] = {
-                            "en": name,  # CMaNGOS name (may be translated)
-                            locale: name,
-                            "source": "cmangos",
-                            "cmangos_id": cid
-                        }
-            
-            # Add CMaNGOS items
-            for iid, name in cmangos_items.items():
-                if name and not name.startswith("["):
-                    item_id = f"cmangos_{iid}"
-                    if item_id not in items_section:
-                        items_section[item_id] = {
-                            "en": name,
-                            locale: name,
-                            "source": "cmangos",
-                            "cmangos_id": iid
-                        }
-            
-            # Add CMaNGOS quests
-            for qid, name in cmangos_quests.items():
-                if name and not name.startswith("["):
-                    quest_id = f"cmangos_{qid}"
-                    if quest_id not in quests_section:
-                        quests_section[quest_id] = {
-                            "en": name,
-                            locale: name,
-                            "source": "cmangos",
-                            "cmangos_id": qid
-                        }
-            
-            # Add CMaNGOS gameobjects
-            for gid, name in cmangos_gameobjects.items():
-                if name and not name.startswith("["):
-                    obj_id = f"cmangos_{gid}"
-                    if obj_id not in objects_section:
-                        objects_section[obj_id] = {
-                            "en": name,
-                            locale: name,
-                            "source": "cmangos",
-                            "cmangos_id": gid
-                        }
-            
-            self.sections["npcs"] = npcs_section
-            self.sections["items"] = items_section
-            self.sections["quests"] = quests_section
-            self.sections["objects"] = objects_section
-            
-            cmangos_total = len(cmangos_creatures) + len(cmangos_items) + len(cmangos_quests) + len(cmangos_gameobjects)
-            print(f"  CMaNGOS cargado: {cmangos_total} entradas (fuente primaria)")
-        
-        # ═══════════════════════════════════════════════════════════
-        # Questie NPCs: FUENTE SECUNDARIA (fallback)
-        # ═══════════════════════════════════════════════════════════
-        questie_npcs_file = DATABASE_DIR / f"questie_npcs_{locale}.json"
-        questie_npcs = load_json(questie_npcs_file, {})
-        if isinstance(questie_npcs, dict) and questie_npcs:
-            npcs_section = self.sections.get("npcs", {})
-            # Build index for fast lookup
-            npc_by_name = {}
-            for npc_id, npc_data in npcs_section.items():
-                if isinstance(npc_data, dict):
-                    en = str(npc_data.get("en", "")).strip()
-                    if en:
-                        npc_by_name.setdefault(normalize_name(en), []).append((npc_id, npc_data))
-            
-            added = 0
-            updated = 0
-            for en_name, trans_name in questie_npcs.items():
-                if not trans_name:
-                    continue
-                normalized = normalize_name(en_name)
-                if not normalized:
-                    continue
-                matches = npc_by_name.get(normalized, [])
-                if matches:
-                    # Only update if NOT already from CMaNGOS
-                    for npc_id, npc_data in matches:
-                        if npc_data.get("source") != "cmangos":
-                            npc_data[locale] = trans_name
-                            npc_data["source"] = "questie_npcs"
-                            updated += 1
-                else:
-                    # Crear nueva entrada (solo si no existe en CMaNGOS)
-                    new_id = f"questie_{added}"
-                    npcs_section[new_id] = {"en": en_name, locale: trans_name, "source": "questie_npcs"}
-                    added += 1
-            self.sections["npcs"] = npcs_section
-            print(f"  Questie NPCs: {len(questie_npcs)} entradas (fuente secundaria)")
-
         # Índice por nombre inglés
         self.by_name: Dict[str, Dict[str, list[dict]]] = {}
 
@@ -657,7 +487,7 @@ class LocalDatabase:
             for key, data in entries.items():
                 if not isinstance(data, dict):
                     continue
-                en = str(data.get("en") or key).strip()
+                en = str(data.get("enUS") or data.get("en") or key).strip()
                 if en:
                     index.setdefault(normalize_name(en), []).append(data)
             # Manual overrides tienen prioridad
@@ -699,9 +529,8 @@ class LocalDatabase:
         groups = {}
         for data in candidates:
             key = (
-                str(data.get("en") or "").strip().casefold(),
-                str(data.get("es") or "").strip().casefold(),
-                str(data.get("mx") or "").strip().casefold(),
+                str(data.get("enUS") or data.get("en") or "").strip().casefold(),
+                str(data.get(self.locale) or data.get("es") or "").strip().casefold(),
             )
             groups.setdefault(key, data)
         if len(groups) == 1:
@@ -729,6 +558,25 @@ class LocalDatabase:
             return None, "ambiguous"
         return None, "missing"
 
+    def get_zone_patterns(self) -> list[tuple[re.Pattern, str]]:
+        if hasattr(self, "_zone_patterns"):
+            return self._zone_patterns
+        merged = dict(self.sections.get("zones", {}))
+        for en, es in ZONE_TRANSLATIONS.items():
+            if en not in merged:
+                merged[en] = es
+        sorted_zones = sorted(merged.items(), key=lambda p: len(p[0]), reverse=True)
+        patterns = []
+        for en, es in sorted_zones:
+            if en != es:
+                try:
+                    pattern = re.compile(re.escape(en), re.IGNORECASE)
+                    patterns.append((pattern, es))
+                except re.error:
+                    pass
+        self._zone_patterns = patterns
+        return patterns
+        
     def translate_entity(self, name: str, *, file: str, line: int, context: str) -> str:
         """
         V5: Busca en npcs + items (FRIENDLY puede ser cualquiera de los dos).
@@ -847,7 +695,8 @@ class DescriptionTranslator:
 
         if USE_MYMEMORY_FALLBACK and MyMemoryTranslator is not None:
             try:
-                self.mymemory = MyMemoryTranslator(source="en-US", target=f"en-US")
+                mymemory_target = f"{self.locale[:2]}-{self.locale[2:]}"
+                self.mymemory = MyMemoryTranslator(source="en-US", target=mymemory_target)
             except Exception:
                 self.mymemory = None
 
@@ -933,6 +782,14 @@ class GuideTranslator:
         self.descriptions = descriptions
         self.term_replacements = self._build_term_replacements()
         self.global_replacements = self._build_global_replacements()
+
+    def translate_zone_names(self, text: str) -> str:
+        """Replaces English zone/dungeon names with Spanish equivalents."""
+        result = text
+        for pattern, translated in self.db.get_zone_patterns():
+            safe_translated = translated.replace("\\", "\\\\")
+            result = pattern.sub(safe_translated, result)
+        return result
 
     def _build_term_replacements(self) -> list[tuple[re.Pattern, str]]:
         result = []
@@ -1086,7 +943,7 @@ class GuideTranslator:
         # Traducir texto libre con Google/reglas
         translated = self.descriptions.translate(core)
         # V5: Reemplazar nombres de zona que Google no conoce
-        translated = translate_zone_names(translated)
+        translated = self.translate_zone_names(translated)
         return leading + translated + trailing
 
     def _translate_segments_without_sending_tokens(self, text: str, store: PlaceholderStore) -> str:
@@ -1318,7 +1175,7 @@ class GuideTranslator:
             directive = stripped.split()[0]  # "#name" o "#next"
             content = stripped[len(directive) + 1:]
             content, conditional = self._split_conditional(content)
-            translated = translate_zone_names(content)
+            translated = self.translate_zone_names(content)
             prefix = line[: len(line) - len(stripped)]
             return prefix + directive + " " + translated + conditional
 
@@ -1495,3 +1352,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
