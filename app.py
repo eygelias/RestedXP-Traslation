@@ -249,8 +249,6 @@ class Bridge(QObject):
             from translate_guides import (LocalDatabase, DescriptionTranslator, GuideTranslator,
                                            ensure_dirs, save_json, deduplicate_unresolved, compare_files)
 
-            tg._ZONE_PATTERNS.clear()
-            tg._QUESTIE_ZONES.clear()
             tg.TARGET_LOCALE = locale
             tg.TARGET_WOW_VERSION = wow_version
             tg.OUTPUT_SUFFIX = get_output_suffix(locale)
