@@ -54,6 +54,7 @@ Archivos generados principales:
 
 ```text
 database/questiedb_es.json      # DB unificada principal
+database/questiedb_forever.json # DB QuestieDB 1.x Forever (build_database_forever.py)
 database/merged_esES.json       # DB combinada por locale
 database/npcnames_esES.json     # NPCnames de RXPGuides
 database/questie_npcs_esES.json # Fallback Questie

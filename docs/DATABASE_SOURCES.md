@@ -44,6 +44,45 @@ database/zones_*.json
 database/spells_es.json
 ```
 
+### QuestieDB 1.x — formato baked (flavor Forever)
+
+QuestieDB 1.x distribuye la base como un `.toc` de WoW en modo *baked*: la
+lista de archivos Lua habitual más un "TOC metadata store" con la base
+codificada en líneas `## X-...: valor` (IDs, filas de entidades y bloques de
+localización). La codificación equivale a `C_EncodingUtil` del cliente:
+`DecodeBase64` → `DecompressString(bytes, 1)` (zlib) → `DeserializeCBOR`.
+
+Artículo esperado:
+
+```text
+QuestieDB-1.0.x-Forever.zip   (incluye QuestieDB/QuestieDB_Forever.toc)
+```
+
+Uso en proyecto:
+
+```text
+build_database_forever.py   (parser: questiedb_forever.py)
+```
+
+Genera:
+
+```text
+database/questiedb_forever.json   (el que carga LocalDatabase con wow_version="forever")
+```
+
+Formato de entrada resumido:
+
+```text
+X-<Tipo>-IDS            lista de IDs (zlib+CBOR, chunkeada ~N~)
+X-<Tipo>-<id>-S         fila de la entidad (CBOR mapa o array posicional)
+X-l10n-<locale>-<Tipo>  columnas de traducciones (zlib+CBOR, alineadas con los IDs)
+```
+
+Tipos: `Quest`, `Npc`, `Item`, `Object`. Locales: los 9 soportados por el
+traductor (`deDE esES esMX frFR koKR ptBR ruRU zhCN zhTW`). Campos
+traducibles: `name` en los 4 tipos, `objectivesText` en Quest y `subName` en
+Npc.
+
 ## 2. RXPGuides / RestedXP addon
 
 Fuente para archivos de locale del propio addon.
@@ -204,6 +243,9 @@ no traducir, dejar inglés y reportar unresolved
 # 3. Colocar archivos RXPGuides locale en rxpguides_locale/
 # 4. Colocar SQL CMaNGOS/TBC si se va a regenerar merged_*.json
 python build_database.py
+
+# Base Forever (QuestieDB 1.x baked) — genera database/questiedb_forever.json
+python build_database_forever.py --source QuestieDB-1.0.x-Forever.zip
 ```
 
 ## Seguridad / legal
