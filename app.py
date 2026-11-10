@@ -82,20 +82,28 @@ class Bridge(QObject):
         self.ui_lang = UI_TO_LOCALE.get(lang_code, "esES")
 
     def _load_config(self):
-        """Load saved folder paths from config.json."""
+        """Load saved folder paths and guide selection from config.json."""
         try:
             if self._config_file.exists():
                 with open(self._config_file, 'r', encoding='utf-8') as f:
                     cfg = json.load(f)
                 if cfg.get("output_dir"):
                     self.output_dir = cfg["output_dir"]
+                if isinstance(cfg.get("selected_files"), list):
+                    self.selected_files = [str(p) for p in cfg["selected_files"] if p]
+                if cfg.get("base_input_dir"):
+                    self.base_input_dir = cfg["base_input_dir"]
         except Exception:
             pass
 
     def _save_config(self):
-        """Save current folder paths to config.json."""
+        """Save folder paths and guide selection to config.json."""
         try:
-            cfg = {"output_dir": self.output_dir}
+            cfg = {
+                "output_dir": self.output_dir,
+                "selected_files": list(self.selected_files),
+                "base_input_dir": self.base_input_dir,
+            }
             with open(self._config_file, 'w', encoding='utf-8') as f:
                 json.dump(cfg, f, ensure_ascii=False, indent=2)
         except Exception:
@@ -115,8 +123,17 @@ class Bridge(QObject):
         )
         if files:
             self.selected_files = files
+            # Rutas relativas al padre común: evita que archivos homónimos
+            # de subcarpetas distintas (p. ej. forever/ y forever/dungeon/)
+            # pisen la misma salida.
+            try:
+                parents = [str(Path(f).resolve().parent) for f in files]
+                self.base_input_dir = os.path.commonpath(parents)
+            except Exception:
+                self.base_input_dir = None
             names = [Path(f).name for f in files]
             self._log(f"📁 {len(files)} guía(s) seleccionada(s)")
+            self._save_config()
             return json.dumps({"files": files, "names": names})
         return json.dumps({"files": [], "names": []})
 
@@ -134,6 +151,7 @@ class Bridge(QObject):
                 names.append(file_path.name)
             
             self._log(f"📁 {len(self.selected_files)} guía(s) encontradas en carpeta")
+            self._save_config()
             return json.dumps({"files": self.selected_files, "names": [base_dir.name + "/* (" + str(len(names)) + " archivos)"]})
         return json.dumps({"files": [], "names": []})
 
@@ -275,6 +293,9 @@ class Bridge(QObject):
                 else:
                     rel = source.name
                 text_lines = source.read_text(encoding="utf-8", errors="ignore").splitlines()
+                if rel in file_sources:
+                    self._log(f"⚠ Duplicado ignorado (mismo nombre de salida): {rel}")
+                    continue
                 files_meta.append({
                     "name": rel, "rel": rel,
                     "size": source.stat().st_size,
@@ -741,6 +762,35 @@ class MainWindow(QMainWindow):
             document.body.style.margin = '0';
             """
             self.view.page().runJavaScript(js)
+            if not getattr(self, "_session_restored", False):
+                self._session_restored = True
+                self._restore_session()
+
+    def _restore_session(self):
+        """Recupera la selección de guías y avisa si hay una traducción pendiente.
+
+        Así, cerrar el programa (con o sin Detener) y volver a abrirlo permite
+        continuar exactamente donde quedó con solo pulsar Traducir.
+        """
+        sel = getattr(self.bridge, "selected_files", []) or []
+        if sel:
+            base = getattr(self.bridge, "base_input_dir", None)
+            if base:
+                label = f"{Path(base).name}/* ({len(sel)} archivos)"
+            else:
+                names = [Path(f).name for f in sel[:3]]
+                label = ", ".join(names) + ("…" if len(sel) > 3 else "")
+            safe = label.replace("\\", "\\\\").replace("'", "\\'")
+            self._run_js(f"document.getElementById('guidePath').textContent = '{safe}';")
+            self.bridge._log(f"📁 Selección restaurada: {len(sel)} guía(s)")
+        try:
+            import translate_guides as tg
+            if (tg.CACHE_DIR / "translation_checkpoint.json").exists():
+                self.bridge._log(
+                    "♻ Hay una traducción pendiente guardada — pulsa Traducir para continuar donde quedó."
+                )
+        except Exception:
+            pass
 
     def _find_html(self):
         candidates = [

@@ -475,10 +475,10 @@ class TranslationCheckpoint:
                     if entry.get("status") != "done":
                         entry["status"] = "in_progress"
                     break
-            self._saves_since_write += 1
-            if force or self._saves_since_write >= 8:
-                self._save(force=True)
-                self._saves_since_write = 0
+            # Se guarda en cada avance (cada 50 líneas): la pérdida máxima
+            # ante un apagón es mínima y el archivo es pequeño.
+            self._save(force=True)
+            self._saves_since_write = 0
 
     def mark_done(self, name: str) -> None:
         with self._lock:
@@ -1546,8 +1546,13 @@ def main() -> int:
     # ── Checkpoint: memoriza guía + línea por si se corta la luz ──
     checkpoint = TranslationCheckpoint()
     files_meta = []
+    seen_rels = set()
     for source in lua_files:
         rel = str(source.relative_to(INPUT_DIR))
+        if rel in seen_rels:
+            print(f"  ⚠ Duplicado ignorado (mismo nombre de salida): {rel}")
+            continue
+        seen_rels.add(rel)
         text_lines = source.read_text(encoding="utf-8", errors="ignore").splitlines()
         files_meta.append({
             "name": rel,
