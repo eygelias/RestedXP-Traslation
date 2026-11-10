@@ -60,7 +60,12 @@ def read_text(path: Path) -> str:
 
 
 def normalize_newlines(text: str) -> list[str]:
-    return text.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    lines = text.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+    # El salto de línea final es opcional: su presencia/ausencia no es una
+    # línea de contenido extra (evita falsos 'line_count' de ±1).
+    if len(lines) > 1 and lines[-1] == "":
+        lines.pop()
+    return lines
 
 
 def structural_prefix(line: str) -> str | None:

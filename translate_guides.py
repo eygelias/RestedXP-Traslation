@@ -929,9 +929,16 @@ class DescriptionTranslator:
                 self.mymemory = None
 
         self.stats = {"cache": 0, "google": 0, "mymemory": 0, "rules": 0, "unchanged": 0}
+        # Seguridad para los 8 hilos de traducción: la caché se muta con lock
+        # y se persiste en lotes (guardar en cada línea rompía con 'dictionary
+        # changed size during iteration' y relentecía todo).
+        self._lock = threading.Lock()
+        self._unsaved = 0
 
     def save(self) -> None:
-        save_json(self.cache_file, self.cache)
+        with self._lock:
+            snapshot = self.cache.copy()
+        save_json(self.cache_file, snapshot)
 
     def fallback(self, text: str) -> str:
         result = text
@@ -954,13 +961,15 @@ class DescriptionTranslator:
         key = text.strip()
         if not key:
             return text
-        if key in self.cache:
-            self.stats["cache"] += 1
-            return self.cache[key]
+        with self._lock:
+            if key in self.cache:
+                self.stats["cache"] += 1
+                return self.cache[key]
 
         translated = None
         provider = "unchanged"
 
+        # La llamada de red se hace FUERA del lock para no frenar a los hilos.
         if self.google is not None:
             try:
                 translated = self.google.translate(text)
@@ -982,9 +991,16 @@ class DescriptionTranslator:
             translated = self.fallback(text)
             provider = "rules" if translated != text else "unchanged"
 
-        self.stats[provider] = self.stats.get(provider, 0) + 1
-        self.cache[key] = translated
-        self.save()
+        snapshot = None
+        with self._lock:
+            self.stats[provider] = self.stats.get(provider, 0) + 1
+            self.cache[key] = translated
+            self._unsaved += 1
+            if self._unsaved >= 25:
+                self._unsaved = 0
+                snapshot = self.cache.copy()
+        if snapshot is not None:
+            save_json(self.cache_file, snapshot)
         return translated
 
 
