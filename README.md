@@ -1,4 +1,4 @@
-# RestedXP-Traslation V5
+# RestedXP-Traslation V6
 
 Traductor local para guías de **RestedXP / RXPGuides**. Convierte guías `.lua` de inglés a varios idiomas manteniendo la sintaxis interna que RestedXP necesita para funcionar dentro de World of Warcraft Classic.
 
@@ -6,7 +6,7 @@ Traductor local para guías de **RestedXP / RXPGuides**. Convierte guías `.lua`
 
 ## Qué hace
 
-RestedXP-Traslation V5 toma archivos de guía RestedXP y genera versiones traducidas sin romper comandos del addon.
+RestedXP-Traslation V6 toma archivos de guía RestedXP y genera versiones traducidas sin romper comandos del addon.
 
 Traduce:
 
@@ -126,7 +126,7 @@ output/                        # Salida traducida
 Ve a:
 
 ```text
-https://github.com/eygelias/RestedXP-TraslationV5/releases
+https://github.com/eygelias/RestedXP-Traslation/releases
 ```
 
 Descarga el ZIP del release si quieres la app compilada.
@@ -134,8 +134,8 @@ Descarga el ZIP del release si quieres la app compilada.
 Si quieres código fuente:
 
 ```bash
-git clone https://github.com/eygelias/RestedXP-TraslationV5.git
-cd RestedXP-TraslationV5
+git clone https://github.com/eygelias/RestedXP-Traslation.git
+cd RestedXP-Traslation
 ```
 
 ### Paso 2 — Instalar dependencias para modo código

@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 validate_output.py
-RXP Translator V4 - Valida que una guía traducida mantenga intacta la sintaxis.
+RXP Translator V6 - Valida que una guía traducida mantenga intacta la sintaxis.
 
-V4: Validaciones adicionales:
+V6: Validaciones adicionales:
     - Condiciones << no deben haberse traducido
     - .goto no debe haber traducido zona
     - Nombres de clase/raza en << deben permanecer en inglés
@@ -35,7 +35,7 @@ COLOR_RE = re.compile(r"\|c[0-9A-Fa-f]{8}")
 TEXTURE_RE = re.compile(r"\|T[^|]*\|t")
 LINK_RE = re.compile(r"\|H[^|]*\|h|\|h")
 
-# V4: Validación de condicionales
+# V6: Validación de condicionales
 CONDITIONAL_RE = re.compile(r"<<\s*(.+?)\s*$")
 GOTO_RE = re.compile(r"^(\s*\.goto\s+)([^,]+)(,.*)$", re.IGNORECASE)
 
@@ -69,7 +69,7 @@ def structural_prefix(line: str) -> str | None:
 
 
 def check_conditional_not_translated(original: str, translated: str, line_no: int) -> list[dict]:
-    """V4: Verifica que los condicionales << no se hayan traducido."""
+    """V6: Verifica que los condicionales << no se hayan traducido."""
     errors = []
     orig_match = CONDITIONAL_RE.search(original)
     trans_match = CONDITIONAL_RE.search(translated)
@@ -98,7 +98,7 @@ def check_conditional_not_translated(original: str, translated: str, line_no: in
 
 
 def check_goto_not_translated(original: str, translated: str, line_no: int) -> list[dict]:
-    """V4: Verifica que .goto no haya traducido el nombre de zona."""
+    """V6: Verifica que .goto no haya traducido el nombre de zona."""
     errors = []
     orig_match = GOTO_RE.match(original)
     trans_match = GOTO_RE.match(translated)
@@ -173,10 +173,10 @@ def compare_files(original: Path, translated: Path) -> dict:
                     "after": after,
                 })
 
-        # V4: .goto no debe traducir zona
+        # V6: .goto no debe traducir zona
         errors.extend(check_goto_not_translated(before, after, line_no))
 
-        # V4: Condicional << no debe traducirse
+        # V6: Condicional << no debe traducirse
         errors.extend(check_conditional_not_translated(before, after, line_no))
 
         # Checks de integridad estructural

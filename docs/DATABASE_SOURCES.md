@@ -1,6 +1,6 @@
 # Database Sources
 
-Fuentes necesarias para reconstruir las bases de datos de RestedXP-Traslation V5.
+Fuentes necesarias para reconstruir las bases de datos de RestedXP-Traslation V6.
 
 ## Resumen rápido
 

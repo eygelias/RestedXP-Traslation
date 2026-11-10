@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 extract_npcnames.py
-RXP Translator V4 - Extrae NPCnames.lua para cualquier idioma soportado.
+RXP Translator V6 - Extrae NPCnames.lua para cualquier idioma soportado.
 
 Lee: rxpguides_locale/NPCnames.lua
 Genera: database/npcnames_{locale}.json
@@ -123,7 +123,7 @@ def main() -> int:
     ensure_dirs()
 
     print("=" * 50)
-    print(" RXP Translator V4 - Extraer NPCnames")
+    print(" RXP Translator V6 - Extraer NPCnames")
     print("=" * 50)
 
     if not NPCNAMES_LUA.exists():

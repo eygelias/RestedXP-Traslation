@@ -1,6 +1,6 @@
 """
 locales_config.py
-Configuración central de idiomas soportados por RXP Translator V4.
+Configuración central de idiomas soportados por RXP Translator V6.
 """
 
 # ─────────────────────────────────────────────────────────

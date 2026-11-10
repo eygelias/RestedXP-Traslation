@@ -9,7 +9,7 @@ Es el equivalente a build_database.py para el formato "baked" de QuestieDB 1.x
 LocalDatabase de translate_guides.py carga cuando wow_version="forever"
 (database/questiedb_{wow_version}.json).
 
-Fuentes de datos (en orden de prioridad, igual que el pipeline V5):
+Fuentes de datos (en orden de prioridad, igual que el pipeline V6):
     1. manual_overrides.json  - correcciones manuales (se aplican en tiempo de traducción)
     2. NPCnames.lua (RXPGuides) - nombres del cliente; sobrescriben traducciones l10n
     3. QuestieDB Forever 1.0.13 - entidades + localizaciones oficiales (l10n)
@@ -37,7 +37,7 @@ from typing import Dict
 from locales_config import SUPPORTED_LOCALES
 from questiedb_forever import ENTITY_TYPES, LOCALES, QuestieDBForever
 
-# Reutiliza el parser/merge de NPCnames del pipeline V5 para mantener la misma
+# Reutiliza el parser/merge de NPCnames del pipeline V6 para mantener la misma
 # semántica de prioridad (NPCnames > QuestieDB a la hora de construir).
 from build_database import merge_npcnames_into_npcs, parse_npcnames_locale
 
@@ -47,7 +47,7 @@ NPCNAMES_LUA = BASE_DIR / "rxpguides_locale" / "NPCnames.lua"
 
 OUTPUT_DB = DATABASE_DIR / "questiedb_forever.json"
 
-# Mapeo tipo QuestieDB → sección del JSON del traductor (igual que ENTITY_CONFIG de V4).
+# Mapeo tipo QuestieDB → sección del JSON del traductor (igual que ENTITY_CONFIG de V6).
 SECTION_BY_TYPE = {
     "Quest": "quests",
     "Npc": "npcs",

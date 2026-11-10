@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 translate_guides.py
-RXP Translator V5 - Traduce guías RestedXP a cualquier idioma soportado.
+RXP Translator V6 - Traduce guías RestedXP a cualquier idioma soportado.
 
 Idiomas: esES, esMX, deDE, frFR, ptBR, ruRU, koKR, zhCN, zhTW
 
@@ -66,7 +66,7 @@ USE_MYMEMORY_FALLBACK = True
 # Etiquetas que contienen una ENTIDAD (NPC, item, objeto).
 # Su contenido se traduce con la base de datos, NO con Google.
 ENTITY_TAG_SECTION = {
-    "FRIENDLY": "entity",    # V5: busca en npcs + items
+    "FRIENDLY": "entity",    # V6: busca en npcs + items
     "ENEMY": "npcs",
     "LOOT": "items",
     "PICK": "objects",
@@ -240,7 +240,7 @@ ZONE_TRANSLATIONS = {
 }
 
 # ─────────────────────────────────────────────────────────
-# Reglas de traducción ampliadas (V5)
+# Reglas de traducción ampliadas (V6)
 # ─────────────────────────────────────────────────────────
 
 FALLBACK_RULES = [
@@ -446,7 +446,7 @@ class PlaceholderStore:
 
 
 # ─────────────────────────────────────────────────────────
-# LocalDatabase — V5 con prioridad NPCnames
+# LocalDatabase — V6 con prioridad NPCnames
 # ─────────────────────────────────────────────────────────
 
 
@@ -603,7 +603,7 @@ class LocalDatabase:
         
     def translate_entity(self, name: str, *, file: str, line: int, context: str) -> str:
         """
-        V5: Busca en npcs + items (FRIENDLY puede ser cualquiera de los dos).
+        V6: Busca en npcs + items (FRIENDLY puede ser cualquiera de los dos).
         Prioridad: manual_overrides > NPCnames > QuestieDB.
         """
         # Buscar en NPCs primero
@@ -685,7 +685,7 @@ class LocalDatabase:
 
     def print_database_summary(self) -> None:
         locale_name = get_locale_config(TARGET_LOCALE)["name"]
-        print(f"\nBase local V5 cargada (idioma: {locale_name}):")
+        print(f"\nBase local V6 cargada (idioma: {locale_name}):")
         for section in ["quests", "npcs", "items", "objects", "zones", "spells"]:
             total, localized = self.localized_count(section)
             print(f"  {section:10}: {total:7} registros | {localized:7} con nombre traducido")
@@ -785,13 +785,13 @@ class DescriptionTranslator:
 
 
 # ─────────────────────────────────────────────────────────
-# GuideTranslator — V5 con todas las correcciones
+# GuideTranslator — V6 con todas las correcciones
 # ─────────────────────────────────────────────────────────
 
 
 class GuideTranslator:
     """
-    Motor V5. Traduce texto visible respetando:
+    Motor V6. Traduce texto visible respetando:
     - Etiquetas RXP (|cRXP_...|r) con pila de anidamiento
     - Texturas |T...|t y enlaces |H...|h (literal)
     - Colores hex |cAARRGGBB|r (literal, NO traducir contenido de zona)
@@ -995,7 +995,7 @@ class GuideTranslator:
             return text
         # Traducir texto libre con Google/reglas
         translated = self.descriptions.translate(core)
-        # V5: Reemplazar nombres de zona que Google no conoce
+        # V6: Reemplazar nombres de zona que Google no conoce
         translated = self.translate_zone_names(translated)
         return leading + translated + trailing
 
@@ -1068,7 +1068,7 @@ class GuideTranslator:
                 inner = text[content_start:reset_pos]
 
                 if kind == "rxp" and tag_type in ENTITY_TAG_SECTION:
-                    # V5: FRIENDLY busca en npcs + items; '::ID' se resuelve por ID como Questie
+                    # V6: FRIENDLY busca en npcs + items; '::ID' se resuelve por ID como Questie
                     if tag_type == "FRIENDLY":
                         sections = ("npcs", "items")
                     else:
@@ -1079,7 +1079,7 @@ class GuideTranslator:
                         use_translate_entity=(tag_type == "FRIENDLY"),
                     )
                 elif kind == "color":
-                    # V5: NO traducir contenido de colores hex (pueden ser zonas)
+                    # V6: NO traducir contenido de colores hex (pueden ser zonas)
                     translated_inner = inner
                 else:
                     translated_inner = self._translate_markup_aware(
@@ -1117,7 +1117,7 @@ class GuideTranslator:
 
     def _split_conditional(self, text: str) -> tuple[str, str]:
         """
-        V5: Separa un condicional << del texto visible.
+        V6: Separa un condicional << del texto visible.
         Retorna (texto_visible, condicional).
         Maneja múltiples condicionales: << !Druid !Warlock !Shaman
         Y condicionales compuestos: << Warlock/Shaman
@@ -1172,7 +1172,7 @@ class GuideTranslator:
 
     def translate_line(self, line: str, *, file: str, line_no: int) -> str:
         """
-        V5: Traduce una línea de guía.
+        V6: Traduce una línea de guía.
 
         Reglas críticas:
         - .goto: NUNCA traducir nombre de zona
@@ -1319,7 +1319,7 @@ def main() -> int:
     locale_name = get_locale_config(locale)["name"]
 
     print("=" * 55)
-    print(f" RXP Translator V5 - Traducir a {locale_name} ({locale})")
+    print(f" RXP Translator V6 - Traducir a {locale_name} ({locale})")
     print("=" * 55)
 
     if not QUESTIEDB_FILE.exists():

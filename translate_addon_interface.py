@@ -85,7 +85,7 @@ def generate_locale_file(strings: list[tuple[str, str]], target_locale: str,
     lines.append(f"local addonName, addon = ...")
     lines.append(f"")
     lines.append(f"-- Traducción automática para {target_locale}")
-    lines.append(f"-- Generado por RXP Translator V5")
+    lines.append(f"-- Generado por RXP Translator V6")
     lines.append(f"local L = LibStub(\"AceLocale-3.0\"):NewLocale(addonName, \"{target_locale}\", false)")
     lines.append(f"if not L then return end")
     lines.append(f"")

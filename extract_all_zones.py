@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 extract_all_zones.py
-RXP Translator V4 - Extrae zonas/subzonas para cualquier idioma.
+RXP Translator V6 - Extrae zonas/subzonas para cualquier idioma.
 
 Fuentes:
     1. LibBabble-SubZone-3.0 (rxpguides_locale/subzone_*.lua)
@@ -163,7 +163,7 @@ def main() -> int:
     DATABASE_DIR.mkdir(exist_ok=True)
 
     print("=" * 55)
-    print(" RXP Translator V4 - Extraer zonas/subzonas")
+    print(" RXP Translator V6 - Extraer zonas/subzonas")
     print("=" * 55)
 
     # Determinar qué locales extraer

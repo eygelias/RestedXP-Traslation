@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 build_database.py
-RXP Translator V4 - Construye la base de datos de traducción unificada.
+RXP Translator V6 - Construye la base de datos de traducción unificada.
 
 Fuentes de datos (en orden de prioridad):
     1. manual_overrides.json  - Correcciones manuales (máxima prioridad)
@@ -488,7 +488,7 @@ def build_entity_section(source: QuestieDBSource, section: str) -> Dict[str, dic
 
 
 # ─────────────────────────────────────────────────────────
-# V4: Merge NPCnames.lua into NPC section
+# V6: Merge NPCnames.lua into NPC section
 # ─────────────────────────────────────────────────────────
 
 def merge_npcnames_into_npcs(npcs: dict[str, dict], npcnames: dict[str, str], locale: str) -> int:
@@ -633,7 +633,7 @@ def main() -> int:
     ensure_dirs()
 
     print("=" * 50)
-    print(" RXP Translator V4 - Construir base de datos")
+    print(" RXP Translator V6 - Construir base de datos")
     print("=" * 50)
 
     # ── Paso 1: NPCnames.lua (se procesa en Paso 4 para todos los idiomas) ──
@@ -660,7 +660,7 @@ def main() -> int:
 
     result = {
         "meta": {
-            "generator": "build_database.py V4",
+            "generator": "build_database.py V6",
             "created_utc": datetime.now(timezone.utc).isoformat(),
             "questiedb_source": source.label,
             "format": "QuestieDB HTML shards + NPCnames.lua (multi-locale)",

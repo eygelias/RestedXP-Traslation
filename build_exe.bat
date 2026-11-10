@@ -4,7 +4,7 @@ title RXP Translator V6 - Build EXE
 cd /d "%~dp0"
 
 echo ===============================================
-echo  RXP Translator V5 - Construir EXE (PyQt5)
+echo  RXP Translator V6 - Construir EXE (PyQt5)
 echo ===============================================
 echo.
 
