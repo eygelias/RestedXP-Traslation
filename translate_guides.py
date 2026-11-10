@@ -20,7 +20,9 @@ from __future__ import annotations
 import json
 import re
 import sys
+import threading
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict
 
@@ -326,6 +328,208 @@ def save_json(path: Path, data) -> None:
         json.dumps(data, ensure_ascii=False, indent=2, sort_keys=False),
         encoding="utf-8",
     )
+
+
+# ─────────────────────────────────────────────────────────
+# Checkpoint / reanudación de traducción
+# ─────────────────────────────────────────────────────────
+
+CHECKPOINT_VERSION = 1
+CHECKPOINT_FLUSH_EVERY = 50   # líneas escritas al destino antes de guardar avance
+
+
+class TranslationCheckpoint:
+    """Memoriza el progreso de una traducción para reanudarla tras un corte
+    (apagón, corte de luz, cierre forzoso...).
+
+    Guarda en cache/translation_checkpoint.json la lista de guías del trabajo,
+    qué guía estaba en curso y en qué línea quedó. Si la línea no se puede
+    precisar (archivo de salida ausente o inconsistente), esa guía se reinicia
+    desde el principio.
+    """
+
+    def __init__(self, path: Path | None = None) -> None:
+        self.path = path or (CACHE_DIR / "translation_checkpoint.json")
+        self._lock = threading.Lock()
+        self._saves_since_write = 0
+        self.data: dict = {}
+
+    def load(self) -> dict | None:
+        raw = load_json(self.path, None)
+        if isinstance(raw, dict) and raw.get("version") == CHECKPOINT_VERSION \
+                and isinstance(raw.get("files"), list):
+            return raw
+        return None
+
+    @staticmethod
+    def _plan_entry(entry: dict, output_dir: Path) -> int:
+        """Línea desde la que continuar esa guía (0 = ya hecha, 1 = reiniciar)."""
+        total = int(entry.get("total_lines") or 0)
+        rel = str(entry.get("rel") or entry.get("name") or "")
+        destination = output_dir / rel if rel else None
+        if entry.get("status") == "done":
+            if destination is not None and destination.exists():
+                return 0
+            return 1
+        lines_done = int(entry.get("lines_done") or 0)
+        if total <= 0 or lines_done <= 0:
+            return 1
+        try:
+            previous = destination.read_text(encoding="utf-8", errors="ignore").splitlines()
+        except Exception:
+            return 1
+        if lines_done >= total:
+            # el trabajo de líneas estaba completo; si la salida está entera, omitir
+            return 0 if len(previous) >= total else 1
+        if len(previous) < lines_done:
+            return 1
+        return lines_done + 1
+
+    def start_job(self, *, locale: str, wow_version: str, output_dir: Path,
+                  files: list[dict], force_new: bool = False) -> dict:
+        """Prepara el trabajo. `files`: [{name, rel, size, total_lines}].
+
+        Devuelve el plan de reanudación {name: start_line}:
+          0  = guía ya completada (omitir)
+          1  = empezar (o reiniciar) esa guía
+          N  = continuar desde la línea N
+        """
+        existing = None if force_new else self.load()
+        plan: dict[str, int] = {}
+        resumed_from = {}
+        restarted = {}
+        current_names = {f["name"] for f in files}
+
+        if existing and existing.get("locale") == locale \
+                and existing.get("wow_version") == wow_version \
+                and str(existing.get("output_dir") or "") == str(output_dir):
+            old_by_name = {f.get("name"): f for f in existing["files"]}
+            for f in files:
+                old = old_by_name.get(f["name"])
+                if old is None:
+                    plan[f["name"]] = 1
+                    continue
+                if int(old.get("size") or -1) != int(f["size"]) \
+                        or int(old.get("total_lines") or -1) != int(f["total_lines"]):
+                    plan[f["name"]] = 1          # el archivo cambió → reiniciar guía
+                    if int(old.get("lines_done") or 0) > 0:
+                        restarted[f["name"]] = True
+                    continue
+                start = self._plan_entry(old, output_dir)
+                plan[f["name"]] = start
+                if start > 1:
+                    resumed_from[f["name"]] = start
+                elif start == 1 and (
+                        old.get("status") == "in_progress"
+                        or int(old.get("lines_done") or 0) > 0):
+                    # había progreso pero no se pudo precisar → reiniciar esa guía
+                    restarted[f["name"]] = True
+        else:
+            for f in files:
+                plan[f["name"]] = 1
+
+        self.data = {
+            "version": CHECKPOINT_VERSION,
+            "created_utc": datetime.now(timezone.utc).isoformat(),
+            "locale": locale,
+            "wow_version": wow_version,
+            "output_dir": str(output_dir),
+            "files": [
+                {
+                    "name": f["name"],
+                    "rel": f["rel"],
+                    "size": int(f["size"]),
+                    "total_lines": int(f["total_lines"]),
+                    "lines_done": 0,
+                    "status": "pending",
+                }
+                for f in files
+            ],
+        }
+        # los que el plan marca como hechos o en curso quedan como estaban
+        for entry in self.data["files"]:
+            start = plan.get(entry["name"], 1)
+            if start == 0:
+                entry["status"] = "done"
+                entry["lines_done"] = entry["total_lines"]
+            elif start > 1:
+                entry["status"] = "in_progress"
+                entry["lines_done"] = start - 1
+        self._save(force=True)
+
+        done_count = sum(1 for v in plan.values() if v == 0)
+        return {
+            "plan": plan,
+            "resumed_from": resumed_from,
+            "restarted": list(restarted),
+            "done_count": done_count,
+            "total": len(files),
+            "reused": bool(existing) and (done_count + len(resumed_from) + len(restarted) > 0),
+        }
+
+    def mark_progress(self, name: str, lines_done: int, force: bool = False) -> None:
+        with self._lock:
+            for entry in self.data.get("files", []):
+                if entry.get("name") == name:
+                    entry["lines_done"] = int(lines_done)
+                    if entry.get("status") != "done":
+                        entry["status"] = "in_progress"
+                    break
+            self._saves_since_write += 1
+            if force or self._saves_since_write >= 8:
+                self._save(force=True)
+                self._saves_since_write = 0
+
+    def mark_done(self, name: str) -> None:
+        with self._lock:
+            for entry in self.data.get("files", []):
+                if entry.get("name") == name:
+                    entry["status"] = "done"
+                    entry["lines_done"] = int(entry.get("total_lines") or 0)
+                    break
+            self._save(force=True)
+            self._saves_since_write = 0
+
+    def finish(self) -> None:
+        try:
+            self.path.unlink(missing_ok=True)
+        except Exception:
+            pass
+
+    def _save(self, force: bool = False) -> None:
+        try:
+            tmp = self.path.with_suffix(".json.tmp")
+            tmp.write_text(
+                json.dumps(self.data, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
+            tmp.replace(self.path)
+        except Exception:
+            pass
+
+
+def prepare_destination(destination: Path, start_line: int):
+    """Abre el destino para continuar la traducción desde `start_line` (1-based).
+
+    Conserva las primeras start_line-1 líneas ya traducidas. Si el archivo no
+    tiene esas líneas, se reinicia la guía (devuelve keep=0).
+
+    Retorna (handle_abierto, keep).
+    """
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    keep = max(int(start_line) - 1, 0)
+    previous: list[str] = []
+    if keep and destination.exists():
+        try:
+            previous = destination.read_text(encoding="utf-8", errors="ignore").splitlines()
+        except Exception:
+            previous = []
+    if keep > len(previous):
+        keep = 0
+    handle = destination.open("w", encoding="utf-8")
+    if keep:
+        handle.write("\n".join(previous[:keep]) + "\n")
+    return handle, keep
 
 
 def normalize_name(value: str) -> str:
@@ -1339,20 +1543,59 @@ def main() -> int:
     validation_reports = []
     overall_ok = True
 
-    for file_index, source in enumerate(lua_files, start=1):
-        relative = source.relative_to(INPUT_DIR)
+    # ── Checkpoint: memoriza guía + línea por si se corta la luz ──
+    checkpoint = TranslationCheckpoint()
+    files_meta = []
+    for source in lua_files:
+        rel = str(source.relative_to(INPUT_DIR))
+        text_lines = source.read_text(encoding="utf-8", errors="ignore").splitlines()
+        files_meta.append({
+            "name": rel,
+            "rel": rel,
+            "size": source.stat().st_size,
+            "total_lines": len(text_lines),
+            "source": source,
+            "lines": text_lines,
+        })
+    job = checkpoint.start_job(
+        locale=locale, wow_version=TARGET_WOW_VERSION,
+        output_dir=OUTPUT_DIR, files=files_meta,
+    )
+    if job["reused"]:
+        print(f"\n♻ Checkpoint encontrado: {job['done_count']}/{job['total']} guías ya completadas.")
+        for name, line in job["resumed_from"].items():
+            print(f"   ↳ Reanudando «{name}» desde la línea {line}")
+        for name in job["restarted"]:
+            print(f"   ⚠ «{name}»: no se pudo precisar el progreso — se reinicia esa guía")
+
+    pending = [f for f in files_meta if job["plan"].get(f["name"], 1) != 0]
+    for file_index, item in enumerate(pending, start=1):
+        source = item["source"]
+        relative = Path(item["rel"])
         destination = output_path_for(relative)
-        destination.parent.mkdir(parents=True, exist_ok=True)
+        start_line = max(int(job["plan"].get(item["name"], 1) or 1), 1)
+        lines = item["lines"]
 
-        print(f"\n[{file_index}/{len(lua_files)}] Traduciendo: {relative}")
+        etiqueta = f"(reanudar desde línea {start_line})" if start_line > 1 else ""
+        print(f"\n[{file_index}/{len(pending)}] Traduciendo: {relative} {etiqueta}".rstrip())
 
-        lines = source.read_text(encoding="utf-8", errors="ignore").splitlines()
-        translated_lines = []
+        handle, keep = prepare_destination(destination, start_line)
+        if start_line > 1 and keep == 0:
+            print("  ⚠ No se pudo precisar la línea guardada — se reinicia esta guía")
+        buffer: list[str] = []
+        written = keep
 
-        for line_no, line in enumerate(lines, start=1):
-            translated_lines.append(
+        for line_no in range(keep + 1, len(lines) + 1):
+            line = lines[line_no - 1]
+            buffer.append(
                 translator.translate_line(line, file=str(relative), line_no=line_no)
             )
+            written += 1
+            if len(buffer) >= CHECKPOINT_FLUSH_EVERY or line_no == len(lines):
+                handle.write("\n".join(buffer) + "\n")
+                handle.flush()
+                buffer.clear()
+                checkpoint.mark_progress(item["name"], written)
             if line_no % 500 == 0 or line_no == len(lines):
                 print(
                     f"\r  Líneas: {line_no}/{len(lines)} | "
@@ -1363,8 +1606,8 @@ def main() -> int:
                 )
 
         print()
-
-        destination.write_text("\n".join(translated_lines) + "\n", encoding="utf-8")
+        handle.close()
+        checkpoint.mark_done(item["name"])
 
         report = compare_files(source, destination)
         validation_reports.append(report)
@@ -1372,6 +1615,8 @@ def main() -> int:
 
         print(f"  Generado: {destination}")
         print(f"  Validación: {'OK' if report['ok'] else 'ERROR'}")
+
+    checkpoint.finish()
 
     unresolved = deduplicate_unresolved(database.unresolved)
     unresolved_file = CACHE_DIR / f"unresolved_{locale}.json"

@@ -262,54 +262,96 @@ class Bridge(QObject):
             descriptions = DescriptionTranslator(locale=locale)
             translator = GuideTranslator(database, descriptions)
 
-            total_lines = 0
+            # ── Checkpoint: memoriza guía + línea para reanudar tras un corte ──
+            checkpoint = tg.TranslationCheckpoint()
+            files_meta = []
+            file_sources = {}
             for file_path in self.selected_files:
                 source = Path(file_path)
-                if source.exists():
-                    total_lines += len(source.read_text(encoding="utf-8", errors="ignore").splitlines())
+                if not source.exists():
+                    continue
+                if getattr(self, 'base_input_dir', None) and str(source).startswith(self.base_input_dir):
+                    rel = str(source.relative_to(self.base_input_dir))
+                else:
+                    rel = source.name
+                text_lines = source.read_text(encoding="utf-8", errors="ignore").splitlines()
+                files_meta.append({
+                    "name": rel, "rel": rel,
+                    "size": source.stat().st_size,
+                    "total_lines": len(text_lines),
+                })
+                file_sources[rel] = (source, text_lines)
 
+            job = checkpoint.start_job(
+                locale=locale, wow_version=wow_version,
+                output_dir=Path(self.output_dir), files=files_meta,
+            )
+            if job["reused"]:
+                self._log(f"♻ Checkpoint: {job['done_count']}/{job['total']} guías ya completadas — se retoma donde quedó.")
+                for name, line in job["resumed_from"].items():
+                    self._log(f"   ↳ Reanudando «{name}» desde la línea {line}")
+                for name in job["restarted"]:
+                    self._log(f"   ⚠ «{name}»: no se pudo precisar el progreso — se reinicia esa guía")
+
+            total_lines = sum(m["total_lines"] for m in files_meta)
             done_lines = 0
             lock = threading.Lock()
-            
-            def process_file(file_path):
+            for m in files_meta:
+                if job["plan"].get(m["name"], 1) == 0:
+                    done_lines += m["total_lines"]
+
+            def process_file(rel):
                 nonlocal done_lines
-                source = Path(file_path)
-                if not source.exists():
+                if self.stop_requested:
                     return
-                    
-                if getattr(self, 'base_input_dir', None) and str(source).startswith(self.base_input_dir):
-                    rel_path = source.relative_to(self.base_input_dir)
-                    destination = Path(self.output_dir) / rel_path
-                else:
-                    destination = Path(self.output_dir) / source.name
-                    
-                destination.parent.mkdir(parents=True, exist_ok=True)
-                
-                lines = source.read_text(encoding="utf-8", errors="ignore").splitlines()
-                result_lines = []
+                source, lines = file_sources[rel]
+                start_line = max(int(job["plan"].get(rel, 1) or 1), 1)
+                if start_line == 0:
+                    return  # ya completada en el checkpoint
+
+                destination = Path(self.output_dir) / rel
+                handle, keep = tg.prepare_destination(destination, start_line)
+                if start_line > 1 and keep == 0:
+                    self._log(f"⚠ «{rel}»: no se precisó la línea guardada — se reinicia esa guía")
+                buffer = []
+                written = keep
                 errors = 0
-                
-                for line_no, line in enumerate(lines, start=1):
+
+                for line_no in range(keep + 1, len(lines) + 1):
+                    if self.stop_requested:
+                        break
+                    line = lines[line_no - 1]
                     try:
-                        result_lines.append(translator.translate_line(line, file=source.name, line_no=line_no))
-                    except Exception as e:
-                        result_lines.append(line)
+                        buffer.append(translator.translate_line(line, file=source.name, line_no=line_no))
+                    except Exception:
+                        buffer.append(line)
                         errors += 1
-                        if errors <= 3:
-                            pass # log in thread can be messy
-                    
+                    written += 1
+
+                    if len(buffer) >= tg.CHECKPOINT_FLUSH_EVERY or line_no == len(lines):
+                        handle.write("\n".join(buffer) + "\n")
+                        handle.flush()
+                        buffer.clear()
+                        checkpoint.mark_progress(rel, written)
+
                     with lock:
                         done_lines += 1
                         if done_lines % 50 == 0 or done_lines == total_lines:
                             pct = int(done_lines / max(total_lines, 1) * 100)
                             stats = f"Procesando {len(self.selected_files)} guías | Google: {descriptions.stats['google']} | Caché: {descriptions.stats['cache']}"
                             self._update_progress(pct, stats)
-                            
-                destination.write_text("\n".join(result_lines) + "\n", encoding="utf-8")
+
+                if buffer:
+                    handle.write("\n".join(buffer) + "\n")
+                    handle.flush()
+                    checkpoint.mark_progress(rel, written, force=True)
+                handle.close()
+                if written >= len(lines):
+                    checkpoint.mark_done(rel)
 
             import concurrent.futures
             with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
-                executor.map(process_file, self.selected_files)
+                list(executor.map(process_file, [m["name"] for m in files_meta]))
 
             descriptions.save()
             unresolved = deduplicate_unresolved(database.unresolved)
@@ -318,40 +360,12 @@ class Bridge(QObject):
                 "locale": locale,
                 "items": unresolved
             })
-            
-            self._log(f"✅ ¡{len(self.selected_files)} guías traducidas al {locale}!")
-            
-            # Update TOC files
-            toc_files = list(addon_path.glob("*.toc"))
-            for toc_file in toc_files:
-                toc_content = toc_file.read_text(encoding="utf-8-sig")
-                modified = False
-                
-                # Check for Title
-                title_match = re.search(r'^## Title:\s*(.*)', toc_content, re.MULTILINE)
-                if title_match:
-                    title_eng = title_match.group(1).strip()
-                    title_loc = f"## Title-{locale}:"
-                    if title_loc not in toc_content:
-                        tr_title = translator.translate(title_eng)
-                        if tr_title:
-                            toc_content = re.sub(r'(^## Title:\s*.*?$)', f'\\1\n{title_loc} {tr_title}', toc_content, flags=re.MULTILINE)
-                            modified = True
-                            
-                # Check for Notes
-                notes_match = re.search(r'^## Notes:\s*(.*)', toc_content, re.MULTILINE)
-                if notes_match:
-                    notes_eng = notes_match.group(1).strip()
-                    notes_loc = f"## Notes-{locale}:"
-                    if notes_loc not in toc_content:
-                        tr_notes = translator.translate(notes_eng)
-                        if tr_notes:
-                            toc_content = re.sub(r'(^## Notes:\s*.*?$)', f'\\1\n{notes_loc} {tr_notes}', toc_content, flags=re.MULTILINE)
-                            modified = True
-                            
-                if modified:
-                    toc_file.write_text(toc_content, encoding="utf-8")
-                    self._log(f"\ud83d\udcdd {toc_file.name} actualizado con metadatos traducidos")
+
+            if self.stop_requested:
+                self._log("⏸ Traducción detenida — el progreso queda guardado. Pulsa Traducir para continuar donde quedó.")
+            else:
+                checkpoint.finish()
+                self._log(f"✅ ¡{len(self.selected_files)} guías traducidas al {locale}!")
             self._update_progress(100, self._msg("done"))
             
         except Exception as e:
