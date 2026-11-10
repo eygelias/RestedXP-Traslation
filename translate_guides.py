@@ -535,6 +535,27 @@ class LocalDatabase:
             groups.setdefault(key, data)
         if len(groups) == 1:
             return next(iter(groups.values()))
+        # Varias entradas con el mismo nombre EN (p. ej. variante clásica + variante
+        # custom sin l10n): si todas comparten nombre y solo hay una traducción
+        # oficial para el locale, esa es la respuesta — sin inventar nada.
+        by_en: dict[str, list[dict]] = {}
+        for data in candidates:
+            en = str(data.get("enUS") or data.get("en") or "").strip().casefold()
+            by_en.setdefault(en, []).append(data)
+        if len(by_en) == 1:
+            entries = next(iter(by_en.values()))
+            localized = [
+                d for d in entries
+                if str(d.get(self.locale) or d.get("es") or "").strip()
+            ]
+            if not localized:
+                return entries[0]
+            distinct = {
+                str(d.get(self.locale) or d.get("es") or "").strip().casefold()
+                for d in localized
+            }
+            if len(distinct) == 1:
+                return localized[0]
         return None
 
     def by_english_name(self, section: str, name: str) -> tuple[dict | None, str]:
@@ -570,7 +591,10 @@ class LocalDatabase:
         for en, es in sorted_zones:
             if en != es:
                 try:
-                    pattern = re.compile(re.escape(en), re.IGNORECASE)
+                    # Guardas de palabra: "Sea" no debe traducirse dentro de "Season".
+                    pattern = re.compile(
+                        rf"(?<![\w']){re.escape(en)}(?![\w'])", re.IGNORECASE
+                    )
                     patterns.append((pattern, es))
                 except re.error:
                     pass
@@ -891,10 +915,39 @@ class GuideTranslator:
             return text
         translated = self.db.translate_name(section, english, file=file, line=line_no, context=context)
         try:
-            pattern = re.compile(re.escape(english), re.IGNORECASE)
+            # Tolera puntuación final distinta entre DB ("Return to the Crossroads.")
+            # y guía ("Return to the Crossroads"), sin casar dentro de otros nombres.
+            core = english.rstrip(".!?")
+            pattern = re.compile(re.escape(core) + r"(?:[.!?]+)?(?=$|[\s,\]])", re.IGNORECASE)
             return pattern.sub(lambda _: store.add(translated), text)
         except re.error:
             return text
+
+    def _resolve_entity_ref(self, ref: str, sections: tuple, *, file: str, line_no: int, context: str,
+                            use_translate_entity: bool = False) -> str:
+        """Traduce una referencia 'Nombre::ID' al estilo Questie: por ID primero, luego por nombre.
+
+        Conserva el sufijo ::ID y no inventa: sin entrada en la DB devuelve el nombre original.
+        """
+        name, entity_id = ref, None
+        if "::" in ref:
+            name, _, rest = ref.partition("::")
+            entity_id = rest.strip() or None
+            name = name.strip()
+        if entity_id:
+            for section in sections:
+                data = self.db.by_id(section, entity_id)
+                if data:
+                    localized = select_translation(data)
+                    if localized:
+                        return f"{localized}::{entity_id}"
+        if not name:
+            return ref
+        if use_translate_entity:
+            translated = self.db.translate_entity(name, file=file, line=line_no, context=context)
+        else:
+            translated = self.db.translate_name(sections[0], name, file=file, line=line_no, context=context)
+        return f"{translated}::{entity_id}" if entity_id else translated
 
     def _inject_ids_from_command(self, command_prefix: str, visible_text: str, store: PlaceholderStore, *, file: str, line_no: int) -> str:
         result = visible_text
@@ -1015,16 +1068,16 @@ class GuideTranslator:
                 inner = text[content_start:reset_pos]
 
                 if kind == "rxp" and tag_type in ENTITY_TAG_SECTION:
-                    # V5: FRIENDLY busca en npcs + items
+                    # V5: FRIENDLY busca en npcs + items; '::ID' se resuelve por ID como Questie
                     if tag_type == "FRIENDLY":
-                        translated_inner = self.db.translate_entity(
-                            inner, file=file, line=line_no, context=f"rxp_tag:{tag_type}"
-                        )
+                        sections = ("npcs", "items")
                     else:
-                        section = ENTITY_TAG_SECTION[tag_type]
-                        translated_inner = self.db.translate_name(
-                            section, inner, file=file, line=line_no, context=f"rxp_tag:{tag_type}"
-                        )
+                        sections = (ENTITY_TAG_SECTION[tag_type],)
+                    translated_inner = self._resolve_entity_ref(
+                        inner, sections, file=file, line_no=line_no,
+                        context=f"rxp_tag:{tag_type}",
+                        use_translate_entity=(tag_type == "FRIENDLY"),
+                    )
                 elif kind == "color":
                     # V5: NO traducir contenido de colores hex (pueden ser zonas)
                     translated_inner = inner
@@ -1157,17 +1210,22 @@ class GuideTranslator:
         for cmd in (".mob ", ".target ", ".unitscan "):
             if stripped.lower().startswith(cmd):
                 prefix = line[: len(line) - len(stripped)]
-                npc_name = stripped[len(cmd):].strip()
-                if npc_name:
+                raw = stripped[len(cmd):]
+                rest, conditional = self._split_conditional(raw)
+                rest = rest.strip()
+                if rest:
                     # Handle + prefix (elite/boss indicator)
                     plus_prefix = ""
-                    if npc_name.startswith("+"):
+                    if rest.startswith("+"):
                         plus_prefix = "+"
-                        npc_name = npc_name[1:].strip()
-                    translated_npc = self.db.translate_name(
-                        "npcs", npc_name, file=file, line=line_no, context=cmd.strip()
+                        rest = rest[1:].strip()
+                    # Listas ';Nombre1;Nombre2' y referencias 'Nombre::ID'
+                    parts = [p.strip() for p in rest.split(";") if p.strip()]
+                    translated_npc = ";".join(
+                        self._resolve_entity_ref(p, ("npcs",), file=file, line_no=line_no, context=cmd.strip())
+                        for p in parts
                     )
-                    return prefix + cmd + plus_prefix + translated_npc
+                    return prefix + cmd + plus_prefix + translated_npc + (" " + conditional if conditional else "")
                 return line
 
         # ── #name y #next: traducir nombres de zona/dungeon ──
