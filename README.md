@@ -243,7 +243,7 @@ build_exe.bat
 Salida esperada:
 
 ```text
-dist/RXP_Translator_V5/RXP_Translator_V5.exe
+dist/RXP_Translator_V6/RXP_Translator_V6.exe
 ```
 
 ## Fuentes de datos

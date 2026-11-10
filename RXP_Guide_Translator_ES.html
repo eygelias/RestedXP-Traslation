@@ -863,7 +863,7 @@
             cats[k] = document.getElementById('chk-'+k).checked;
         });
         document.getElementById('btnTranslate').classList.add('active');
-        await bridge.translate(locale, JSON.stringify(cats));
+        await bridge.translate('forever', locale, JSON.stringify(cats));
         document.getElementById('btnTranslate').classList.remove('active');
     }
 

@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title RXP Translator V5 - Build EXE
+title RXP Translator V6 - Build EXE
 cd /d "%~dp0"
 
 echo ===============================================
@@ -10,12 +10,14 @@ echo.
 
 echo [1/2] Generando EXE con PyInstaller...
 
-pyinstaller --noconfirm --onedir --windowed --name "RXP_Translator_V5" ^
+pyinstaller --noconfirm --onedir --windowed --name "RXP_Translator_V6" ^
     --add-data "RXP_Guide_Translator_ES.html;." ^
     --add-data "locales_config.py;." ^
     --add-data "translate_guides.py;." ^
     --add-data "translate_addon_interface.py;." ^
     --add-data "build_database.py;." ^
+    --add-data "build_database_forever.py;." ^
+    --add-data "questiedb_forever.py;." ^
     --add-data "validate_output.py;." ^
     --add-data "database;database" ^
     --add-data "cache;cache" ^
@@ -30,19 +32,19 @@ pyinstaller --noconfirm --onedir --windowed --name "RXP_Translator_V5" ^
 echo.
 
 echo [2/2] Copiando datos adicionales...
-if exist "dist\RXP_Translator_V5" (
-    mkdir "dist\RXP_Translator_V5\output" 2>nul
-    if exist "icon.ico" copy /Y "icon.ico" "dist\RXP_Translator_V5\" >nul 2>&1
+if exist "dist\RXP_Translator_V6" (
+    mkdir "dist\RXP_Translator_V6\output" 2>nul
+    if exist "icon.ico" copy /Y "icon.ico" "dist\RXP_Translator_V6\" >nul 2>&1
     echo Listo.
 ) else (
-    echo ERROR: No se genero la carpeta dist\RXP_Translator_V5
+    echo ERROR: No se genero la carpeta dist\RXP_Translator_V6
 )
 
 echo.
 echo ===============================================
-if exist "dist\RXP_Translator_V5\RXP_Translator_V5.exe" (
+if exist "dist\RXP_Translator_V6\RXP_Translator_V6.exe" (
     echo  EXE generado correctamente!
-    echo  Ruta: %~dp0dist\RXP_Translator_V5\RXP_Translator_V5.exe
+    echo  Ruta: %~dp0dist\RXP_Translator_V6\RXP_Translator_V6.exe
 ) else (
     echo  ERROR: El EXE no se genero.
 )
