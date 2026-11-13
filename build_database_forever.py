@@ -29,6 +29,7 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -116,6 +117,53 @@ def build_section(db: QuestieDBForever, entity_type: str) -> Dict[str, dict]:
     return entries
 
 
+def merge_client_names(entries: Dict[str, dict], client: dict, locale: str) -> int:
+    """Sobrescribe con los nombres REALES del cliente (caché WDB extraída).
+
+    El cliente es la máxima autoridad: su cadena es exactamente la que el juego
+    muestra. Devuelve cuántas entradas cambiaron.
+    """
+    by_id = {
+        int(data["id"]): key
+        for key, data in entries.items()
+        if isinstance(data, dict) and isinstance(data.get("id"), int)
+    }
+    changed = 0
+    for cid_str, info in client.items():
+        try:
+            cid = int(cid_str)
+        except (TypeError, ValueError):
+            continue
+        key = by_id.get(cid)
+        if key is None:
+            continue
+        name = str((info or {}).get("name") or "").strip()
+        if not name:
+            continue
+        if str(entries[key].get(locale) or "") != name:
+            entries[key][locale] = name
+            entries[key][f"client_{locale}"] = True
+            changed += 1
+    return changed
+
+
+def overlay_client_names(result: dict) -> int:
+    """Aplica database/client_names_<locale>.json sobre npcs y objects."""
+    total = 0
+    for cpath in sorted(DATABASE_DIR.glob("client_names_*.json")):
+        locale = cpath.stem.replace("client_names_", "")
+        try:
+            payload = json.loads(cpath.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        for section in ("npcs", "objects"):
+            changed = merge_client_names(result.get(section, {}), payload.get(section, {}), locale)
+            if changed:
+                print(f"  {locale}/{section}: {changed} nombres corregidos con el cliente")
+                total += changed
+    return total
+
+
 def validate(result: dict) -> bool:
     problems = []
     for section, minimum in MINIMUM_EXPECTED.items():
@@ -179,6 +227,12 @@ def main() -> int:
             total_npcnames += updated
     print(f"  Total NPCnames aplicados: {total_npcnames}")
     result["meta"]["npcnames_merged"] = total_npcnames
+
+    # ── Overlay del CLIENTE (máxima autoridad: lo que el juego muestra) ──
+    print(f"\n── Nombres reales del cliente (caché WDB) ──")
+    total_client = overlay_client_names(result)
+    print(f"  Total nombres de cliente aplicados: {total_client}")
+    result["meta"]["client_names_merged"] = total_client
 
     if not validate(result):
         return 1

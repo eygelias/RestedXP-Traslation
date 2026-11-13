@@ -1,8 +1,8 @@
 {
   "meta": {
     "generator": "build_database_forever.py",
-    "created_utc": "2026-11-10T13:44:47.534251+00:00",
-    "questiedb_source": "C:\\Users\\ELIA\\Desktop\\QuestieDB-1.0.13-Forever.zip",
+    "created_utc": "2026-11-13T15:33:03.933780+00:00",
+    "questiedb_source": "C:\\Users\\ELIA\\XiaomiMiMoProjects\\.mimo-sessions\\2026\\11\\10\\https-github-com-eygelias-restedxp-traslation\\questiedb-forever\\QuestieDB",
     "questiedb_flavor": "forever",
     "format": "QuestieDB 1.x baked TOC + NPCnames.lua (multi-locale)",
     "supported_locales": [
@@ -27,7 +27,8 @@
       "zhCN",
       "zhTW"
     ],
-    "npcnames_merged": 24820
+    "npcnames_merged": 24820,
+    "client_names_merged": 202
   },
   "quests": {
     "2": {
@@ -68552,7 +68553,7 @@
       "en": "Defias Thug",
       "deDE": "Schmalspurrohling",
       "esES": "Matón sin cerebro",
-      "esMX": "Matón sin cerebro",
+      "esMX": "Matón Defias",
       "frFR": "Nervi de pacotille",
       "koKR": "하찮은 폭력배",
       "ptBR": "Capanga Défias",
@@ -68566,7 +68567,8 @@
       "npcnames_ruRU": true,
       "npcnames_koKR": true,
       "npcnames_zhTW": true,
-      "npcnames_zhCN": true
+      "npcnames_zhCN": true,
+      "client_esMX": true
     },
     "40": {
       "id": 40,
@@ -68674,13 +68676,14 @@
       "en": "Thuros Lightfingers",
       "deDE": "Thuros Lightfingers",
       "esES": "Thuros Dedoluz",
-      "esMX": "Thuros Dedoluz",
+      "esMX": "Thuros Dedos Ligeros",
       "frFR": "Thuros Doigts-agiles",
       "koKR": "투로스 라이트핑거",
       "ptBR": "Turos Mão-leve",
       "ruRU": "Турос Ловкорук",
       "zhCN": "索罗斯·莱特芬格",
-      "zhTW": "索羅斯·萊特芬格"
+      "zhTW": "索羅斯·萊特芬格",
+      "client_esMX": true
     },
     "62": {
       "id": 62,
@@ -68761,13 +68764,14 @@
       "en": "Kurran Steele",
       "deDE": "Kurran Steele",
       "esES": "Kurran Aceralia",
-      "esMX": "Kurran Aceralia",
+      "esMX": "Kurran Aceral",
       "frFR": "Kurran Steele",
       "koKR": "쿠란 스틸",
       "ptBR": "Torren Ácero",
       "ruRU": "Курран Сталль",
       "zhCN": "库兰·斯蒂利",
-      "zhTW": "庫蘭·斯蒂利"
+      "zhTW": "庫蘭·斯蒂利",
+      "client_esMX": true
     },
     "78": {
       "id": 78,
@@ -68873,13 +68877,14 @@
       "en": "Defias Cutpurse",
       "deDE": "Taschendieb der Defias",
       "esES": "Cortapurso Defias",
-      "esMX": "Cortapurso Defias",
+      "esMX": "Ratero Defias",
       "frFR": "Vide-gousset défias",
       "koKR": "데피아즈단 소매치기",
       "ptBR": "Punguista Défias",
       "ruRU": "Карманник из Братства Справедливости",
       "zhCN": "迪菲亚小偷",
-      "zhTW": "迪菲亞小偷"
+      "zhTW": "迪菲亞小偷",
+      "client_esMX": true
     },
     "95": {
       "id": 95,
@@ -68931,13 +68936,14 @@
       "en": "Morgaine the Sly",
       "deDE": "Morgaine die Verschlagene",
       "esES": "Morgaine el Astuto",
-      "esMX": "Morgaine el Astuto",
+      "esMX": "Morgaine la Astuta",
       "frFR": "Morgaine la rusée",
       "koKR": "교활한 도적 몰게니",
       "ptBR": "Morgana, a Dissimulada",
       "ruRU": "Моргана Лукавая",
       "zhCN": "狡猾的莫加尼",
-      "zhTW": "狡猾的莫加尼"
+      "zhTW": "狡猾的莫加尼",
+      "client_esMX": true
     },
     "100": {
       "id": 100,
@@ -69068,7 +69074,7 @@
       "en": "Defias Bandit",
       "deDE": "Bandit",
       "esES": "Bandido",
-      "esMX": "Bandido",
+      "esMX": "Bandido Defias",
       "frFR": "Bandit",
       "koKR": "좀도둑",
       "ptBR": "Bandido Défias",
@@ -69082,7 +69088,8 @@
       "npcnames_ruRU": true,
       "npcnames_koKR": true,
       "npcnames_zhTW": true,
-      "npcnames_zhCN": true
+      "npcnames_zhCN": true,
+      "client_esMX": true
     },
     "117": {
       "id": 117,
@@ -71872,7 +71879,7 @@
       "en": "Guard Parker",
       "deDE": "Wachhauptmann Parker",
       "esES": "Capitán de la Avanzada Parker",
-      "esMX": "Capitán de la Avanzada Parker",
+      "esMX": "Guardia Parker",
       "frFR": "Capitaine de la garde Parker",
       "koKR": "파수대장 파커",
       "ptBR": "Guarda Florestan",
@@ -71886,7 +71893,8 @@
       "npcnames_ruRU": true,
       "npcnames_koKR": true,
       "npcnames_zhTW": true,
-      "npcnames_zhCN": true
+      "npcnames_zhCN": true,
+      "client_esMX": true
     },
     "465": {
       "id": 465,
@@ -72166,13 +72174,14 @@
       "en": "Protector Weaver",
       "deDE": "Beschützer Weaver",
       "esES": "Tejedor protector",
-      "esMX": "Tejedor protector",
+      "esMX": "Protector Tejedor",
       "frFR": "Protecteur Weaver",
       "koKR": "민병대원 위버",
       "ptBR": "Protetor Tessálio",
       "ruRU": "Ткач-заступник",
       "zhCN": "守卫者维沃尔",
-      "zhTW": "保衛者維沃爾"
+      "zhTW": "保衛者維沃爾",
+      "client_esMX": true
     },
     "489": {
       "id": 489,
@@ -72180,13 +72189,14 @@
       "en": "Protector Dutfield",
       "deDE": "Beschützer Dutfield",
       "esES": "Protector Dutfield",
-      "esMX": "Protector Dutfield",
+      "esMX": "Protector Deber",
       "frFR": "Protecteur Dutfield",
       "koKR": "민병대원 듀트필드",
       "ptBR": "Protetor Teutônio",
       "ruRU": "Заступник Датфилд",
       "zhCN": "守卫者达菲欧德",
-      "zhTW": "保衛者達菲歐德"
+      "zhTW": "保衛者達菲歐德",
+      "client_esMX": true
     },
     "490": {
       "id": 490,
@@ -73216,13 +73226,14 @@
       "en": "Chicken",
       "deDE": "Huhn",
       "esES": "Gallina",
-      "esMX": "Gallina",
+      "esMX": "Pollo",
       "frFR": "Poulet",
       "koKR": "닭",
       "ptBR": "Galinha",
       "ruRU": "Курица",
       "zhCN": "鸡",
-      "zhTW": "雞"
+      "zhTW": "雞",
+      "client_esMX": true
     },
     "622": {
       "id": 622,
@@ -75574,7 +75585,7 @@
       "en": "Deputy Willem",
       "deDE": "Stellvertreter Willem",
       "esES": "Sargento Willem",
-      "esMX": "Sargento Willem",
+      "esMX": "Ayudante de alguacil Willem",
       "frFR": "Sergent Willem",
       "koKR": "하사관 윌렘",
       "ptBR": "Cabo Vilém",
@@ -75587,7 +75598,8 @@
       "npcnames_frFR": true,
       "npcnames_ruRU": true,
       "npcnames_koKR": true,
-      "npcnames_zhTW": true
+      "npcnames_zhTW": true,
+      "client_esMX": true
     },
     "824": {
       "id": 824,
@@ -75667,13 +75679,14 @@
       "en": "Sand Crawler",
       "deDE": "Sandkriecher",
       "esES": "Reptador de la arena",
-      "esMX": "Reptador de la arena",
+      "esMX": "Reptador de arena",
       "frFR": "Clampant des sables",
       "koKR": "모래게",
       "ptBR": "Aretisco",
       "ruRU": "Песчаный краб",
       "zhCN": "沙行蟹",
-      "zhTW": "沙行蟹"
+      "zhTW": "沙行蟹",
+      "client_esMX": true
     },
     "831": {
       "id": 831,
@@ -75695,7 +75708,7 @@
       "en": "Dust Devil",
       "deDE": "Entfesselter Zyklon",
       "esES": "Ciclón desatado",
-      "esMX": "Ciclón desatado",
+      "esMX": "Diablo de polvo",
       "frFR": "Cyclone délié",
       "koKR": "속박 풀린 소용돌이",
       "ptBR": "Redemoinho de Poeira",
@@ -75709,7 +75722,8 @@
       "npcnames_ruRU": true,
       "npcnames_koKR": true,
       "npcnames_zhTW": true,
-      "npcnames_zhCN": true
+      "npcnames_zhCN": true,
+      "client_esMX": true
     },
     "833": {
       "id": 833,
@@ -76154,13 +76168,14 @@
       "en": "Protector Dorana",
       "deDE": "Beschützerin Dorana",
       "esES": "Protector Dorana",
-      "esMX": "Protector Dorana",
+      "esMX": "Protectora Dorana",
       "frFR": "Protecteur Dorana",
       "koKR": "민병대원 도라나",
       "ptBR": "Protetora Dorana",
       "ruRU": "Заступница Дорана",
       "zhCN": "守卫者多拉娜",
-      "zhTW": "保衛者朵拉娜"
+      "zhTW": "保衛者朵拉娜",
+      "client_esMX": true
     },
     "870": {
       "id": 870,
@@ -76168,13 +76183,14 @@
       "en": "Protector Deni",
       "deDE": "Beschützerin Deni",
       "esES": "Protector Deni",
-      "esMX": "Protector Deni",
+      "esMX": "Protectora Deni",
       "frFR": "Protecteur Deni",
       "koKR": "민병대원 데니",
       "ptBR": "Protetora Deni",
       "ruRU": "Заступница Дени",
       "zhCN": "守卫者德尼",
-      "zhTW": "保衛者德尼"
+      "zhTW": "保衛者德尼",
+      "client_esMX": true
     },
     "871": {
       "id": 871,
@@ -76417,13 +76433,14 @@
       "en": "Fawn",
       "deDE": "Rehkitz",
       "esES": "Cervatillo",
-      "esMX": "Cervatillo",
+      "esMX": "Cervato",
       "frFR": "Faon",
       "koKR": "새끼 사슴",
       "ptBR": "Corço",
       "ruRU": "Олененок",
       "zhCN": "小鹿",
-      "zhTW": "小鹿"
+      "zhTW": "小鹿",
+      "client_esMX": true
     },
     "891": {
       "id": 891,
@@ -77288,13 +77305,14 @@
       "en": "Dawn Brightstar",
       "deDE": "Dawn Brightstar",
       "esES": "Estrella brillante del alba",
-      "esMX": "Estrella brillante del alba",
+      "esMX": "Alba Estrellaclara",
       "frFR": "Dawn Brightstar",
       "koKR": "던 브라이트스타",
       "ptBR": "Estela Dalva",
       "ruRU": "Дон Брайтстар",
       "zhCN": "当恩·布赖特斯塔",
-      "zhTW": "當恩·布賴特斯塔"
+      "zhTW": "當恩·布賴特斯塔",
+      "client_esMX": true
     },
     "959": {
       "id": 959,
@@ -79381,13 +79399,14 @@
       "en": "Snow Tracker Wolf",
       "deDE": "Schneefährtenleserwolf",
       "esES": "Lobo rastreador de la nieve",
-      "esMX": "Lobo rastreador de la nieve",
+      "esMX": "Lobo rastreador de las nieves",
       "frFR": "Loup pisteur des neiges",
       "koKR": "새끼 겨울늑대",
       "ptBR": "Lobo Rastreador da Neve",
       "ruRU": "Снежный гончий волк",
       "zhCN": "雪狼",
-      "zhTW": "雪狼"
+      "zhTW": "雪狼",
+      "client_esMX": true
     },
     "1139": {
       "id": 1139,
@@ -80026,7 +80045,7 @@
       "en": "Elder Black Bear",
       "deDE": "Schwarzbär",
       "esES": "Oso negro",
-      "esMX": "Oso negro",
+      "esMX": "Oso negro mayor",
       "frFR": "Ours noir",
       "koKR": "검은곰",
       "ptBR": "Urso Preto Ancião",
@@ -80040,7 +80059,8 @@
       "npcnames_ruRU": true,
       "npcnames_koKR": true,
       "npcnames_zhTW": true,
-      "npcnames_zhCN": true
+      "npcnames_zhCN": true,
+      "client_esMX": true
     },
     "1187": {
       "id": 1187,
@@ -80134,13 +80154,14 @@
       "en": "Loch Frenzy",
       "deDE": "Lochfrenzy",
       "esES": "Demente del Loch",
-      "esMX": "Demente del Loch",
+      "esMX": "Furia del Loch Modan",
       "frFR": "Furie du loch",
       "koKR": "호수프렌지",
       "ptBR": "Farnesim Lacustre",
       "ruRU": "Бешенка",
       "zhCN": "洛克湖狂鱼",
-      "zhTW": "洛克湖狂魚"
+      "zhTW": "洛克湖狂魚",
+      "client_esMX": true
     },
     "1194": {
       "id": 1194,
@@ -81419,13 +81440,14 @@
       "en": "Lina Stover",
       "deDE": "Lina Stover",
       "esES": "Lina Paladare",
-      "esMX": "Lina Paladare",
+      "esMX": "Lina Hornillos",
       "frFR": "Lina Stover",
       "koKR": "리나 스토버",
       "ptBR": "Lina Fornalha",
       "ruRU": "Лина Стовер",
       "zhCN": "黎娜·斯图瓦",
-      "zhTW": "黎娜·斯圖瓦"
+      "zhTW": "黎娜·斯圖瓦",
+      "client_esMX": true
     },
     "1298": {
       "id": 1298,
@@ -85286,13 +85308,14 @@
       "en": "Northshire Guard",
       "deDE": "Wache von Nordhain",
       "esES": "Guardia Norvera",
-      "esMX": "Guardia Norvera",
+      "esMX": "Guardia de Villanorte",
       "frFR": "Garde de Northshire",
       "koKR": "노스샤이어 경비병",
       "ptBR": "Guarda de Vila Norte",
       "ruRU": "Стражник Североземья",
       "zhCN": "北郡守卫",
-      "zhTW": "北郡守衛"
+      "zhTW": "北郡守衛",
+      "client_esMX": true
     },
     "1645": {
       "id": 1645,
@@ -85514,13 +85537,14 @@
       "en": "Dextren Ward",
       "deDE": "Dextren Ward",
       "esES": "Dextren Tutor",
-      "esMX": "Dextren Tutor",
+      "esMX": "Dextren Ward",
       "frFR": "Dextren Ward",
       "koKR": "덱스트렌 워드",
       "ptBR": "Flávio Lúcio",
       "ruRU": "Декстрен Вард",
       "zhCN": "迪克斯特·瓦德",
-      "zhTW": "迪克斯特·瓦德"
+      "zhTW": "迪克斯特·瓦德",
+      "client_esMX": true
     },
     "1664": {
       "id": 1664,
@@ -88748,13 +88772,14 @@
       "en": "Servant of Azora",
       "deDE": "Diener von Azora",
       "esES": "Vasallo de Azora",
-      "esMX": "Vasallo de Azora",
+      "esMX": "Sirviente de Azora",
       "frFR": "Serviteur d’Azora",
       "koKR": "아조라의 하인",
       "ptBR": "Serviçal de Azora",
       "ruRU": "Слуга Азоры",
       "zhCN": "阿祖拉的仆从",
-      "zhTW": "阿祖拉的僕從"
+      "zhTW": "阿祖拉的僕從",
+      "client_esMX": true
     },
     "1950": {
       "id": 1950,
@@ -89858,13 +89883,14 @@
       "en": "Forlorn Spirit",
       "deDE": "Unglückseliger Geist",
       "esES": "Espíritu abandonado",
-      "esMX": "Espíritu abandonado",
+      "esMX": "Espíritu melancólico",
       "frFR": "Esprit mélancolique",
       "koKR": "외로운 영혼",
       "ptBR": "Espírito Desamparado",
       "ruRU": "Неприкаянный дух",
       "zhCN": "弃灵",
-      "zhTW": "棄靈"
+      "zhTW": "棄靈",
+      "client_esMX": true
     },
     "2045": {
       "id": 2045,
@@ -91187,13 +91213,14 @@
       "en": "Thistle Bear",
       "deDE": "Distelbär",
       "esES": "Oso Cardo",
-      "esMX": "Oso Cardo",
+      "esMX": "Oso cardo",
       "frFR": "Ours des chardons",
       "koKR": "엉겅퀴곰",
       "ptBR": "Ursocardo",
       "ruRU": "Колючешерстный медведь",
       "zhCN": "蓟熊",
-      "zhTW": "薊熊"
+      "zhTW": "薊熊",
+      "client_esMX": true
     },
     "2164": {
       "id": 2164,
@@ -91621,13 +91648,14 @@
       "en": "Crier Goodman",
       "deDE": "Ausrufer Goodman",
       "esES": "Crier Bonombre",
-      "esMX": "Crier Bonombre",
+      "esMX": "Pregonero Buenhombre",
       "frFR": "Crieur Goodman",
       "koKR": "포고꾼 굿맨",
       "ptBR": "Brados Bonhomme",
       "ruRU": "Глашатай Гудман",
       "zhCN": "公告员古德曼",
-      "zhTW": "公告員古德曼"
+      "zhTW": "公告員古德曼",
+      "client_esMX": true
     },
     "2201": {
       "id": 2201,
@@ -94865,13 +94893,14 @@
       "en": "Olivia Burnside",
       "deDE": "Olivia Burnside",
       "esES": "Olivia Ladoquemao",
-      "esMX": "Olivia Ladoquemao",
+      "esMX": "Olivia Ladoquemado",
       "frFR": "Olivia Burnside",
       "koKR": "올리비아 번사이드",
       "ptBR": "Didi Ardelado",
       "ruRU": "Оливия Бернсайд",
       "zhCN": "奥利维亚·伯恩赛德",
-      "zhTW": "奧利維亞·伯恩賽德"
+      "zhTW": "奧利維亞·伯恩賽德",
+      "client_esMX": true
     },
     "2456": {
       "id": 2456,
@@ -94897,13 +94926,14 @@
       "en": "John Burnside",
       "deDE": "John Burnside",
       "esES": "John Ladoquemao",
-      "esMX": "John Ladoquemao",
+      "esMX": "John Ladoquemado",
       "frFR": "John Burnside",
       "koKR": "존 번사이드",
       "ptBR": "Zaca Ardelado",
       "ruRU": "Джон Бернсайд",
       "zhCN": "约翰·伯恩赛德",
-      "zhTW": "約翰·伯恩賽德"
+      "zhTW": "約翰·伯恩賽德",
+      "client_esMX": true
     },
     "2458": {
       "id": 2458,
@@ -97055,13 +97085,14 @@
       "en": "Hammerfall Grunt",
       "deDE": "Grunzer von Hammerfall",
       "esES": "Bruto Sentencia",
-      "esMX": "Bruto Sentencia",
+      "esMX": "Bruto de Sentencia",
       "frFR": "Grunt de Trépas-d'Orgrim",
       "koKR": "해머폴 그런트",
       "ptBR": "Bruto da Ruína do Martelo",
       "ruRU": "Рубака Павшего Молота",
       "zhCN": "落锤步兵",
-      "zhTW": "落錘蠻兵"
+      "zhTW": "落錘蠻兵",
+      "client_esMX": true
     },
     "2620": {
       "id": 2620,
@@ -97069,13 +97100,14 @@
       "en": "Prairie Dog",
       "deDE": "Präriehund",
       "esES": "Perro de pradera",
-      "esMX": "Perro de pradera",
+      "esMX": "Perro de la pradera",
       "frFR": "Chien de prairie",
       "koKR": "땅다람쥐",
       "ptBR": "Cão-da-pradaria",
       "ruRU": "Луговая собачка",
       "zhCN": "草原土拨鼠",
-      "zhTW": "草原土撥鼠"
+      "zhTW": "草原土撥鼠",
+      "client_esMX": true
     },
     "2621": {
       "id": 2621,
@@ -97198,13 +97230,14 @@
       "en": "Earthbind Totem",
       "deDE": "Totem der Erdbindung",
       "esES": "Tótem de la tierra",
-      "esMX": "Tótem de la tierra",
+      "esMX": "Tótem Nexo Terrestre",
       "frFR": "Totem de lien terrestre",
       "koKR": "속박의 토템",
       "ptBR": "Totem de Prisão Terrena",
       "ruRU": "Тотем оков земли",
       "zhCN": "地缚图腾",
-      "zhTW": "地縛圖騰"
+      "zhTW": "地縛圖騰",
+      "client_esMX": true
     },
     "2634": {
       "id": 2634,
@@ -100414,13 +100447,14 @@
       "en": "Snake",
       "deDE": "Natter",
       "esES": "Víbora",
-      "esMX": "Víbora",
+      "esMX": "Culebra",
       "frFR": "Serpent",
       "koKR": "뱀",
       "ptBR": "Cobra",
       "ruRU": "Змея",
       "zhCN": "蛇",
-      "zhTW": "蛇"
+      "zhTW": "蛇",
+      "client_esMX": true
     },
     "2915": {
       "id": 2915,
@@ -108750,13 +108784,14 @@
       "en": "Miss Danna",
       "deDE": "Miss Danna",
       "esES": "Doña Danna",
-      "esMX": "Doña Danna",
+      "esMX": "Señorita Danna",
       "frFR": "Mademoiselle Danna",
       "koKR": "다나",
       "ptBR": "Srta. Leda",
       "ruRU": "Мисс Данна",
       "zhCN": "丹娜小姐",
-      "zhTW": "丹娜小姐"
+      "zhTW": "丹娜小姐",
+      "client_esMX": true
     },
     "3514": {
       "id": 3514,
@@ -112457,7 +112492,7 @@
       "en": "Caylais Moonfeather",
       "deDE": "Teldira Mondfeder",
       "esES": "Teldira Plumalunar",
-      "esMX": "Teldira Plumalunar",
+      "esMX": "Caylais Plumalunar",
       "frFR": "Teldira Plumelune",
       "koKR": "텔디라 문페더",
       "ptBR": "Caylais Plumaluna",
@@ -112471,7 +112506,8 @@
       "npcnames_ruRU": true,
       "npcnames_koKR": true,
       "npcnames_zhTW": true,
-      "npcnames_zhCN": true
+      "npcnames_zhCN": true,
+      "client_esMX": true
     },
     "3842": {
       "id": 3842,
@@ -112750,13 +112786,14 @@
       "en": "Fel Steed",
       "deDE": "Teufelsross",
       "esES": "Corcel nefasto",
-      "esMX": "Corcel nefasto",
+      "esMX": "Corcel vil",
       "frFR": "Palefroi corrompu",
       "koKR": "지옥마",
       "ptBR": "Corcel Vil",
       "ruRU": "Конь скверны",
       "zhCN": "地狱战马",
-      "zhTW": "魔化戰馬"
+      "zhTW": "魔化戰馬",
+      "client_esMX": true
     },
     "3865": {
       "id": 3865,
@@ -117931,13 +117968,14 @@
       "en": "Odo the Blindwatcher",
       "deDE": "Odo der Blindseher",
       "esES": "Odo el Cegato",
-      "esMX": "Odo el Cegato",
+      "esMX": "Odo el Vigía Ciego",
       "frFR": "Odo l'Aveugle",
       "koKR": "눈먼감시자 오도",
       "ptBR": "Odo, o Vigia Cego",
       "ruRU": "Одо Слепой Страж",
       "zhCN": "盲眼守卫奥杜",
-      "zhTW": "『盲眼守衛』奧杜"
+      "zhTW": "『盲眼守衛』奧杜",
+      "client_esMX": true
     },
     "4280": {
       "id": 4280,
@@ -119528,13 +119566,14 @@
       "en": "Overlord Ramtusk",
       "deDE": "Oberanführer Rammhauer",
       "esES": "Señor Supremo Colmicarnero",
-      "esMX": "Señor Supremo Colmicarnero",
+      "esMX": "Señor supremo Colmicarnero",
       "frFR": "Seigneur Brusquebroche",
       "koKR": "대군주 램터스크",
       "ptBR": "Lorde Supremo Marretusco",
       "ruRU": "Властитель Таранный Клык",
       "zhCN": "主宰拉姆塔斯",
-      "zhTW": "拉姆塔斯主宰"
+      "zhTW": "拉姆塔斯主宰",
+      "client_esMX": true
     },
     "4421": {
       "id": 4421,
@@ -119626,13 +119665,14 @@
       "en": "Death Speaker Jargba",
       "deDE": "Todessprecher Jargba",
       "esES": "Médium Jargba",
-      "esMX": "Médium Jargba",
+      "esMX": "Portavoz de la muerte Jargba",
       "frFR": "Nécrorateur Jargba",
       "koKR": "죽음의예언자 잘그바",
       "ptBR": "Morta-voz Jargba",
       "ruRU": "Вестник смерти Джаргба",
       "zhCN": "亡语者贾格巴",
-      "zhTW": "亡語者賈格巴"
+      "zhTW": "亡語者賈格巴",
+      "client_esMX": true
     },
     "4429": {
       "id": 4429,
@@ -123538,7 +123578,7 @@
       "en": "Ultham Ironhorn",
       "deDE": "Ultham Eisenhorn",
       "esES": "Ultham Ferrocorno",
-      "esMX": "Ultham Ferrocorno",
+      "esMX": "Ulthaan Ferrocorno",
       "frFR": "Ultham Corne-de-fer",
       "koKR": "울담 아이언혼",
       "ptBR": "Ultham Chifrerro",
@@ -123548,7 +123588,8 @@
       "npcnames_esES": true,
       "npcnames_esMX": true,
       "npcnames_deDE": true,
-      "npcnames_frFR": true
+      "npcnames_frFR": true,
+      "client_esMX": true
     },
     "4773": {
       "id": 4773,
@@ -125309,13 +125350,14 @@
       "en": "Old Town Thug",
       "deDE": "Raufbold der Altstadt",
       "esES": "Matón del casco antiguo",
-      "esMX": "Matón del casco antiguo",
+      "esMX": "Matón del Casco Antiguo",
       "frFR": "Nervi de la vieille ville",
       "koKR": "구시가지 흉악범",
       "ptBR": "Capanga da Cidade Velha",
       "ruRU": "Лиходей из Старого города",
       "zhCN": "旧城区暴徒",
-      "zhTW": "舊城區暴徒"
+      "zhTW": "舊城區暴徒",
+      "client_esMX": true
     },
     "4970": {
       "id": 4970,
@@ -126485,13 +126527,14 @@
       "en": "Mangorn Flinthammer",
       "deDE": "Mangorn Flinthammer",
       "esES": "Mangorn Hachílex",
-      "esMX": "Mangorn Hachílex",
+      "esMX": "Mangorn Martílex",
       "frFR": "Mangorn Flinthammer",
       "koKR": "맨고른 플린트해머",
       "ptBR": "Mangorn Pederterlo",
       "ruRU": "Нак",
       "zhCN": "曼高恩·火锤",
-      "zhTW": "曼高恩·火錘"
+      "zhTW": "曼高恩·火錘",
+      "client_esMX": true
     },
     "5108": {
       "id": 5108,
@@ -126499,13 +126542,14 @@
       "en": "Raena Flinthammer",
       "deDE": "Raena Flinthammer",
       "esES": "Raena Hachílex",
-      "esMX": "Raena Hachílex",
+      "esMX": "Raena Martílex",
       "frFR": "Raena Flinthammer",
       "koKR": "레나 플린트해머",
       "ptBR": "Raena Pedertelo",
       "ruRU": "Раена Кремнемолот",
       "zhCN": "莱纳·火锤",
-      "zhTW": "萊納·火錘"
+      "zhTW": "萊納·火錘",
+      "client_esMX": true
     },
     "5109": {
       "id": 5109,
@@ -127590,13 +127634,14 @@
       "en": "Rebecca Laughlin",
       "deDE": "Rebecca Laughlin",
       "esES": "Rebecca Laughlin",
-      "esMX": "Rebecca Laughlin",
+      "esMX": "Rebecca Risante",
       "frFR": "Rebecca Laughlin",
       "koKR": "레베카 래플린",
       "ptBR": "Marilde Beltron",
       "ruRU": "Ребекка Лафлин",
       "zhCN": "瑞贝卡·拉弗林",
-      "zhTW": "瑞貝卡·拉弗林"
+      "zhTW": "瑞貝卡·拉弗林",
+      "client_esMX": true
     },
     "5194": {
       "id": 5194,
@@ -130646,13 +130691,14 @@
       "en": "Kathrum Axehand",
       "deDE": "Kathrum Axehand",
       "esES": "Kathrum Manacha",
-      "esMX": "Kathrum Manacha",
+      "esMX": "Kathrum Mano de Hacha",
       "frFR": "Kathrum Axehand",
       "koKR": "카스룸 액스핸드",
       "ptBR": "Kathrum Mão de Acha",
       "ruRU": "Катрум Топорище",
       "zhCN": "卡斯鲁姆·斧拳",
-      "zhTW": "卡斯魯姆·斧拳"
+      "zhTW": "卡斯魯姆·斧拳",
+      "client_esMX": true
     },
     "5510": {
       "id": 5510,
@@ -131071,13 +131117,14 @@
       "en": "Fizzlebang Booms",
       "deDE": "Fizzlebang Booms",
       "esES": "Fizzlebang Explot",
-      "esMX": "Fizzlebang Explot",
+      "esMX": "Fizzlebang Bums",
       "frFR": "Fizzlebang Booms",
       "koKR": "피즐뱅 붐즈",
       "ptBR": "Chiabangue Buum",
       "ruRU": "Физзблям Бум",
       "zhCN": "菲斯巴恩",
-      "zhTW": "菲斯巴恩"
+      "zhTW": "菲斯巴恩",
+      "client_esMX": true
     },
     "5570": {
       "id": 5570,
@@ -132768,13 +132815,14 @@
       "en": "Dreamscythe",
       "deDE": "Traumsense",
       "esES": "Guadañasueños",
-      "esMX": "Guadañasueños",
+      "esMX": "Segasueños",
       "frFR": "Fauche-rêve",
       "koKR": "드림사이드",
       "ptBR": "Darquimeros",
       "ruRU": "Жнец Снов",
       "zhCN": "德姆塞卡尔",
-      "zhTW": "德姆塞卡爾"
+      "zhTW": "德姆塞卡爾",
+      "client_esMX": true
     },
     "5722": {
       "id": 5722,
@@ -134663,13 +134711,14 @@
       "en": "Stoneskin Totem",
       "deDE": "Totem der Steinhaut",
       "esES": "Tótem piel de piedra",
-      "esMX": "Tótem piel de piedra",
+      "esMX": "Tótem Piel de piedra",
       "frFR": "Totem de Peau de pierre",
       "koKR": "돌가죽 토템",
       "ptBR": "Totem Litopele",
       "ruRU": "Тотем каменной кожи",
       "zhCN": "石肤图腾",
-      "zhTW": "石甲圖騰"
+      "zhTW": "石甲圖騰",
+      "client_esMX": true
     },
     "5874": {
       "id": 5874,
@@ -135199,13 +135248,14 @@
       "en": "Tremor Totem",
       "deDE": "Totem des Erdstoßes",
       "esES": "Tótem del Temblor",
-      "esMX": "Tótem del Temblor",
+      "esMX": "Tótem de tremor",
       "frFR": "Totem de Séisme",
       "koKR": "진동의 토템",
       "ptBR": "Totem Sísmico",
       "ruRU": "Тотем трепета",
       "zhCN": "战栗图腾",
-      "zhTW": "戰慄圖騰"
+      "zhTW": "戰慄圖騰",
+      "client_esMX": true
     },
     "5914": {
       "id": 5914,
@@ -137461,13 +137511,14 @@
       "en": "School of Fish",
       "deDE": "Fischschwarm",
       "esES": "Cardumen",
-      "esMX": "Cardumen",
+      "esMX": "Banco de peces",
       "frFR": "Banc de poisson",
       "koKR": "물고기 떼",
       "ptBR": "Cardume",
       "ruRU": "Косяк рыбы",
       "zhCN": "鱼群",
-      "zhTW": "魚群"
+      "zhTW": "魚群",
+      "client_esMX": true
     },
     "6146": {
       "id": 6146,
@@ -139204,14 +139255,15 @@
       "en": "Dane Winslow",
       "deDE": "Dane Winsloe",
       "esES": "Dane Suaven",
-      "esMX": "Dane Suaven",
+      "esMX": "Dane Winslow",
       "frFR": "Dane Winslow",
       "koKR": "데인 윈슬로",
       "ptBR": "Dimas Victório",
       "ruRU": "Дейн Винслоу",
       "zhCN": "丹恩·温斯洛",
       "zhTW": "丹恩·溫斯洛",
-      "npcnames_deDE": true
+      "npcnames_deDE": true,
+      "client_esMX": true
     },
     "6374": {
       "id": 6374,
@@ -142056,13 +142108,14 @@
       "en": "Obsidian Sentinel",
       "deDE": "Obsidianschildwache",
       "esES": "Centinela Obsidiano",
-      "esMX": "Centinela Obsidiano",
+      "esMX": "Centinela obsidiana",
       "frFR": "Sentinelle d'obsidienne",
       "koKR": "흑요석 파수꾼",
       "ptBR": "Sentinela de Obsidiana",
       "ruRU": "Обсидиановый часовой",
       "zhCN": "黑曜石哨兵",
-      "zhTW": "黑曜石哨兵"
+      "zhTW": "黑曜石哨兵",
+      "client_esMX": true
     },
     "7024": {
       "id": 7024,
@@ -143537,13 +143590,14 @@
       "en": "Ancient Stone Keeper",
       "deDE": "Uralter Steinbewahrer",
       "esES": "Vigilante pétreo anciano",
-      "esMX": "Vigilante pétreo anciano",
+      "esMX": "Vigilante de piedra anciano",
       "frFR": "Ancien Gardien des pierres",
       "koKR": "고대 바위 문지기",
       "ptBR": "Antigo Protetor de Pedra",
       "ruRU": "Древний Хранитель Камня",
       "zhCN": "古代的石头看守者",
-      "zhTW": "古代的石頭看守者"
+      "zhTW": "古代的石頭看守者",
+      "client_esMX": true
     },
     "7207": {
       "id": 7207,
@@ -144645,13 +144699,14 @@
       "en": "Plaguemaw the Rotting",
       "deDE": "Plaguemaw der Faulende",
       "esES": "Fauzpeste el Putrefacto",
-      "esMX": "Fauzpeste el Putrefacto",
+      "esMX": "Faucepeste el Podrido",
       "frFR": "Pestegueule le Pourrissant",
       "koKR": "썩어가는 역병아귀",
       "ptBR": "Pragorja, o Podre",
       "ruRU": "Чумобрюх Гнилой",
       "zhCN": "腐烂的普雷莫尔",
-      "zhTW": "腐爛的普雷莫爾"
+      "zhTW": "腐爛的普雷莫爾",
+      "client_esMX": true
     },
     "7357": {
       "id": 7357,
@@ -144927,13 +144982,14 @@
       "en": "Silver Tabby",
       "deDE": "Silberne Tigerkatze",
       "esES": "Felino plateado",
-      "esMX": "Felino plateado",
+      "esMX": "Atigrado plateado",
       "frFR": "Chat tigré argenté",
       "koKR": "은빛띠고양이",
       "ptBR": "Tigrado Cinzento",
       "ruRU": "Серебристая полосатая кошка",
       "zhCN": "黑斑白猫",
-      "zhTW": "黑斑白貓"
+      "zhTW": "黑斑白貓",
+      "client_esMX": true
     },
     "7382": {
       "id": 7382,
@@ -144941,13 +144997,14 @@
       "en": "Orange Tabby",
       "deDE": "Orangene Tigerkatze",
       "esES": "Felino naranja",
-      "esMX": "Felino naranja",
+      "esMX": "Atigrado naranja",
       "frFR": "Chat tigré orange",
       "koKR": "주황띠고양이",
       "ptBR": "Tigrado Amarelo",
       "ruRU": "Рыжая полосатая кошка",
       "zhCN": "虎皮猫",
-      "zhTW": "虎皮貓"
+      "zhTW": "虎皮貓",
+      "client_esMX": true
     },
     "7383": {
       "id": 7383,
@@ -145011,13 +145068,14 @@
       "en": "Green Wing Macaw",
       "deDE": "Grünflügel-Ara",
       "esES": "Loro Alaverde",
-      "esMX": "Loro Alaverde",
+      "esMX": "Guacamayo rojo",
       "frFR": "Macaw aile verte",
       "koKR": "초록금강앵무",
       "ptBR": "Arara-da-asa-verde",
       "ruRU": "Зеленокрылый ара",
       "zhCN": "绿翼鹦鹉",
-      "zhTW": "綠翼鸚鵡"
+      "zhTW": "綠翼鸚鵡",
+      "client_esMX": true
     },
     "7388": {
       "id": 7388,
@@ -145408,13 +145466,14 @@
       "en": "Mana Spring Totem IV",
       "deDE": "Totem der Manaquelle IV",
       "esES": "Tótem Fuentemaná IV",
-      "esMX": "Tótem Fuentemaná IV",
+      "esMX": "Tótem Fuente de maná IV",
       "frFR": "Totem Fontaine de mana IV",
       "koKR": "마나샘 토템 IV",
       "ptBR": "Totem de Fonte de Mana IV",
       "ruRU": "Тотем источника маны IV",
       "zhCN": "法力之泉图腾 IV",
-      "zhTW": "法力之泉圖騰 IV"
+      "zhTW": "法力之泉圖騰 IV",
+      "client_esMX": true
     },
     "7423": {
       "id": 7423,
@@ -146080,13 +146139,14 @@
       "en": "Windfury Totem III",
       "deDE": "Totem des Windzorns III",
       "esES": "Tótem Viento furioso III",
-      "esMX": "Tótem Viento furioso III",
+      "esMX": "Tótem Viento Furioso III",
       "frFR": "Totem Furie-des-vents III",
       "koKR": "질풍의 토템 III",
       "ptBR": "Totem de Fúria dos Ventos III",
       "ruRU": "Тотем неистовства ветра III",
       "zhCN": "风怒图腾 III",
-      "zhTW": "風怒圖騰 III"
+      "zhTW": "風怒圖騰 III",
+      "client_esMX": true
     },
     "7485": {
       "id": 7485,
@@ -146287,13 +146347,14 @@
       "en": "Crimson Whelpling",
       "deDE": "Purpurroter Welpling",
       "esES": "Dracochorro Carmesí",
-      "esMX": "Dracochorro Carmesí",
+      "esMX": "Vástago carmesí",
       "frFR": "Jeune dragonnet cramoisi",
       "koKR": "작은 붉은 새끼용",
       "ptBR": "Dragonetinho Carmesim",
       "ruRU": "Маленький багровый дракончик",
       "zhCN": "红龙宝宝",
-      "zhTW": "紅龍寶寶"
+      "zhTW": "紅龍寶寶",
+      "client_esMX": true
     },
     "7545": {
       "id": 7545,
@@ -153553,13 +153614,14 @@
       "en": "Lil Timmy",
       "deDE": "Lil Timmy",
       "esES": "Lil Timmy",
-      "esMX": "Lil Timmy",
+      "esMX": "Pequeño Timmy",
       "frFR": "Jeune Timmy",
       "koKR": "릴 티미",
       "ptBR": "Toninho",
       "ruRU": "Малыш Тимми",
       "zhCN": "利尔·迪米",
-      "zhTW": "利爾·迪米"
+      "zhTW": "利爾·迪米",
+      "client_esMX": true
     },
     "8667": {
       "id": 8667,
@@ -155074,7 +155136,7 @@
       "en": "Hilary",
       "deDE": "Nida",
       "esES": "Nida",
-      "esMX": "Nida",
+      "esMX": "Hilary",
       "frFR": "Nida",
       "koKR": "니다",
       "ptBR": "Hilária",
@@ -155088,7 +155150,8 @@
       "npcnames_ruRU": true,
       "npcnames_koKR": true,
       "npcnames_zhTW": true,
-      "npcnames_zhCN": true
+      "npcnames_zhCN": true,
+      "client_esMX": true
     },
     "8963": {
       "id": 8963,
@@ -155310,13 +155373,14 @@
       "en": "High Interrogator Gerstahn",
       "deDE": "Verhörmeisterin Gerstahn",
       "esES": "Alto Interrogador Gerstahn",
-      "esMX": "Alto Interrogador Gerstahn",
+      "esMX": "Alta interrogadora Gerstahn",
       "frFR": "Grand Interrogateur Gerstahn",
       "koKR": "대심문관 게르스탄",
       "ptBR": "Suprema Interrogadora Gerstahn",
       "ruRU": "Верховный дознаватель Герштан",
       "zhCN": "审讯官格斯塔恩",
-      "zhTW": "審訊官格斯塔恩"
+      "zhTW": "審訊官格斯塔恩",
+      "client_esMX": true
     },
     "9019": {
       "id": 9019,
@@ -155604,13 +155668,14 @@
       "en": "Doom'rel",
       "deDE": "Un'rel",
       "esES": "Doom'rel",
-      "esMX": "Doom'rel",
+      "esMX": "Condena'rel",
       "frFR": "Tragi'rel",
       "koKR": "운명의 문지기",
       "ptBR": "Ruine'rel",
       "ruRU": "Рок'рел",
       "zhCN": "杜姆雷尔",
-      "zhTW": "杜姆雷爾"
+      "zhTW": "杜姆雷爾",
+      "client_esMX": true
     },
     "9040": {
       "id": 9040,
@@ -155632,13 +155697,14 @@
       "en": "Warder Stilgiss",
       "deDE": "Wärter Stilgiss",
       "esES": "Guarda Stilgiss",
-      "esMX": "Guarda Stilgiss",
+      "esMX": "Depositario Stilgiss",
       "frFR": "Gardien Stilgiss",
       "koKR": "문지기 스틸기스",
       "ptBR": "Carcereiro Stilgiss",
       "ruRU": "Тюремщик Стилгисс",
       "zhCN": "典狱官斯迪尔基斯",
-      "zhTW": "守衛斯迪爾基斯"
+      "zhTW": "守衛斯迪爾基斯",
+      "client_esMX": true
     },
     "9042": {
       "id": 9042,
@@ -156381,13 +156447,14 @@
       "en": "Shadow Hunter Vosh'gajin",
       "deDE": "Schattenjägerin Vosh'gajin",
       "esES": "Cazador de las Sombras Vosh'gajin",
-      "esMX": "Cazador de las Sombras Vosh'gajin",
+      "esMX": "Cazadora de las Sombras Vosh'gajin",
       "frFR": "Chasseresse des ombres Vosh'gajin",
       "koKR": "어둠사냥꾼 보쉬가진",
       "ptBR": "Caçadora Sombria Vosh'gajin",
       "ruRU": "Темная охотница Вос'гаджин",
       "zhCN": "暗影猎手沃什加斯",
-      "zhTW": "暗影獵手沃許加斯"
+      "zhTW": "暗影獵手沃許加斯",
+      "client_esMX": true
     },
     "9237": {
       "id": 9237,
@@ -160923,13 +160990,14 @@
       "en": "Gizrul the Slavener",
       "deDE": "Gizrul der Geifernde",
       "esES": "Gizrul el esclavista",
-      "esMX": "Gizrul el esclavista",
+      "esMX": "Gizrul el Esclavista",
       "frFR": "Gizrul l'esclavagiste",
       "koKR": "흉포한 기즈룰",
       "ptBR": "Gizrul, o Subjugador",
       "ruRU": "Гизрул Поработитель",
       "zhCN": "奴役者基兹鲁尔",
-      "zhTW": "『奴役者』基茲盧爾"
+      "zhTW": "『奴役者』基茲盧爾",
+      "client_esMX": true
     },
     "10276": {
       "id": 10276,
@@ -162270,13 +162338,14 @@
       "en": "Marduk Blackpool",
       "deDE": "Marduk Blackpool",
       "esES": "Marduz Pozonegro",
-      "esMX": "Marduz Pozonegro",
+      "esMX": "Marduk Pozonegro",
       "frFR": "Marduk Noirétang",
       "koKR": "마르두크 블랙풀",
       "ptBR": "Marduque Lagonero",
       "ruRU": "Мардук Блэкпул",
       "zhCN": "马杜克·布莱克波尔",
-      "zhTW": "馬杜克·布萊克波爾"
+      "zhTW": "馬杜克·布萊克波爾",
+      "client_esMX": true
     },
     "10435": {
       "id": 10435,
@@ -162991,13 +163060,14 @@
       "en": "Instructor Malicia",
       "deDE": "Instrukteurin Malicia",
       "esES": "Instructor Malicia",
-      "esMX": "Instructor Malicia",
+      "esMX": "Instructora Malicia",
       "frFR": "Instructeur Malicia",
       "koKR": "조교 말리시아",
       "ptBR": "Instrutora Malícia",
       "ruRU": "Инструктор Коварница",
       "zhCN": "讲师玛丽希亚",
-      "zhTW": "講師瑪麗希亞"
+      "zhTW": "講師瑪麗希亞",
+      "client_esMX": true
     },
     "10506": {
       "id": 10506,
@@ -165942,13 +166012,14 @@
       "en": "Naga Siren",
       "deDE": "Sirene der Naga",
       "esES": "Sirena Naga",
-      "esMX": "Sirena Naga",
+      "esMX": "Sirena naga",
       "frFR": "Sirène naga",
       "koKR": "나가 사이렌",
       "ptBR": "Sirena Naga",
       "ruRU": "Нага-сирена",
       "zhCN": "纳迦海妖",
-      "zhTW": "納迦海妖"
+      "zhTW": "納迦海妖",
+      "client_esMX": true
     },
     "10976": {
       "id": 10976,
@@ -168153,13 +168224,14 @@
       "en": "Northshire Peasant",
       "deDE": "Arbeiter von Nordhain",
       "esES": "Campesino Norvera",
-      "esMX": "Campesino Norvera",
+      "esMX": "Campesino de Villanorte",
       "frFR": "Paysan du Northshire",
       "koKR": "노스샤이어 인부",
       "ptBR": "Camponês de Vila Norte",
       "ruRU": "Крестьянин Североземья",
       "zhCN": "北郡农夫",
-      "zhTW": "北郡農夫"
+      "zhTW": "北郡農夫",
+      "client_esMX": true
     },
     "11261": {
       "id": 11261,
@@ -168621,13 +168693,14 @@
       "en": "Eastvale Peasant",
       "deDE": "Arbeiter des Osttals",
       "esES": "Campesino de de la Vega del Este",
-      "esMX": "Campesino de de la Vega del Este",
+      "esMX": "Campesino de la Vega del Este",
       "frFR": "Paysan du Val d'est",
       "koKR": "동부벌목지 인부",
       "ptBR": "Camponês do Vale do Leste",
       "ruRU": "Крестьянин лагеря Восточной долины",
       "zhCN": "东谷农民",
-      "zhTW": "東谷農民"
+      "zhTW": "東谷農民",
+      "client_esMX": true
     },
     "11338": {
       "id": 11338,
@@ -178963,13 +179036,14 @@
       "en": "Imp Minion",
       "deDE": "Wichteldiener",
       "esES": "Esbirro Diablillo",
-      "esMX": "Esbirro Diablillo",
+      "esMX": "Esbirro diablillo",
       "frFR": "Diablotin serviteur",
       "koKR": "하급 임프",
       "ptBR": "Lacaio Diabrete",
       "ruRU": "Бес-прислужник",
       "zhCN": "小鬼爪牙",
-      "zhTW": "小鬼爪牙"
+      "zhTW": "小鬼爪牙",
+      "client_esMX": true
     },
     "12923": {
       "id": 12923,
@@ -183180,13 +183254,14 @@
       "en": "Deeprun Diver",
       "deDE": "Tiefentaucher",
       "esES": "Mergujador subterráneo",
-      "esMX": "Mergujador subterráneo",
+      "esMX": "Buceador subterráneo",
       "frFR": "Plongeur des profondeurs",
       "koKR": "깊은굴 잠수부",
       "ptBR": "Mergulhador Correfundo",
       "ruRU": "Ныряльщик Подземного поезда",
       "zhCN": "矿道潜水者",
-      "zhTW": "礦道潛水者"
+      "zhTW": "礦道潛水者",
+      "client_esMX": true
     },
     "14122": {
       "id": 14122,
@@ -184672,13 +184747,14 @@
       "en": "Thief Catcher Shadowdelve",
       "deDE": "Diebesjäger Shadowdelve",
       "esES": "Cogeladrones Sombonda",
-      "esMX": "Cogeladrones Sombonda",
+      "esMX": "Miñón Sombonda",
       "frFR": "Grippe-larrons Shadowdelve",
       "koKR": "방범대원 섀도델브",
       "ptBR": "Pega-ladrão Umbrafurna",
       "ruRU": "Охотник на воров Тенеборец",
       "zhCN": "抓贼者格雷·铁钻",
-      "zhTW": "抓賊者格雷·鐵鑽"
+      "zhTW": "抓賊者格雷·鐵鑽",
+      "client_esMX": true
     },
     "14364": {
       "id": 14364,
@@ -184700,13 +184776,14 @@
       "en": "Thief Catcher Farmountain",
       "deDE": "Diebesjäger Farmountain",
       "esES": "Cogeladrones Monlejos",
-      "esMX": "Cogeladrones Monlejos",
+      "esMX": "Miñón Montelejano",
       "frFR": "Grippe-larrons Farmountain",
       "koKR": "방범대원 파마운틴",
       "ptBR": "Pega-ladrão Montalgures",
       "ruRU": "Охотник на воров Дальногор",
       "zhCN": "抓贼者扎克·远山",
-      "zhTW": "抓賊者札克·遠山"
+      "zhTW": "抓賊者札克·遠山",
+      "client_esMX": true
     },
     "14366": {
       "id": 14366,
@@ -184728,13 +184805,14 @@
       "en": "Thief Catcher Thunderbrew",
       "deDE": "Diebesjäger Donnerbräu",
       "esES": "Cogeladrones Cebatruenos",
-      "esMX": "Cogeladrones Cebatruenos",
+      "esMX": "Miñón Cebatruenos",
       "frFR": "Grippe-larrons Thunderbrew",
       "koKR": "방범대원 썬더브루",
       "ptBR": "Pega-ladrão Cervaforte",
       "ruRU": "Охотник на воров Громовар",
       "zhCN": "抓贼者尼恩·雷酒",
-      "zhTW": "抓賊者尼恩·雷酒"
+      "zhTW": "抓賊者尼恩·雷酒",
+      "client_esMX": true
     },
     "14368": {
       "id": 14368,
@@ -189213,13 +189291,14 @@
       "en": "Darkmoon Faire Carnie",
       "deDE": "Schausteller des Dunkelmond-Jahrmarkts",
       "esES": "Faire Carnie de la Luna Negra",
-      "esMX": "Faire Carnie de la Luna Negra",
+      "esMX": "Feriante de la Feria de la Luna Negra",
       "frFR": "Forain de Sombrelune",
       "koKR": "다크문 유랑단 일꾼",
       "ptBR": "Trabalhador de Negraluna",
       "ruRU": "Зазывала ярмарки Новолуния",
       "zhCN": "暗月马戏团艺人",
-      "zhTW": "暗月馬戲團清潔工"
+      "zhTW": "暗月馬戲團清潔工",
+      "client_esMX": true
     },
     "14850": {
       "id": 14850,
@@ -189423,13 +189502,14 @@
       "en": "Pygmy Cockatrice",
       "deDE": "Zwerghühnchen",
       "esES": "Gallotriz pígmea",
-      "esMX": "Gallotriz pígmea",
+      "esMX": "Gallotriz pigmea",
       "frFR": "Cockatrice pygmée",
       "koKR": "피그미 코카트리스",
       "ptBR": "Cocatriz Pigmeia",
       "ruRU": "Карликовый кокатрикс",
       "zhCN": "派格米",
-      "zhTW": "派格米"
+      "zhTW": "派格米",
+      "client_esMX": true
     },
     "14870": {
       "id": 14870,
@@ -190997,13 +191077,14 @@
       "en": "Silverwing Emissary",
       "deDE": "Abgesandter der Silverwing",
       "esES": "Emisario Ala de Plata",
-      "esMX": "Emisario Ala de Plata",
+      "esMX": "Emisaria Ala de Plata",
       "frFR": "Emissaire d'Aile-argent",
       "koKR": "은빛날개 사절",
       "ptBR": "Emissário da Asa de Prata",
       "ruRU": "Посланница Среброкрылых",
       "zhCN": "银翼大使",
-      "zhTW": "銀翼大使"
+      "zhTW": "銀翼大使",
+      "client_esMX": true
     },
     "15103": {
       "id": 15103,
@@ -191892,13 +191973,14 @@
       "en": "Cenarion Emissary Jademoon",
       "deDE": "Abgesandte Jademoon",
       "esES": "Emisario Cenarion Lunajade",
-      "esMX": "Emisario Cenarion Lunajade",
+      "esMX": "Emisaria Cenarion Lunajade",
       "frFR": "Emissaire cénarienne Jademoon",
       "koKR": "세나리온 사절 제이드문",
       "ptBR": "Emissária Cenariana Lunajade",
       "ruRU": "Кенарийский эмиссар Нефритовая Луна",
       "zhCN": "塞纳里奥使者安亚·碧月",
-      "zhTW": "塞納里奧使者安亞·碧月"
+      "zhTW": "塞納里奧使者安亞·碧月",
+      "client_esMX": true
     },
     "15188": {
       "id": 15188,
@@ -192321,12 +192403,13 @@
       "en": "Faire Cannon Trigger",
       "deDE": "Auslöser für Jahrmarktskanone",
       "esES": "Activador de cañón de feria",
-      "esMX": "Activador de cañón de feria",
+      "esMX": "Activador del cañón de la feria",
       "frFR": "Déclencheur du canon de la foire",
       "koKR": "축제 대포 트리거",
       "ptBR": "Gatilho do Canhão da Feira",
       "ruRU": "Инициатор ярмарочной пушки",
-      "zhCN": "Faire Cannon Trigger"
+      "zhCN": "Faire Cannon Trigger",
+      "client_esMX": true
     },
     "15219": {
       "id": 15219,
@@ -193100,13 +193183,14 @@
       "en": "Steam Tonk",
       "deDE": "Dampfpanzer",
       "esES": "Tanquete de vapor",
-      "esMX": "Tanquete de vapor",
+      "esMX": "Tonque de vapor",
       "frFR": "Chariotte à vapeur",
       "koKR": "통통 전차",
       "ptBR": "Tonque a Vapor",
       "ruRU": "Паровой танк",
       "zhCN": "蒸汽车",
-      "zhTW": "暗月蒸汽坦克"
+      "zhTW": "暗月蒸汽坦克",
+      "client_esMX": true
     },
     "15333": {
       "id": 15333,
@@ -193619,7 +193703,9 @@
     "15384": {
       "id": 15384,
       "source": "forever",
-      "en": "World Trigger"
+      "en": "World Trigger",
+      "esMX": "Activador de mundo",
+      "client_esMX": true
     },
     "15385": {
       "id": 15385,
@@ -199891,7 +199977,9 @@
       "koKR": "귀부인 디나 케네디",
       "npcnames_koKR": true,
       "zhCN": "德娜·肯尼迪",
-      "npcnames_zhCN": true
+      "npcnames_zhCN": true,
+      "esMX": "Lady Dena Kennedy",
+      "client_esMX": true
     },
     "15992": {
       "id": 15992,
@@ -201419,7 +201507,9 @@
       "id": 16121,
       "source": "forever",
       "en": "Mortar",
-      "zhTW": "迫擊砲"
+      "zhTW": "迫擊砲",
+      "esMX": "Mortero",
+      "client_esMX": true
     },
     "16123": {
       "id": 16123,
@@ -205371,10 +205461,11 @@
       "en": "Cat",
       "deDE": "Wolf",
       "esES": "Cat",
-      "esMX": "Wolf",
+      "esMX": "Mascota de cazador genérica",
       "frFR": "Bjarn",
       "ruRU": "Spider",
-      "zhTW": "Bärchen"
+      "zhTW": "Bärchen",
+      "client_esMX": true
     },
     "167875": {
       "id": 167875,
@@ -205392,8 +205483,9 @@
       "en": "Incubus",
       "deDE": "佐阿斯伊塔",
       "esES": "Pahenbar",
-      "esMX": "Barnardo",
-      "ruRU": "Elartros"
+      "esMX": "Íncubo",
+      "ruRU": "Elartros",
+      "client_esMX": true
     },
     "185333": {
       "id": 185333,
@@ -205665,7 +205757,9 @@
       "source": "forever",
       "en": "Kackle",
       "deDE": "Kicher",
-      "ruRU": "Гогот"
+      "ruRU": "Гогот",
+      "esMX": "Kackle",
+      "client_esMX": true
     },
     "210451": {
       "id": 210451,
@@ -207549,32 +207643,44 @@
     "245999": {
       "id": 245999,
       "source": "forever",
-      "en": "Arcane Anomaly"
+      "en": "Arcane Anomaly",
+      "esMX": "Anomalía Arcana",
+      "client_esMX": true
     },
     "246003": {
       "id": 246003,
       "source": "forever",
-      "en": "Fel Ancient"
+      "en": "Fel Ancient",
+      "esMX": "Anciano vil",
+      "client_esMX": true
     },
     "246008": {
       "id": 246008,
       "source": "forever",
-      "en": "Mana Devourer"
+      "en": "Mana Devourer",
+      "esMX": "Devorador de maná",
+      "client_esMX": true
     },
     "246016": {
       "id": 246016,
       "source": "forever",
-      "en": "Arcanic Enigma"
+      "en": "Arcanic Enigma",
+      "esMX": "Enigma arcano",
+      "client_esMX": true
     },
     "246017": {
       "id": 246017,
       "source": "forever",
-      "en": "Unstable Sentinel"
+      "en": "Unstable Sentinel",
+      "esMX": "Centinela inestable",
+      "client_esMX": true
     },
     "246020": {
       "id": 246020,
       "source": "forever",
-      "en": "Shade of the Archmage"
+      "en": "Shade of the Archmage",
+      "esMX": "Sombra del archimago",
+      "client_esMX": true
     },
     "246133": {
       "id": 246133,
@@ -208209,7 +208315,9 @@
     "247032": {
       "id": 247032,
       "source": "forever",
-      "en": "Lyn the Ignored"
+      "en": "Lyn the Ignored",
+      "esMX": "Lyn, el Ignorado",
+      "client_esMX": true
     },
     "247033": {
       "id": 247033,
@@ -208224,7 +208332,9 @@
     "247126": {
       "id": 247126,
       "source": "forever",
-      "en": "Atrexis the Grave Knight"
+      "en": "Atrexis the Grave Knight",
+      "esMX": "Atrexis, el Caballero de la tumba",
+      "client_esMX": true
     },
     "247215": {
       "id": 247215,
@@ -208843,7 +208953,9 @@
       "en": "Stormwind Dock Worker",
       "deDE": "Dockarbeiter von Stormwind",
       "frFR": "Portefaix de Hurlevent",
-      "zhTW": "暴風碼頭工人"
+      "zhTW": "暴風碼頭工人",
+      "esMX": "Trabajador del muelle de Ventormenta",
+      "client_esMX": true
     },
     "249216": {
       "id": 249216,
@@ -209270,7 +209382,9 @@
     "250483": {
       "id": 250483,
       "source": "forever",
-      "en": "Witherfang"
+      "en": "Witherfang",
+      "esMX": "Marchitacolmillos",
+      "client_esMX": true
     },
     "250484": {
       "id": 250484,
@@ -209406,7 +209520,9 @@
     "250631": {
       "id": 250631,
       "source": "forever",
-      "en": "The Abandoned"
+      "en": "The Abandoned",
+      "esMX": "El Abandonado",
+      "client_esMX": true
     },
     "250649": {
       "id": 250649,
@@ -209446,12 +209562,16 @@
     "250657": {
       "id": 250657,
       "source": "forever",
-      "en": "Rath'mael"
+      "en": "Rath'mael",
+      "esMX": "Rath'mael",
+      "client_esMX": true
     },
     "250660": {
       "id": 250660,
       "source": "forever",
-      "en": "The Baron"
+      "en": "The Baron",
+      "esMX": "El barón",
+      "client_esMX": true
     },
     "250686": {
       "id": 250686,
@@ -212382,12 +212502,16 @@
     "253351": {
       "id": 253351,
       "source": "forever",
-      "en": "[DNT] Invisible Stalker"
+      "en": "[DNT] Invisible Stalker",
+      "esMX": "[DNT] Invisible Stalker",
+      "client_esMX": true
     },
     "253353": {
       "id": 253353,
       "source": "forever",
-      "en": "[DNT] Invisible Stalker"
+      "en": "[DNT] Invisible Stalker",
+      "esMX": "[DNT] Invisible Stalker",
+      "client_esMX": true
     },
     "253357": {
       "id": 253357,
@@ -212921,7 +213045,9 @@
     "254108": {
       "id": 254108,
       "source": "forever",
-      "en": "Stalker"
+      "en": "Stalker",
+      "esMX": "Acechador",
+      "client_esMX": true
     },
     "254128": {
       "id": 254128,
@@ -214210,7 +214336,9 @@
     "256035": {
       "id": 256035,
       "source": "forever",
-      "en": "Viktor the Vile"
+      "en": "Viktor the Vile",
+      "esMX": "Viktor, el Vil",
+      "client_esMX": true
     },
     "256040": {
       "id": 256040,
@@ -214259,7 +214387,9 @@
     "256097": {
       "id": 256097,
       "source": "forever",
-      "en": "Bjork"
+      "en": "Bjork",
+      "esMX": "Bjork",
+      "client_esMX": true
     },
     "256102": {
       "id": 256102,
@@ -215054,7 +215184,9 @@
       "source": "forever",
       "en": "Basket of Alchemy Goods",
       "esES": "Cesta de bienes de alquimia",
-      "ruRU": "Корзина товаров для алхимии"
+      "ruRU": "Корзина товаров для алхимии",
+      "esMX": "Cesta de objetos de alquimia",
+      "client_esMX": true
     },
     "256739": {
       "id": 256739,
@@ -215062,20 +215194,26 @@
       "en": "Crate of Blacksmithing Goods",
       "deDE": "Kiste mit Schmiedebedarf",
       "frFR": "Caisse de fournitures de forge",
-      "ruRU": "Ящик товаров для кузнечного дела"
+      "ruRU": "Ящик товаров для кузнечного дела",
+      "esMX": "Cajón de objetos de herrería",
+      "client_esMX": true
     },
     "256740": {
       "id": 256740,
       "source": "forever",
       "en": "Crate of Enchanting Supplies",
       "deDE": "Kiste mit Verzauberkunstbedarf",
-      "frFR": "Caisse de fournitures d'enchantement"
+      "frFR": "Caisse de fournitures d'enchantement",
+      "esMX": "Cajón de suministros de encantamiento",
+      "client_esMX": true
     },
     "256741": {
       "id": 256741,
       "source": "forever",
       "en": "Basket of Textile Supplies",
-      "frFR": "Panier de fournitures textiles"
+      "frFR": "Panier de fournitures textiles",
+      "esMX": "Cesta de suministros textiles",
+      "client_esMX": true
     },
     "256742": {
       "id": 256742,
@@ -215086,7 +215224,9 @@
       "frFR": "Dianne Padeloup",
       "koKR": "다이앤 소프트스텝",
       "ruRU": "Дианна Мягкий Шаг",
-      "zhTW": "黛安‧柔步"
+      "zhTW": "黛安‧柔步",
+      "esMX": "Dianne Pisaditas",
+      "client_esMX": true
     },
     "256749": {
       "id": 256749,
@@ -217185,7 +217325,9 @@
     "259269": {
       "id": 259269,
       "source": "forever",
-      "en": "High Plains Buzzard"
+      "en": "High Plains Buzzard",
+      "esMX": "Águila ratonera de las altas llanuras",
+      "client_esMX": true
     },
     "259287": {
       "id": 259287,
@@ -217406,7 +217548,9 @@
       "id": 259842,
       "source": "forever",
       "en": "Musical Gustjumper",
-      "deDE": "Musikalischer Böenspringer"
+      "deDE": "Musikalischer Böenspringer",
+      "esMX": "Saltavientos musical",
+      "client_esMX": true
     },
     "259843": {
       "id": 259843,
@@ -217937,17 +218081,23 @@
     "260322": {
       "id": 260322,
       "source": "forever",
-      "en": "Saltspine"
+      "en": "Saltspine",
+      "esMX": "Salespina",
+      "client_esMX": true
     },
     "260325": {
       "id": 260325,
       "source": "forever",
-      "en": "Shadetooth"
+      "en": "Shadetooth",
+      "esMX": "Dentumbra",
+      "client_esMX": true
     },
     "260326": {
       "id": 260326,
       "source": "forever",
-      "en": "Relic Guardian"
+      "en": "Relic Guardian",
+      "esMX": "Guardián de reliquias",
+      "client_esMX": true
     },
     "260343": {
       "id": 260343,
@@ -218549,12 +218699,16 @@
     "261306": {
       "id": 261306,
       "source": "forever",
-      "en": "Faldrim Anvilmar"
+      "en": "Faldrim Anvilmar",
+      "esMX": "Faldrim Yunquemar",
+      "client_esMX": true
     },
     "261311": {
       "id": 261311,
       "source": "forever",
-      "en": "Plunder"
+      "en": "Plunder",
+      "esMX": "Saqueador",
+      "client_esMX": true
     },
     "261313": {
       "id": 261313,
@@ -218569,7 +218723,9 @@
     "261319": {
       "id": 261319,
       "source": "forever",
-      "en": "Durgen Dirgehammer"
+      "en": "Durgen Dirgehammer",
+      "esMX": "Durgen Martillo de Endecha",
+      "client_esMX": true
     },
     "261330": {
       "id": 261330,
@@ -219342,7 +219498,9 @@
     "263398": {
       "id": 263398,
       "source": "forever",
-      "en": "Camp Tent"
+      "en": "Camp Tent",
+      "esMX": "Tienda de campamento",
+      "client_esMX": true
     },
     "263399": {
       "id": 263399,
@@ -219863,27 +220021,37 @@
     "264632": {
       "id": 264632,
       "source": "forever",
-      "en": "Sister"
+      "en": "Sister",
+      "esMX": "Hermana",
+      "client_esMX": true
     },
     "264634": {
       "id": 264634,
       "source": "forever",
-      "en": "Leo"
+      "en": "Leo",
+      "esMX": "Leo",
+      "client_esMX": true
     },
     "264636": {
       "id": 264636,
       "source": "forever",
-      "en": "Buster"
+      "en": "Buster",
+      "esMX": "Destrozador",
+      "client_esMX": true
     },
     "264638": {
       "id": 264638,
       "source": "forever",
-      "en": "Callie"
+      "en": "Callie",
+      "esMX": "Callie",
+      "client_esMX": true
     },
     "264639": {
       "id": 264639,
       "source": "forever",
-      "en": "Bebe"
+      "en": "Bebe",
+      "esMX": "Bebe",
+      "client_esMX": true
     },
     "264663": {
       "id": 264663,
@@ -219940,7 +220108,9 @@
       "source": "forever",
       "en": "Hawk",
       "deDE": "Falke",
-      "esES": "Halcón"
+      "esES": "Halcón",
+      "esMX": "Halcón",
+      "client_esMX": true
     },
     "264861": {
       "id": 264861,
@@ -220040,7 +220210,9 @@
     "265190": {
       "id": 265190,
       "source": "forever",
-      "en": "Stalker"
+      "en": "Stalker",
+      "esMX": "Acechador",
+      "client_esMX": true
     },
     "265207": {
       "id": 265207,
@@ -220441,7 +220613,9 @@
       "source": "forever",
       "en": "Rat Familiar",
       "deDE": "Rattenfamiliar",
-      "frFR": "Familier rat"
+      "frFR": "Familier rat",
+      "esMX": "Familiar roedor",
+      "client_esMX": true
     },
     "266216": {
       "id": 266216,
@@ -221319,13 +221493,17 @@
       "en": "Brown Ram",
       "deDE": "Brauner Widder",
       "ruRU": "Бурый баран",
-      "zhCN": "棕山羊"
+      "zhCN": "棕山羊",
+      "esMX": "Carnero marrón",
+      "client_esMX": true
     },
     "267474": {
       "id": 267474,
       "source": "forever",
       "en": "White Ram",
-      "deDE": "Weißer Widder"
+      "deDE": "Weißer Widder",
+      "esMX": "Carnero blanco",
+      "client_esMX": true
     },
     "267475": {
       "id": 267475,
@@ -221335,7 +221513,9 @@
       "frFR": "Bélier gris",
       "koKR": "회색 산양",
       "ruRU": "Серый баран",
-      "zhCN": "灰山羊"
+      "zhCN": "灰山羊",
+      "esMX": "Carnero gris",
+      "client_esMX": true
     },
     "267525": {
       "id": 267525,
@@ -221354,13 +221534,17 @@
       "deDE": "Braunes Pferd",
       "esES": "Caballo marrón",
       "frFR": "Cheval bai",
-      "ruRU": "Гнедой конь"
+      "ruRU": "Гнедой конь",
+      "esMX": "Caballo marrón",
+      "client_esMX": true
     },
     "267677": {
       "id": 267677,
       "source": "forever",
       "en": "Chestnut Mare",
-      "deDE": "Kastanienbraune Stute"
+      "deDE": "Kastanienbraune Stute",
+      "esMX": "Yegua zaina",
+      "client_esMX": true
     },
     "267678": {
       "id": 267678,
@@ -221380,7 +221564,9 @@
       "esES": "Mecazancudo rojo",
       "frFR": "Mécanotrotteur rouge",
       "koKR": "빨간 기계타조",
-      "ruRU": "Красный механодолгоног"
+      "ruRU": "Красный механодолгоног",
+      "esMX": "Mecazancudo rojo",
+      "client_esMX": true
     },
     "267684": {
       "id": 267684,
@@ -221398,7 +221584,9 @@
       "en": "Blue Mechanostrider",
       "deDE": "Blauer Roboschreiter",
       "frFR": "Mécanotrotteur bleu",
-      "koKR": "푸른 기계타조"
+      "koKR": "푸른 기계타조",
+      "esMX": "Mecazancudo azul",
+      "client_esMX": true
     },
     "267688": {
       "id": 267688,
@@ -221406,7 +221594,9 @@
       "en": "Unpainted Mechanostrider",
       "deDE": "Unlackierter Roboschreiter",
       "frFR": "Mécanotrotteur brut",
-      "ruRU": "Некрашеный механодолгоног"
+      "ruRU": "Некрашеный механодолгоног",
+      "esMX": "Mecazancudo sin pintar",
+      "client_esMX": true
     },
     "267745": {
       "id": 267745,
@@ -221878,7 +222068,9 @@
     "268744": {
       "id": 268744,
       "source": "forever",
-      "en": "Frog Familiar"
+      "en": "Frog Familiar",
+      "esMX": "Familiar batracio",
+      "client_esMX": true
     },
     "268745": {
       "id": 268745,
@@ -222390,7 +222582,9 @@
     "269863": {
       "id": 269863,
       "source": "forever",
-      "en": "Stormwind Crier"
+      "en": "Stormwind Crier",
+      "esMX": "Pregonero de Ventormenta",
+      "client_esMX": true
     },
     "270038": {
       "id": 270038,
@@ -222526,7 +222720,9 @@
     "270313": {
       "id": 270313,
       "source": "forever",
-      "en": "Generic Bunny"
+      "en": "Generic Bunny",
+      "esMX": "Conejillo genérico",
+      "client_esMX": true
     },
     "270388": {
       "id": 270388,
@@ -223462,7 +223658,9 @@
       "id": 271867,
       "source": "forever",
       "en": "Unknown",
-      "deDE": "Unbekannt"
+      "deDE": "Unbekannt",
+      "esMX": "Pachimari",
+      "client_esMX": true
     },
     "271870": {
       "id": 271870,
@@ -223958,13 +224156,17 @@
     "272309": {
       "id": 272309,
       "source": "forever",
-      "en": "Tux"
+      "en": "Tux",
+      "esMX": "Tux",
+      "client_esMX": true
     },
     "272310": {
       "id": 272310,
       "source": "forever",
       "en": "Mocha",
-      "deDE": "Mocha"
+      "deDE": "Mocha",
+      "esMX": "Mocha",
+      "client_esMX": true
     },
     "272313": {
       "id": 272313,
@@ -223980,20 +224182,26 @@
       "id": 272328,
       "source": "forever",
       "en": "Unknown",
-      "deDE": "Unbekannt"
+      "deDE": "Unbekannt",
+      "esMX": "Mini Diablo",
+      "client_esMX": true
     },
     "272329": {
       "id": 272329,
       "source": "forever",
       "en": "Unknown",
-      "deDE": "Unbekannt"
+      "deDE": "Unbekannt",
+      "esMX": "Zerguezno",
+      "client_esMX": true
     },
     "272330": {
       "id": 272330,
       "source": "forever",
       "en": "Unknown",
       "deDE": "Unbekannt",
-      "ruRU": "Неизвестно"
+      "ruRU": "Неизвестно",
+      "esMX": "Osito panda",
+      "client_esMX": true
     },
     "272342": {
       "id": 272342,
@@ -224234,7 +224442,9 @@
     "272614": {
       "id": 272614,
       "source": "forever",
-      "en": "Cappy"
+      "en": "Cappy",
+      "esMX": "Capi",
+      "client_esMX": true
     },
     "272633": {
       "id": 272633,
@@ -224371,7 +224581,9 @@
       "esES": "Ribbly Silbagiro",
       "frFR": "Ribbly Sifflessieu",
       "ruRU": "Трепа Кружесвист",
-      "zhTW": "雷布里·旋哨"
+      "zhTW": "雷布里·旋哨",
+      "esMX": "Ribbly Silbegiro",
+      "client_esMX": true
     },
     "273077": {
       "id": 273077,
@@ -224381,7 +224593,9 @@
       "frFR": "Judith Carol",
       "koKR": "주디스 캐롤",
       "ruRU": "Джудит Кэрол",
-      "zhCN": "朱迪丝·卡罗尔"
+      "zhCN": "朱迪丝·卡罗尔",
+      "esMX": "Judith Carol",
+      "client_esMX": true
     },
     "273084": {
       "id": 273084,
@@ -224401,7 +224615,9 @@
       "en": "Finaida Earthbore",
       "deDE": "Finaida Earthbore",
       "frFR": "Finaida Terreporte",
-      "ruRU": "Финаида Землебур"
+      "ruRU": "Финаида Землебур",
+      "esMX": "Finaida Perforatierra",
+      "client_esMX": true
     },
     "273140": {
       "id": 273140,
@@ -224460,7 +224676,9 @@
     "273391": {
       "id": 273391,
       "source": "forever",
-      "en": "Baby Crocolisk"
+      "en": "Baby Crocolisk",
+      "esMX": "Cría de crocolisco",
+      "client_esMX": true
     },
     "273437": {
       "id": 273437,
@@ -224631,7 +224849,9 @@
     "273956": {
       "id": 273956,
       "source": "forever",
-      "en": "Condor Hatchling"
+      "en": "Condor Hatchling",
+      "esMX": "Prole de cóndor",
+      "client_esMX": true
     },
     "273967": {
       "id": 273967,
@@ -224744,7 +224964,9 @@
     "274334": {
       "id": 274334,
       "source": "forever",
-      "en": "Tallstrider Hatchling"
+      "en": "Tallstrider Hatchling",
+      "esMX": "Prole de zancaalta",
+      "client_esMX": true
     },
     "274340": {
       "id": 274340,
@@ -225022,7 +225244,9 @@
       "deDE": "Kampfschmied Vaelgrim",
       "frFR": "Forgeguerre Vaelgrim",
       "koKR": "전투대장장이 밸그림",
-      "ruRU": "Боевой кузнец Ваэлгрим"
+      "ruRU": "Боевой кузнец Ваэлгрим",
+      "esMX": "Beliforja Vaelgrim",
+      "client_esMX": true
     },
     "274876": {
       "id": 274876,
@@ -225037,7 +225261,9 @@
     "274902": {
       "id": 274902,
       "source": "forever",
-      "en": "Stormwind City Defender"
+      "en": "Stormwind City Defender",
+      "esMX": "Defensor de la Ciudad de Ventormenta",
+      "client_esMX": true
     },
     "274903": {
       "id": 274903,
@@ -225057,7 +225283,9 @@
       "source": "forever",
       "en": "Seajay the Oar-Fetcher",
       "deDE": "Seajay der Ruder-Einholer",
-      "esES": "Seajay el Buscarremos"
+      "esES": "Seajay el Buscarremos",
+      "esMX": "Corvimar, el Remorrero",
+      "client_esMX": true
     },
     "274906": {
       "id": 274906,
@@ -225082,7 +225310,9 @@
       "deDE": "Eviatar Achitov",
       "esES": "Eviatar Achitov",
       "frFR": "Eviatar Fratrenoble",
-      "ruRU": "Эвиатар Ачитов"
+      "ruRU": "Эвиатар Ачитов",
+      "esMX": "Eviatar Achitov",
+      "client_esMX": true
     },
     "274911": {
       "id": 274911,
@@ -225120,7 +225350,9 @@
       "id": 274914,
       "source": "forever",
       "en": "Aendaril Brookshot",
-      "deDE": "Aendaril Brookshot"
+      "deDE": "Aendaril Brookshot",
+      "esMX": "Aendaril Caucertero",
+      "client_esMX": true
     },
     "274916": {
       "id": 274916,
@@ -225137,7 +225369,9 @@
       "id": 274917,
       "source": "forever",
       "en": "Boborus Overvolt",
-      "deDE": "Boborus Overvolt"
+      "deDE": "Boborus Overvolt",
+      "esMX": "Boborus Voltígrado",
+      "client_esMX": true
     },
     "274921": {
       "id": 274921,
@@ -225198,7 +225432,9 @@
     "274940": {
       "id": 274940,
       "source": "forever",
-      "en": "Annabella Junelight"
+      "en": "Annabella Junelight",
+      "esMX": "Annabella Juniluz",
+      "client_esMX": true
     },
     "274941": {
       "id": 274941,
@@ -226085,7 +226321,9 @@
       "ptBR": "Montanhista Barbacarvão",
       "ruRU": "Горный пехотинец Пеплобород",
       "zhCN": "巡山人煤须",
-      "zhTW": "巡山人煤鬚"
+      "zhTW": "巡山人煤鬚",
+      "esMX": "Montaraz Barbahullera",
+      "client_esMX": true
     },
     "276082": {
       "id": 276082,
@@ -226383,7 +226621,9 @@
       "id": 276591,
       "source": "forever",
       "en": "Spoogledorf",
-      "deDE": "Spoogledorf"
+      "deDE": "Spoogledorf",
+      "esMX": "Spoogledorf",
+      "client_esMX": true
     },
     "276595": {
       "id": 276595,
@@ -226439,14 +226679,18 @@
       "en": "Swift Green Mechanostrider",
       "deDE": "Schneller grüner Roboschreiter",
       "frFR": "Mécanotrotteur vert rapide",
-      "ruRU": "Стремительный зеленый механодолгоног"
+      "ruRU": "Стремительный зеленый механодолгоног",
+      "esMX": "Mecazancudo verde presto",
+      "client_esMX": true
     },
     "276737": {
       "id": 276737,
       "source": "forever",
       "en": "Swift Gray Ram",
       "deDE": "Schneller grauer Widder",
-      "ruRU": "Стремительный серый баран"
+      "ruRU": "Стремительный серый баран",
+      "esMX": "Carnero gris presto",
+      "client_esMX": true
     },
     "276740": {
       "id": 276740,
@@ -226454,7 +226698,9 @@
       "en": "Cedrik Stonequest",
       "deDE": "Cedrik Stonequest",
       "frFR": "Cedrik Quêtepière",
-      "ruRU": "Седрик Камнепыт"
+      "ruRU": "Седрик Камнепыт",
+      "esMX": "Cedrik Petromisión",
+      "client_esMX": true
     },
     "276752": {
       "id": 276752,
@@ -226506,7 +226752,9 @@
       "source": "forever",
       "en": "Swift Brown Steed",
       "frFR": "Palefroi bai rapide",
-      "ruRU": "Стремительный гнедой рысак"
+      "ruRU": "Стремительный гнедой рысак",
+      "esMX": "Corcel marrón presto",
+      "client_esMX": true
     },
     "276786": {
       "id": 276786,
@@ -226516,13 +226764,17 @@
       "esES": "Palomino presto",
       "frFR": "Palomino rapide",
       "koKR": "날쌘 황토마",
-      "ruRU": "Стремительный игреневый конь"
+      "ruRU": "Стремительный игреневый конь",
+      "esMX": "Palomino presto",
+      "client_esMX": true
     },
     "276787": {
       "id": 276787,
       "source": "forever",
       "en": "Swift White Steed",
-      "ruRU": "Стремительный белый рысак"
+      "ruRU": "Стремительный белый рысак",
+      "esMX": "Corcel blanco presto",
+      "client_esMX": true
     },
     "276788": {
       "id": 276788,
@@ -226620,7 +226872,9 @@
       "esES": "Shiro Trabachispas",
       "frFR": "Shiro Clochéclair",
       "koKR": "시로 호블스파크",
-      "ruRU": "Широ Искроскок"
+      "ruRU": "Широ Искроскок",
+      "esMX": "Shiro Chispatrunca",
+      "client_esMX": true
     },
     "276803": {
       "id": 276803,
@@ -226784,7 +227038,9 @@
       "id": 277062,
       "source": "forever",
       "en": "Ancelina",
-      "ruRU": "Анселина"
+      "ruRU": "Анселина",
+      "esMX": "Ancelina",
+      "client_esMX": true
     },
     "277067": {
       "id": 277067,
@@ -227196,7 +227452,9 @@
       "en": "Abigail Lawson",
       "deDE": "Abigail Lawson",
       "frFR": "Abigail Lawson",
-      "zhTW": "阿比蓋爾‧勞森"
+      "zhTW": "阿比蓋爾‧勞森",
+      "esMX": "Abigail Lawson",
+      "client_esMX": true
     },
     "278105": {
       "id": 278105,
@@ -532337,7 +532595,9 @@
       "id": 1932,
       "source": "forever",
       "en": "Campfire",
-      "zhTW": "篝火"
+      "zhTW": "篝火",
+      "esMX": "Hoguera",
+      "client_esMX": true
     },
     "1935": {
       "id": 1935,
@@ -548593,8 +548853,9 @@
       "id": 105568,
       "source": "forever",
       "en": "Peasent Woodpile",
-      "esMX": "Peasent Woodpile",
-      "zhTW": "農夫的木柴"
+      "esMX": "Pila de madera de campesinos",
+      "zhTW": "農夫的木柴",
+      "client_esMX": true
     },
     "105569": {
       "id": 105569,
@@ -550672,7 +550933,9 @@
       "id": 142111,
       "source": "forever",
       "en": "Mailbox",
-      "zhTW": "郵箱"
+      "zhTW": "郵箱",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "142117": {
       "id": 142117,
@@ -555089,7 +555352,9 @@
       "id": 153716,
       "source": "forever",
       "en": "Mailbox",
-      "zhTW": "郵箱"
+      "zhTW": "郵箱",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "153723": {
       "id": 153723,
@@ -561917,7 +562182,9 @@
       "source": "forever",
       "en": "The Last Guardian",
       "koKR": "최후의 수호자",
-      "zhTW": "最後的守護者"
+      "zhTW": "最後的守護者",
+      "esMX": "El último guardián",
+      "client_esMX": true
     },
     "175742": {
       "id": 175742,
@@ -566318,7 +566585,9 @@
       "id": 177274,
       "source": "forever",
       "en": "Moonwell",
-      "zhTW": "月井"
+      "zhTW": "月井",
+      "esMX": "Poza de la Luna",
+      "client_esMX": true
     },
     "177275": {
       "id": 177275,
@@ -572011,7 +572280,9 @@
       "source": "forever",
       "en": "Oily Blackmouth School",
       "koKR": "기름기 많은 아귀 떼",
-      "zhTW": "小型黑口魚群"
+      "zhTW": "小型黑口魚群",
+      "esMX": "Banco de bocanegras grasos",
+      "client_esMX": true
     },
     "180598": {
       "id": 180598,
@@ -572154,7 +572425,9 @@
       "source": "forever",
       "en": "Floating Debris",
       "koKR": "표류하는 파편",
-      "zhTW": "漂浮的碎片"
+      "zhTW": "漂浮的碎片",
+      "esMX": "Restos flotando",
+      "client_esMX": true
     },
     "180656": {
       "id": 180656,
@@ -581890,7 +582163,9 @@
     "408014": {
       "id": 408014,
       "source": "forever",
-      "en": "Gnomish Tome"
+      "en": "Gnomish Tome",
+      "esMX": "Tomo gnómico",
+      "client_esMX": true
     },
     "409289": {
       "id": 409289,
@@ -582100,7 +582375,9 @@
       "deDE": "Planke mit Nagel",
       "frFR": "Planche clouée",
       "ruRU": "Доска с гвоздями",
-      "zhTW": "上釘的木板"
+      "zhTW": "上釘的木板",
+      "esMX": "Tabla clavada",
+      "client_esMX": true
     },
     "424012": {
       "id": 424012,
@@ -582690,7 +582967,9 @@
       "deDE": "Gildentresor",
       "esES": "Cámara de la hermandad",
       "frFR": "Coffre-fort de guilde",
-      "koKR": "길드 금고"
+      "koKR": "길드 금고",
+      "esMX": "Cámara de hermandad",
+      "client_esMX": true
     },
     "630866": {
       "id": 630866,
@@ -582746,7 +583025,9 @@
       "deDE": "Briefkasten",
       "frFR": "Boîte aux lettres",
       "koKR": "우체통",
-      "ruRU": "Почтовый ящик"
+      "ruRU": "Почтовый ящик",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "642745": {
       "id": 642745,
@@ -583439,7 +583720,9 @@
     "660331": {
       "id": 660331,
       "source": "forever",
-      "en": "Note"
+      "en": "Note",
+      "esMX": "Nota",
+      "client_esMX": true
     },
     "660490": {
       "id": 660490,
@@ -583903,7 +584186,9 @@
       "id": 696266,
       "source": "forever",
       "en": "Mailbox",
-      "frFR": "Boîte aux lettres"
+      "frFR": "Boîte aux lettres",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696267": {
       "id": 696267,
@@ -583911,7 +584196,9 @@
       "en": "Mailbox",
       "deDE": "Briefkasten",
       "esES": "Buzón",
-      "ruRU": "Почтовый ящик"
+      "ruRU": "Почтовый ящик",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696268": {
       "id": 696268,
@@ -583929,7 +584216,9 @@
       "source": "forever",
       "en": "Mailbox",
       "koKR": "우체통",
-      "ruRU": "Почтовый ящик"
+      "ruRU": "Почтовый ящик",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696270": {
       "id": 696270,
@@ -583937,7 +584226,9 @@
       "en": "Mailbox",
       "deDE": "Briefkasten",
       "frFR": "Boîte aux lettres",
-      "ruRU": "Почтовый ящик"
+      "ruRU": "Почтовый ящик",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696271": {
       "id": 696271,
@@ -583965,19 +584256,25 @@
       "en": "Mailbox",
       "deDE": "Briefkasten",
       "esES": "Buzón",
-      "ruRU": "Почтовый ящик"
+      "ruRU": "Почтовый ящик",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696274": {
       "id": 696274,
       "source": "forever",
       "en": "Mailbox",
       "deDE": "Briefkasten",
-      "ruRU": "Почтовый ящик"
+      "ruRU": "Почтовый ящик",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696275": {
       "id": 696275,
       "source": "forever",
-      "en": "Mailbox"
+      "en": "Mailbox",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696276": {
       "id": 696276,
@@ -583988,7 +584285,9 @@
       "frFR": "Boîte aux lettres",
       "ptBR": "Caixa de Correio",
       "ruRU": "Почтовый ящик",
-      "zhCN": "邮箱"
+      "zhCN": "邮箱",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696277": {
       "id": 696277,
@@ -583998,14 +584297,18 @@
       "esES": "Buzón",
       "frFR": "Boîte aux lettres",
       "ruRU": "Почтовый ящик",
-      "zhTW": "郵箱"
+      "zhTW": "郵箱",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696278": {
       "id": 696278,
       "source": "forever",
       "en": "Mailbox",
       "deDE": "Briefkasten",
-      "ruRU": "Почтовый ящик"
+      "ruRU": "Почтовый ящик",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696279": {
       "id": 696279,
@@ -584015,7 +584318,9 @@
       "esES": "Buzón",
       "ruRU": "Почтовый ящик",
       "zhCN": "邮箱",
-      "zhTW": "郵箱"
+      "zhTW": "郵箱",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696280": {
       "id": 696280,
@@ -584045,12 +584350,16 @@
     "696296": {
       "id": 696296,
       "source": "forever",
-      "en": "General Turalyon"
+      "en": "General Turalyon",
+      "esMX": "General Turalyon",
+      "client_esMX": true
     },
     "696297": {
       "id": 696297,
       "source": "forever",
-      "en": "Ranger Captain Alleria Windrunner"
+      "en": "Ranger Captain Alleria Windrunner",
+      "esMX": "Capitana forestal Alleria Brisaveloz",
+      "client_esMX": true
     },
     "696298": {
       "id": 696298,
@@ -584060,7 +584369,9 @@
     "696299": {
       "id": 696299,
       "source": "forever",
-      "en": "Archmage Khadgar of the Kirin Tor"
+      "en": "Archmage Khadgar of the Kirin Tor",
+      "esMX": "Archimago Khadgar del Kirin Tor",
+      "client_esMX": true
     },
     "696374": {
       "id": 696374,
@@ -584077,12 +584388,16 @@
     "696376": {
       "id": 696376,
       "source": "forever",
-      "en": "Alliance Military Ranks"
+      "en": "Alliance Military Ranks",
+      "esMX": "Rangos militares de la Alianza",
+      "client_esMX": true
     },
     "696392": {
       "id": 696392,
       "source": "forever",
-      "en": "Archbishop Alonsus Faol"
+      "en": "Archbishop Alonsus Faol",
+      "esMX": "Arzobispo Alonsus Faol",
+      "client_esMX": true
     },
     "696434": {
       "id": 696434,
@@ -584092,7 +584407,9 @@
       "esES": "Buzón",
       "frFR": "Boîte aux lettres",
       "ruRU": "Почтовый ящик",
-      "zhCN": "邮箱"
+      "zhCN": "邮箱",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696503": {
       "id": 696503,
@@ -584114,7 +584431,9 @@
       "source": "forever",
       "en": "Mailbox",
       "deDE": "Briefkasten",
-      "frFR": "Boîte aux lettres"
+      "frFR": "Boîte aux lettres",
+      "esMX": "Buzón",
+      "client_esMX": true
     },
     "696751": {
       "id": 696751,

@@ -1,0 +1,6555 @@
+{
+ "meta": {
+  "source": "C:\\Program Files (x86)\\World of Warcraft\\_forever_\\Cache\\WDB\\esMX (caché del cliente WoW)",
+  "extracted_utc": "2026-11-13T15:31:36.308026+00:00",
+  "locale": "esMX",
+  "npcs": 1160,
+  "objects": 634
+ },
+ "npcs": {
+  "6": {
+   "name": "Alimaña kóbold",
+   "subname": ""
+  },
+  "30": {
+   "name": "Araña del bosque",
+   "subname": ""
+  },
+  "36": {
+   "name": "Gólem de la cosecha",
+   "subname": ""
+  },
+  "38": {
+   "name": "Matón Defias",
+   "subname": "Matona Defias"
+  },
+  "40": {
+   "name": "Minero kóbold",
+   "subname": ""
+  },
+  "46": {
+   "name": "Batidor múrloc",
+   "subname": ""
+  },
+  "54": {
+   "name": "Corina Aceral",
+   "subname": ""
+  },
+  "61": {
+   "name": "Thuros Dedos Ligeros",
+   "subname": ""
+  },
+  "66": {
+   "name": "Tharynn Bouden",
+   "subname": ""
+  },
+  "68": {
+   "name": "Guardia de la ciudad de Ventormenta",
+   "subname": "Guardia de Ventormenta"
+  },
+  "69": {
+   "name": "Lobo gris",
+   "subname": ""
+  },
+  "74": {
+   "name": "Kurran Aceral",
+   "subname": ""
+  },
+  "78": {
+   "name": "Janos Nudillomartillo",
+   "subname": ""
+  },
+  "79": {
+   "name": "Narg el Capataz",
+   "subname": ""
+  },
+  "80": {
+   "name": "Obrero kóbold",
+   "subname": ""
+  },
+  "94": {
+   "name": "Ratero Defias",
+   "subname": "Ratera Defias"
+  },
+  "95": {
+   "name": "Contrabandista Defias",
+   "subname": "Contrabandista Defias"
+  },
+  "97": {
+   "name": "Cachorro Zarparrío",
+   "subname": ""
+  },
+  "99": {
+   "name": "Morgaine la Astuta",
+   "subname": ""
+  },
+  "100": {
+   "name": "Bronco Mordeveloz",
+   "subname": ""
+  },
+  "103": {
+   "name": "Garrick Piesuaves",
+   "subname": ""
+  },
+  "113": {
+   "name": "Jabalí Colmipétreo",
+   "subname": ""
+  },
+  "114": {
+   "name": "Vigía de la cosecha",
+   "subname": ""
+  },
+  "116": {
+   "name": "Bandido Defias",
+   "subname": "Bandida Defias"
+  },
+  "117": {
+   "name": "Gnoll Zarparrío",
+   "subname": ""
+  },
+  "119": {
+   "name": "Morrolargo",
+   "subname": ""
+  },
+  "121": {
+   "name": "Acechacaminos Defias",
+   "subname": "Acechacaminos Defias"
+  },
+  "122": {
+   "name": "Bandolero Defias",
+   "subname": ""
+  },
+  "123": {
+   "name": "Bastardo Zarparrío",
+   "subname": ""
+  },
+  "124": {
+   "name": "Tosco Zarparrío",
+   "subname": ""
+  },
+  "126": {
+   "name": "Correcostas múrloc",
+   "subname": ""
+  },
+  "151": {
+   "name": "Brog Patosar",
+   "subname": ""
+  },
+  "152": {
+   "name": "Hermano Danil",
+   "subname": ""
+  },
+  "154": {
+   "name": "Desgarrador superior",
+   "subname": ""
+  },
+  "157": {
+   "name": "Dentosangre",
+   "subname": ""
+  },
+  "167": {
+   "name": "Morhan Cobrilengua",
+   "subname": ""
+  },
+  "190": {
+   "name": "Dermot Johns",
+   "subname": ""
+  },
+  "196": {
+   "name": "Eagan Desollapelambres",
+   "subname": ""
+  },
+  "197": {
+   "name": "Alguacil McBride",
+   "subname": ""
+  },
+  "198": {
+   "name": "Khelden Bremen",
+   "subname": ""
+  },
+  "199": {
+   "name": "Desgarrador joven",
+   "subname": ""
+  },
+  "213": {
+   "name": "Lobo temible famélico",
+   "subname": ""
+  },
+  "217": {
+   "name": "Telarácnida venenosa",
+   "subname": ""
+  },
+  "233": {
+   "name": "Granjero Saldean",
+   "subname": ""
+  },
+  "234": {
+   "name": "Gryan Mantorrecio",
+   "subname": ""
+  },
+  "235": {
+   "name": "Salma Saldean",
+   "subname": ""
+  },
+  "237": {
+   "name": "Granjero Cejade",
+   "subname": ""
+  },
+  "238": {
+   "name": "Verna Cejade",
+   "subname": ""
+  },
+  "240": {
+   "name": "Alguacil Dughan",
+   "subname": ""
+  },
+  "241": {
+   "name": "Remy \"Dos Veces\"",
+   "subname": ""
+  },
+  "244": {
+   "name": "La vieja Pedregosa",
+   "subname": ""
+  },
+  "246": {
+   "name": "\"Tita\" Bernice Pedregosa",
+   "subname": ""
+  },
+  "247": {
+   "name": "Billy Maclure",
+   "subname": ""
+  },
+  "248": {
+   "name": "Abuela Pedregosa",
+   "subname": ""
+  },
+  "250": {
+   "name": "Pa Maclure",
+   "subname": ""
+  },
+  "251": {
+   "name": "Maybell Maclure",
+   "subname": ""
+  },
+  "252": {
+   "name": "Tommy Joe Pedregosa",
+   "subname": ""
+  },
+  "253": {
+   "name": "William Mortero",
+   "subname": ""
+  },
+  "255": {
+   "name": "Gerard Tiller",
+   "subname": ""
+  },
+  "257": {
+   "name": "Trabajador kóbold",
+   "subname": ""
+  },
+  "258": {
+   "name": "Joshua Maclure",
+   "subname": ""
+  },
+  "261": {
+   "name": "Guardia Thomas",
+   "subname": ""
+  },
+  "277": {
+   "name": "Roberto Pupellyverbos",
+   "subname": ""
+  },
+  "278": {
+   "name": "Sara Timberlain",
+   "subname": ""
+  },
+  "279": {
+   "name": "Morgan Mortero",
+   "subname": ""
+  },
+  "285": {
+   "name": "Múrloc",
+   "subname": ""
+  },
+  "294": {
+   "name": "Mariscal Haggard",
+   "subname": ""
+  },
+  "295": {
+   "name": "Tabernero Farley",
+   "subname": ""
+  },
+  "297": {
+   "name": "Custodio Folsom",
+   "subname": ""
+  },
+  "299": {
+   "name": "Lobo joven",
+   "subname": ""
+  },
+  "315": {
+   "name": "Stalvan Mantoniebla",
+   "subname": ""
+  },
+  "327": {
+   "name": "Dientes de Oro",
+   "subname": ""
+  },
+  "328": {
+   "name": "Zaldimar Wefhellt",
+   "subname": ""
+  },
+  "330": {
+   "name": "Princesa",
+   "subname": ""
+  },
+  "332": {
+   "name": "Maestro Mathias Shaw",
+   "subname": ""
+  },
+  "338": {
+   "name": "Mazen Mac'Nadir",
+   "subname": ""
+  },
+  "340": {
+   "name": "Kendor Kabonka",
+   "subname": ""
+  },
+  "352": {
+   "name": "Dungar Tragolargo",
+   "subname": ""
+  },
+  "372": {
+   "name": "Karm Yerropluma",
+   "subname": ""
+  },
+  "375": {
+   "name": "Sacerdotisa Anetta",
+   "subname": ""
+  },
+  "377": {
+   "name": "Sacerdotisa Josetta",
+   "subname": ""
+  },
+  "383": {
+   "name": "Jason Mathers",
+   "subname": ""
+  },
+  "384": {
+   "name": "Katie Cazadora",
+   "subname": ""
+  },
+  "385": {
+   "name": "Caballo",
+   "subname": ""
+  },
+  "390": {
+   "name": "Séquito porcino",
+   "subname": ""
+  },
+  "395": {
+   "name": "Markus",
+   "subname": ""
+  },
+  "416": {
+   "name": "Diablillo",
+   "subname": ""
+  },
+  "417": {
+   "name": "Manáfago",
+   "subname": ""
+  },
+  "423": {
+   "name": "Bastardo de Crestagrana",
+   "subname": ""
+  },
+  "428": {
+   "name": "Cóndor temible",
+   "subname": ""
+  },
+  "434": {
+   "name": "Gnoll Pielsombra rabioso",
+   "subname": ""
+  },
+  "441": {
+   "name": "Cría de dragón Negro",
+   "subname": ""
+  },
+  "442": {
+   "name": "Tarántula",
+   "subname": ""
+  },
+  "448": {
+   "name": "Hogger",
+   "subname": ""
+  },
+  "452": {
+   "name": "Bandido Zarparrío",
+   "subname": ""
+  },
+  "454": {
+   "name": "Dentosangre joven",
+   "subname": ""
+  },
+  "456": {
+   "name": "Oráculo menor múrloc",
+   "subname": ""
+  },
+  "459": {
+   "name": "Drusilla La Salle",
+   "subname": ""
+  },
+  "464": {
+   "name": "Guardia Parker",
+   "subname": ""
+  },
+  "465": {
+   "name": "Posadero Dobbins",
+   "subname": ""
+  },
+  "467": {
+   "name": "El Traidor de los Defias",
+   "subname": ""
+  },
+  "471": {
+   "name": "Madre Colmillo",
+   "subname": ""
+  },
+  "472": {
+   "name": "Fedfennel",
+   "subname": ""
+  },
+  "473": {
+   "name": "Morgan el Coleccionista",
+   "subname": ""
+  },
+  "474": {
+   "name": "Zahorí bribón de Defias",
+   "subname": "Zahorí bribona de Defias"
+  },
+  "475": {
+   "name": "Tunelador kóbold",
+   "subname": ""
+  },
+  "476": {
+   "name": "Geomántico kóbold",
+   "subname": ""
+  },
+  "478": {
+   "name": "Avanzado Zarparrío",
+   "subname": ""
+  },
+  "480": {
+   "name": "Gólem de la cosecha oxidado",
+   "subname": ""
+  },
+  "481": {
+   "name": "Asaltante de caminos Defias",
+   "subname": "Asaltante de caminos Defias"
+  },
+  "482": {
+   "name": "Elling Trias",
+   "subname": ""
+  },
+  "483": {
+   "name": "Elaine Trias",
+   "subname": ""
+  },
+  "487": {
+   "name": "Protector Bialon",
+   "subname": ""
+  },
+  "488": {
+   "name": "Protector Tejedor",
+   "subname": ""
+  },
+  "489": {
+   "name": "Protector Deber",
+   "subname": ""
+  },
+  "490": {
+   "name": "Protector Gariel",
+   "subname": ""
+  },
+  "491": {
+   "name": "Intendente Lewis",
+   "subname": ""
+  },
+  "500": {
+   "name": "Explorador Zarparrío",
+   "subname": ""
+  },
+  "502": {
+   "name": "Benny Blaanco",
+   "subname": ""
+  },
+  "504": {
+   "name": "Trampero Defias",
+   "subname": "Trampera Defias"
+  },
+  "511": {
+   "name": "Necrófago demente",
+   "subname": ""
+  },
+  "514": {
+   "name": "Herrero Argus",
+   "subname": ""
+  },
+  "515": {
+   "name": "Asaltante múrloc",
+   "subname": ""
+  },
+  "523": {
+   "name": "Thor",
+   "subname": ""
+  },
+  "524": {
+   "name": "Jabalí Pielroca",
+   "subname": ""
+  },
+  "525": {
+   "name": "Lobo sarnoso",
+   "subname": ""
+  },
+  "539": {
+   "name": "Telarácnida venenosa pigmea",
+   "subname": ""
+  },
+  "547": {
+   "name": "Gran dentosangre",
+   "subname": ""
+  },
+  "550": {
+   "name": "Mensajero Defias",
+   "subname": ""
+  },
+  "565": {
+   "name": "Lobo temible rabioso",
+   "subname": ""
+  },
+  "570": {
+   "name": "Comesesos",
+   "subname": ""
+  },
+  "582": {
+   "name": "Vieja Blanchy",
+   "subname": ""
+  },
+  "589": {
+   "name": "Saqueador Defias",
+   "subname": "Saqueadora Defias"
+  },
+  "590": {
+   "name": "Despojador Defias",
+   "subname": "Despojadora Defias"
+  },
+  "604": {
+   "name": "Propagador de peste",
+   "subname": ""
+  },
+  "620": {
+   "name": "Pollo",
+   "subname": ""
+  },
+  "639": {
+   "name": "Edwin VanCleef",
+   "subname": ""
+  },
+  "642": {
+   "name": "Trituradora de Sneed",
+   "subname": ""
+  },
+  "643": {
+   "name": "Sneed",
+   "subname": ""
+  },
+  "644": {
+   "name": "Rhahk'Zor",
+   "subname": ""
+  },
+  "645": {
+   "name": "Cocinitas",
+   "subname": ""
+  },
+  "646": {
+   "name": "Don Mamporro",
+   "subname": ""
+  },
+  "647": {
+   "name": "Capitán Verdetez",
+   "subname": ""
+  },
+  "656": {
+   "name": "Wilder Cardortiga",
+   "subname": ""
+  },
+  "712": {
+   "name": "Descarnador de Crestagrana",
+   "subname": ""
+  },
+  "721": {
+   "name": "Conejo",
+   "subname": ""
+  },
+  "727": {
+   "name": "Montaraz de Forjaz",
+   "subname": "Montaraz de Forjaz"
+  },
+  "732": {
+   "name": "Rondador múrloc",
+   "subname": ""
+  },
+  "735": {
+   "name": "Correcorrientes múrloc",
+   "subname": ""
+  },
+  "795": {
+   "name": "Mark",
+   "subname": ""
+  },
+  "796": {
+   "name": "Joshua",
+   "subname": ""
+  },
+  "797": {
+   "name": "Bo",
+   "subname": ""
+  },
+  "820": {
+   "name": "Exploradora Riell",
+   "subname": ""
+  },
+  "821": {
+   "name": "Capitán Danuvin",
+   "subname": ""
+  },
+  "822": {
+   "name": "Oso del bosque joven",
+   "subname": ""
+  },
+  "823": {
+   "name": "Ayudante de alguacil Willem",
+   "subname": ""
+  },
+  "830": {
+   "name": "Reptador de arena",
+   "subname": ""
+  },
+  "832": {
+   "name": "Diablo de polvo",
+   "subname": ""
+  },
+  "833": {
+   "name": "Coyote líder",
+   "subname": ""
+  },
+  "834": {
+   "name": "Coyote",
+   "subname": ""
+  },
+  "842": {
+   "name": "Leñador",
+   "subname": ""
+  },
+  "843": {
+   "name": "Gina MacGregor",
+   "subname": ""
+  },
+  "847": {
+   "name": "Nathan",
+   "subname": ""
+  },
+  "849": {
+   "name": "Rachel",
+   "subname": ""
+  },
+  "869": {
+   "name": "Protectora Dorana",
+   "subname": ""
+  },
+  "870": {
+   "name": "Protectora Deni",
+   "subname": ""
+  },
+  "874": {
+   "name": "Protector Korelor",
+   "subname": ""
+  },
+  "876": {
+   "name": "Protector Leick",
+   "subname": ""
+  },
+  "878": {
+   "name": "Explorador Galiaan",
+   "subname": ""
+  },
+  "880": {
+   "name": "Erlan Yermestia",
+   "subname": ""
+  },
+  "881": {
+   "name": "Surena Caledon",
+   "subname": ""
+  },
+  "883": {
+   "name": "Ciervo",
+   "subname": ""
+  },
+  "890": {
+   "name": "Cervato",
+   "subname": ""
+  },
+  "894": {
+   "name": "Homer Pedregosa",
+   "subname": ""
+  },
+  "896": {
+   "name": "Veldan Pieligero",
+   "subname": ""
+  },
+  "903": {
+   "name": "Guardia Howe",
+   "subname": ""
+  },
+  "906": {
+   "name": "Maximillian Crowe",
+   "subname": ""
+  },
+  "911": {
+   "name": "Llane Beshere",
+   "subname": ""
+  },
+  "913": {
+   "name": "Lyria Du Lac",
+   "subname": ""
+  },
+  "914": {
+   "name": "Ander Germaine",
+   "subname": ""
+  },
+  "915": {
+   "name": "Jorik Kerridan",
+   "subname": ""
+  },
+  "917": {
+   "name": "Keryn Sylvius",
+   "subname": ""
+  },
+  "918": {
+   "name": "Osborne el Nocturno",
+   "subname": ""
+  },
+  "925": {
+   "name": "Hermano Sammuel",
+   "subname": ""
+  },
+  "927": {
+   "name": "Hermano Wilhelm",
+   "subname": ""
+  },
+  "928": {
+   "name": "Lord Grisillo Quiebrasombras",
+   "subname": ""
+  },
+  "930": {
+   "name": "Prole de viuda negra",
+   "subname": ""
+  },
+  "931": {
+   "name": "Ariena Tempespluma",
+   "subname": ""
+  },
+  "932": {
+   "name": "Guardia Cierreniza",
+   "subname": ""
+  },
+  "933": {
+   "name": "Guardia Hiett",
+   "subname": ""
+  },
+  "935": {
+   "name": "Guardia Pearce",
+   "subname": ""
+  },
+  "951": {
+   "name": "Hermano Paxton",
+   "subname": ""
+  },
+  "952": {
+   "name": "Hermano Neals",
+   "subname": ""
+  },
+  "955": {
+   "name": "Sargento De Vries",
+   "subname": ""
+  },
+  "957": {
+   "name": "Dane Lindgren",
+   "subname": ""
+  },
+  "958": {
+   "name": "Alba Estrellaclara",
+   "subname": ""
+  },
+  "959": {
+   "name": "Morley Eberlein",
+   "subname": ""
+  },
+  "963": {
+   "name": "Ayudante de alguacil Rainer",
+   "subname": ""
+  },
+  "1070": {
+   "name": "Ayudante de alguacil Feldon",
+   "subname": ""
+  },
+  "1089": {
+   "name": "Montaraz Pedernal",
+   "subname": ""
+  },
+  "1090": {
+   "name": "Montaraz Muroplof",
+   "subname": ""
+  },
+  "1091": {
+   "name": "Montaraz Gravagau",
+   "subname": ""
+  },
+  "1092": {
+   "name": "Capitán Rugelfuss",
+   "subname": ""
+  },
+  "1103": {
+   "name": "Eldrin",
+   "subname": ""
+  },
+  "1105": {
+   "name": "Jern Cornamenta",
+   "subname": ""
+  },
+  "1109": {
+   "name": "Desgarrador",
+   "subname": ""
+  },
+  "1115": {
+   "name": "Aplastacráneos Comepiedras",
+   "subname": ""
+  },
+  "1116": {
+   "name": "Emboscador Comepiedras",
+   "subname": ""
+  },
+  "1117": {
+   "name": "Cascahuesos Comepiedras",
+   "subname": ""
+  },
+  "1118": {
+   "name": "Partedorsales Comepiedras",
+   "subname": ""
+  },
+  "1125": {
+   "name": "Jabalí del risco",
+   "subname": ""
+  },
+  "1126": {
+   "name": "Jabalí del risco grande",
+   "subname": ""
+  },
+  "1127": {
+   "name": "Jabalí del risco anciano",
+   "subname": ""
+  },
+  "1128": {
+   "name": "Oso negro joven",
+   "subname": ""
+  },
+  "1131": {
+   "name": "Lobo invernal",
+   "subname": ""
+  },
+  "1138": {
+   "name": "Lobo rastreador de las nieves",
+   "subname": ""
+  },
+  "1139": {
+   "name": "Magistrado Narizroma",
+   "subname": ""
+  },
+  "1153": {
+   "name": "Torren Mandicuadrada",
+   "subname": ""
+  },
+  "1161": {
+   "name": "Trogg Rompecantos",
+   "subname": ""
+  },
+  "1162": {
+   "name": "Explorador Rompecantos",
+   "subname": ""
+  },
+  "1163": {
+   "name": "Aplastacráneos Rompecantos",
+   "subname": ""
+  },
+  "1166": {
+   "name": "Vidente Rompecantos",
+   "subname": ""
+  },
+  "1172": {
+   "name": "Alimaña Ratatúnel",
+   "subname": ""
+  },
+  "1173": {
+   "name": "Explorador Ratatúnel",
+   "subname": ""
+  },
+  "1174": {
+   "name": "Geomántico Ratatúnel",
+   "subname": ""
+  },
+  "1175": {
+   "name": "Cavador Ratatúnel",
+   "subname": ""
+  },
+  "1176": {
+   "name": "Batidor Ratatúnel",
+   "subname": ""
+  },
+  "1177": {
+   "name": "Perito Ratatúnel",
+   "subname": ""
+  },
+  "1186": {
+   "name": "Oso negro mayor",
+   "subname": ""
+  },
+  "1188": {
+   "name": "Oso negro grisáceo",
+   "subname": ""
+  },
+  "1190": {
+   "name": "Jabalí montés",
+   "subname": ""
+  },
+  "1191": {
+   "name": "Jabalí montés sarnoso",
+   "subname": ""
+  },
+  "1193": {
+   "name": "Furia del Loch Modan",
+   "subname": ""
+  },
+  "1195": {
+   "name": "Rondadora del bosque",
+   "subname": ""
+  },
+  "1196": {
+   "name": "Oso zarpahelada",
+   "subname": ""
+  },
+  "1198": {
+   "name": "Rallic Finn",
+   "subname": ""
+  },
+  "1201": {
+   "name": "Leopardo de las nieves",
+   "subname": ""
+  },
+  "1202": {
+   "name": "Kóbold Ratatúnel",
+   "subname": ""
+  },
+  "1213": {
+   "name": "Godric Rothgar",
+   "subname": ""
+  },
+  "1236": {
+   "name": "Cavador kóbold",
+   "subname": ""
+  },
+  "1237": {
+   "name": "Kazan Mogosh",
+   "subname": ""
+  },
+  "1246": {
+   "name": "Vosur Brakthel",
+   "subname": ""
+  },
+  "1249": {
+   "name": "Intendente Hudson",
+   "subname": ""
+  },
+  "1250": {
+   "name": "Draco Lindgren",
+   "subname": ""
+  },
+  "1254": {
+   "name": "Supervisor Petrocejas",
+   "subname": ""
+  },
+  "1255": {
+   "name": "Prospector Gehn",
+   "subname": ""
+  },
+  "1256": {
+   "name": "Capataz de cantera Thesten",
+   "subname": ""
+  },
+  "1257": {
+   "name": "Keldric Señalo",
+   "subname": ""
+  },
+  "1261": {
+   "name": "Veron Semperámbar",
+   "subname": ""
+  },
+  "1263": {
+   "name": "Yarlyn Semperámbar",
+   "subname": ""
+  },
+  "1265": {
+   "name": "Rudra Semperámbar",
+   "subname": ""
+  },
+  "1274": {
+   "name": "Senador Barin Rocarroja",
+   "subname": ""
+  },
+  "1275": {
+   "name": "Kyra Señalo",
+   "subname": ""
+  },
+  "1276": {
+   "name": "Montaraz Brokk",
+   "subname": ""
+  },
+  "1277": {
+   "name": "Montaraz Ganin",
+   "subname": ""
+  },
+  "1278": {
+   "name": "Montaraz Stenn",
+   "subname": ""
+  },
+  "1279": {
+   "name": "Montaraz Sílex",
+   "subname": ""
+  },
+  "1280": {
+   "name": "Montaraz Droken",
+   "subname": ""
+  },
+  "1281": {
+   "name": "Montaraz Zaren",
+   "subname": ""
+  },
+  "1282": {
+   "name": "Montaraz Veek",
+   "subname": ""
+  },
+  "1283": {
+   "name": "Montaraz Kalmir",
+   "subname": ""
+  },
+  "1284": {
+   "name": "Arzobispo Benedictus",
+   "subname": ""
+  },
+  "1285": {
+   "name": "Thurman Mullby",
+   "subname": ""
+  },
+  "1286": {
+   "name": "Edna Mullby",
+   "subname": ""
+  },
+  "1287": {
+   "name": "Marda Weller",
+   "subname": ""
+  },
+  "1289": {
+   "name": "Gunther Pozador",
+   "subname": ""
+  },
+  "1291": {
+   "name": "Carla Granger",
+   "subname": ""
+  },
+  "1292": {
+   "name": "Maris Granger",
+   "subname": ""
+  },
+  "1294": {
+   "name": "Aldric Moore",
+   "subname": ""
+  },
+  "1295": {
+   "name": "Lara Moore",
+   "subname": ""
+  },
+  "1297": {
+   "name": "Lina Hornillos",
+   "subname": ""
+  },
+  "1298": {
+   "name": "Frederick Hornillos",
+   "subname": ""
+  },
+  "1299": {
+   "name": "Lisbeth Schneider",
+   "subname": ""
+  },
+  "1300": {
+   "name": "Lawrence Schneider",
+   "subname": ""
+  },
+  "1301": {
+   "name": "Julia Galina",
+   "subname": ""
+  },
+  "1302": {
+   "name": "Bernard Gump",
+   "subname": ""
+  },
+  "1303": {
+   "name": "Felicia Gump",
+   "subname": ""
+  },
+  "1304": {
+   "name": "Darian Singh",
+   "subname": ""
+  },
+  "1312": {
+   "name": "Ardwyn Cailen",
+   "subname": ""
+  },
+  "1314": {
+   "name": "Duncan Cullen",
+   "subname": ""
+  },
+  "1315": {
+   "name": "Allan Hafgan",
+   "subname": ""
+  },
+  "1316": {
+   "name": "Adair Gilroy",
+   "subname": ""
+  },
+  "1317": {
+   "name": "Lucan Cordell",
+   "subname": ""
+  },
+  "1318": {
+   "name": "Jessara Cordell",
+   "subname": ""
+  },
+  "1319": {
+   "name": "Bryan Cruz",
+   "subname": ""
+  },
+  "1320": {
+   "name": "Seoman Griffith",
+   "subname": ""
+  },
+  "1321": {
+   "name": "Alyssa Griffith",
+   "subname": ""
+  },
+  "1323": {
+   "name": "Osric Strang",
+   "subname": ""
+  },
+  "1324": {
+   "name": "Heinrich Roca",
+   "subname": ""
+  },
+  "1325": {
+   "name": "Jasper Vil",
+   "subname": ""
+  },
+  "1326": {
+   "name": "Sloan McCoy",
+   "subname": ""
+  },
+  "1327": {
+   "name": "Reese Langston",
+   "subname": ""
+  },
+  "1328": {
+   "name": "Elly Langston",
+   "subname": ""
+  },
+  "1329": {
+   "name": "Montaraz Naarh",
+   "subname": ""
+  },
+  "1330": {
+   "name": "Montaraz Tyraw",
+   "subname": ""
+  },
+  "1331": {
+   "name": "Montaraz Luxst",
+   "subname": ""
+  },
+  "1332": {
+   "name": "Montaraz Morran",
+   "subname": ""
+  },
+  "1333": {
+   "name": "Gerik Koen",
+   "subname": ""
+  },
+  "1334": {
+   "name": "Montaraz Sentencia",
+   "subname": ""
+  },
+  "1335": {
+   "name": "Montaraz Yuttha",
+   "subname": ""
+  },
+  "1336": {
+   "name": "Montaraz Adverz",
+   "subname": ""
+  },
+  "1337": {
+   "name": "Montaraz Gwarth",
+   "subname": ""
+  },
+  "1338": {
+   "name": "Montaraz Dalk",
+   "subname": ""
+  },
+  "1339": {
+   "name": "Mayda Thane",
+   "subname": ""
+  },
+  "1340": {
+   "name": "Montaraz Kadrell",
+   "subname": ""
+  },
+  "1341": {
+   "name": "Wilhelm Strang",
+   "subname": ""
+  },
+  "1343": {
+   "name": "Montaraz Pico Tormenta",
+   "subname": ""
+  },
+  "1346": {
+   "name": "Georgio Bolero",
+   "subname": ""
+  },
+  "1347": {
+   "name": "Alexandra Bolero",
+   "subname": ""
+  },
+  "1348": {
+   "name": "Gregory Ardus",
+   "subname": ""
+  },
+  "1349": {
+   "name": "Agustus Moulaine",
+   "subname": ""
+  },
+  "1350": {
+   "name": "Theresa Moulaine",
+   "subname": ""
+  },
+  "1351": {
+   "name": "Hermano Cassius",
+   "subname": ""
+  },
+  "1352": {
+   "name": "Esponjín",
+   "subname": ""
+  },
+  "1355": {
+   "name": "Cocinero Ghilm",
+   "subname": ""
+  },
+  "1358": {
+   "name": "Minero Grothor",
+   "subname": ""
+  },
+  "1360": {
+   "name": "Minero Grumnal",
+   "subname": ""
+  },
+  "1362": {
+   "name": "Gothor Brumn",
+   "subname": ""
+  },
+  "1366": {
+   "name": "Adam",
+   "subname": ""
+  },
+  "1367": {
+   "name": "Billy",
+   "subname": ""
+  },
+  "1368": {
+   "name": "Justin",
+   "subname": ""
+  },
+  "1370": {
+   "name": "Brandon",
+   "subname": ""
+  },
+  "1371": {
+   "name": "Roman",
+   "subname": ""
+  },
+  "1376": {
+   "name": "Beldin Brasacerada",
+   "subname": ""
+  },
+  "1377": {
+   "name": "Piloto Roscapiedra",
+   "subname": ""
+  },
+  "1378": {
+   "name": "Piloto Bramiz",
+   "subname": ""
+  },
+  "1388": {
+   "name": "Vagash",
+   "subname": ""
+  },
+  "1395": {
+   "name": "Viejo Beasley",
+   "subname": ""
+  },
+  "1402": {
+   "name": "Topper McNabb",
+   "subname": ""
+  },
+  "1405": {
+   "name": "Morris Lawry",
+   "subname": ""
+  },
+  "1412": {
+   "name": "Ardilla",
+   "subname": ""
+  },
+  "1413": {
+   "name": "Janey Anship",
+   "subname": ""
+  },
+  "1414": {
+   "name": "Lisan Pierce",
+   "subname": ""
+  },
+  "1415": {
+   "name": "Suzanne",
+   "subname": ""
+  },
+  "1416": {
+   "name": "Grimand Elmore",
+   "subname": ""
+  },
+  "1426": {
+   "name": "Minero Zarparrío",
+   "subname": ""
+  },
+  "1427": {
+   "name": "Harlan Bagley",
+   "subname": ""
+  },
+  "1428": {
+   "name": "Rema Schneider",
+   "subname": ""
+  },
+  "1430": {
+   "name": "Tomas",
+   "subname": ""
+  },
+  "1431": {
+   "name": "Suzetta Galina",
+   "subname": ""
+  },
+  "1432": {
+   "name": "Renato Galina",
+   "subname": ""
+  },
+  "1433": {
+   "name": "Corbett Schneider",
+   "subname": ""
+  },
+  "1444": {
+   "name": "Hermano Kristoff",
+   "subname": ""
+  },
+  "1465": {
+   "name": "Drac Corteseco",
+   "subname": ""
+  },
+  "1469": {
+   "name": "Vrok Rayobestial",
+   "subname": ""
+  },
+  "1470": {
+   "name": "Ghak Sanadón",
+   "subname": ""
+  },
+  "1472": {
+   "name": "Morgg Disparormento",
+   "subname": ""
+  },
+  "1473": {
+   "name": "Kali Sanatoque",
+   "subname": ""
+  },
+  "1474": {
+   "name": "Rann Flamejes",
+   "subname": ""
+  },
+  "1477": {
+   "name": "Christoph Faral",
+   "subname": ""
+  },
+  "1478": {
+   "name": "Aedis Brom",
+   "subname": ""
+  },
+  "1572": {
+   "name": "Thorgrum Borrelson",
+   "subname": ""
+  },
+  "1573": {
+   "name": "Gryth Thurden",
+   "subname": ""
+  },
+  "1632": {
+   "name": "Adele Fielder",
+   "subname": ""
+  },
+  "1642": {
+   "name": "Guardia de Villanorte",
+   "subname": "Guardia de Villanorte"
+  },
+  "1645": {
+   "name": "Intendente Hicks",
+   "subname": ""
+  },
+  "1646": {
+   "name": "Baros Alexston",
+   "subname": ""
+  },
+  "1650": {
+   "name": "Terry Palin",
+   "subname": ""
+  },
+  "1651": {
+   "name": "Lee Moreno",
+   "subname": ""
+  },
+  "1663": {
+   "name": "Dextren Ward",
+   "subname": ""
+  },
+  "1666": {
+   "name": "Kam Furiahonda",
+   "subname": ""
+  },
+  "1668": {
+   "name": "William MacGregor",
+   "subname": ""
+  },
+  "1670": {
+   "name": "Mike Molina",
+   "subname": ""
+  },
+  "1679": {
+   "name": "Avarus Kharag",
+   "subname": ""
+  },
+  "1681": {
+   "name": "Brock Buscapiedras",
+   "subname": ""
+  },
+  "1682": {
+   "name": "Yanni Cuoreforte",
+   "subname": ""
+  },
+  "1683": {
+   "name": "Warg Aguahonda",
+   "subname": ""
+  },
+  "1684": {
+   "name": "Khara Aguahonda",
+   "subname": ""
+  },
+  "1689": {
+   "name": "Jabalí del risco cicatríceo",
+   "subname": ""
+  },
+  "1694": {
+   "name": "Loslor Rudge",
+   "subname": ""
+  },
+  "1696": {
+   "name": "Targorr el Pavoroso",
+   "subname": ""
+  },
+  "1698": {
+   "name": "Frast Dokner",
+   "subname": ""
+  },
+  "1701": {
+   "name": "Dank Cortefiel",
+   "subname": ""
+  },
+  "1702": {
+   "name": "Bronk Comengranaje",
+   "subname": ""
+  },
+  "1706": {
+   "name": "Prisionero Defias",
+   "subname": ""
+  },
+  "1707": {
+   "name": "Cautivo Defias",
+   "subname": ""
+  },
+  "1716": {
+   "name": "Bazil Thredd",
+   "subname": ""
+  },
+  "1717": {
+   "name": "Hamhock",
+   "subname": ""
+  },
+  "1719": {
+   "name": "Celador Thelagua",
+   "subname": ""
+  },
+  "1720": {
+   "name": "Bruegal Nudoferro",
+   "subname": ""
+  },
+  "1721": {
+   "name": "Nikova Raskol",
+   "subname": ""
+  },
+  "1754": {
+   "name": "Lord Gregor Lescovar",
+   "subname": ""
+  },
+  "1755": {
+   "name": "Marzon el Filo Silencioso",
+   "subname": ""
+  },
+  "1763": {
+   "name": "Gilnid",
+   "subname": ""
+  },
+  "1777": {
+   "name": "Dakk Rayobestial",
+   "subname": ""
+  },
+  "1853": {
+   "name": "Maestro oscuro Gandling",
+   "subname": ""
+  },
+  "1860": {
+   "name": "Abisario",
+   "subname": ""
+  },
+  "1863": {
+   "name": "Súcubo",
+   "subname": ""
+  },
+  "1933": {
+   "name": "Oveja",
+   "subname": ""
+  },
+  "1949": {
+   "name": "Sirviente de Azora",
+   "subname": "Sirviente de Azora"
+  },
+  "1960": {
+   "name": "Piloto Podomartillo",
+   "subname": ""
+  },
+  "1961": {
+   "name": "Sarnagarra",
+   "subname": ""
+  },
+  "1963": {
+   "name": "Vidra Hogartufa",
+   "subname": ""
+  },
+  "1975": {
+   "name": "Leñador de la Vega del Este",
+   "subname": ""
+  },
+  "1976": {
+   "name": "Patrulla urbana de Ventormenta",
+   "subname": ""
+  },
+  "1977": {
+   "name": "Senador Mehr Piedrasanta",
+   "subname": ""
+  },
+  "2044": {
+   "name": "Espíritu melancólico",
+   "subname": ""
+  },
+  "2046": {
+   "name": "Andrew Krighton",
+   "subname": ""
+  },
+  "2070": {
+   "name": "Cachorro Acechalunas",
+   "subname": ""
+  },
+  "2098": {
+   "name": "Carnero",
+   "subname": ""
+  },
+  "2163": {
+   "name": "Oso cardo",
+   "subname": ""
+  },
+  "2164": {
+   "name": "Oso cardo rabioso",
+   "subname": ""
+  },
+  "2167": {
+   "name": "Abrecaminos Bosque Negro",
+   "subname": ""
+  },
+  "2185": {
+   "name": "Trillador de Costa Oscura",
+   "subname": ""
+  },
+  "2198": {
+   "name": "Pregonero Buenhombre",
+   "subname": ""
+  },
+  "2201": {
+   "name": "Asaltante Brumagris",
+   "subname": ""
+  },
+  "2202": {
+   "name": "Correcostas Brumagris",
+   "subname": ""
+  },
+  "2231": {
+   "name": "Reptador de marea pigmeo",
+   "subname": ""
+  },
+  "2234": {
+   "name": "Reptador de arrecife joven",
+   "subname": ""
+  },
+  "2321": {
+   "name": "Volantón zancudo del bosque",
+   "subname": ""
+  },
+  "2324": {
+   "name": "Soplaviento Bosque Negro",
+   "subname": ""
+  },
+  "2327": {
+   "name": "Shaina Fuller",
+   "subname": ""
+  },
+  "2329": {
+   "name": "Michelle Belle",
+   "subname": ""
+  },
+  "2330": {
+   "name": "Karlee Chaddis",
+   "subname": ""
+  },
+  "2331": {
+   "name": "Paige Chaddis",
+   "subname": ""
+  },
+  "2334": {
+   "name": "Generador de Eventos 001",
+   "subname": ""
+  },
+  "2442": {
+   "name": "Vaca",
+   "subname": ""
+  },
+  "2455": {
+   "name": "Olivia Ladoquemado",
+   "subname": ""
+  },
+  "2456": {
+   "name": "Newton Ladoquemado",
+   "subname": ""
+  },
+  "2457": {
+   "name": "John Ladoquemado",
+   "subname": ""
+  },
+  "2460": {
+   "name": "Barnum Mantopétreo",
+   "subname": ""
+  },
+  "2461": {
+   "name": "Bailey Mantopétreo",
+   "subname": ""
+  },
+  "2506": {
+   "name": "Montaraz Harn",
+   "subname": ""
+  },
+  "2507": {
+   "name": "Montaraz Uthan",
+   "subname": ""
+  },
+  "2508": {
+   "name": "Montaraz Wuar",
+   "subname": ""
+  },
+  "2509": {
+   "name": "Montaraz Risco",
+   "subname": ""
+  },
+  "2510": {
+   "name": "Montaraz Ozmok",
+   "subname": ""
+  },
+  "2511": {
+   "name": "Montaraz Bludd",
+   "subname": ""
+  },
+  "2512": {
+   "name": "Montaraz Roghan",
+   "subname": ""
+  },
+  "2513": {
+   "name": "Montaraz Janha",
+   "subname": ""
+  },
+  "2514": {
+   "name": "Montaraz Modax",
+   "subname": ""
+  },
+  "2515": {
+   "name": "Montaraz Fazgard",
+   "subname": ""
+  },
+  "2516": {
+   "name": "Montaraz Kamdar",
+   "subname": ""
+  },
+  "2517": {
+   "name": "Montaraz Langarr",
+   "subname": ""
+  },
+  "2518": {
+   "name": "Montaraz Iraz",
+   "subname": ""
+  },
+  "2523": {
+   "name": "Tótem abrasador",
+   "subname": ""
+  },
+  "2524": {
+   "name": "Montaraz Haggis",
+   "subname": ""
+  },
+  "2532": {
+   "name": "Donna",
+   "subname": ""
+  },
+  "2533": {
+   "name": "William",
+   "subname": ""
+  },
+  "2619": {
+   "name": "Bruto de Sentencia",
+   "subname": ""
+  },
+  "2620": {
+   "name": "Perro de la pradera",
+   "subname": ""
+  },
+  "2630": {
+   "name": "Tótem Nexo Terrestre",
+   "subname": ""
+  },
+  "2671": {
+   "name": "Ardilla mecánica",
+   "subname": ""
+  },
+  "2695": {
+   "name": "Sara Balloo",
+   "subname": ""
+  },
+  "2748": {
+   "name": "Archaedas",
+   "subname": ""
+  },
+  "2784": {
+   "name": "Rey Magni Barbabronce",
+   "subname": ""
+  },
+  "2790": {
+   "name": "Gran mampostero Marmolez",
+   "subname": ""
+  },
+  "2795": {
+   "name": "Lenny \"Dedillos\" McCoy",
+   "subname": ""
+  },
+  "2879": {
+   "name": "Karrina Mekenda",
+   "subname": ""
+  },
+  "2913": {
+   "name": "Arqueóloga Hollee",
+   "subname": ""
+  },
+  "2914": {
+   "name": "Culebra",
+   "subname": ""
+  },
+  "2930": {
+   "name": "Centinela Glynda Nal'Shea",
+   "subname": ""
+  },
+  "3177": {
+   "name": "Turuk Semperámbar",
+   "subname": ""
+  },
+  "3291": {
+   "name": "Greishan Calefacero",
+   "subname": ""
+  },
+  "3504": {
+   "name": "Gil",
+   "subname": ""
+  },
+  "3505": {
+   "name": "Pat",
+   "subname": ""
+  },
+  "3507": {
+   "name": "Andi",
+   "subname": ""
+  },
+  "3508": {
+   "name": "Mikey",
+   "subname": ""
+  },
+  "3509": {
+   "name": "Geoff",
+   "subname": ""
+  },
+  "3510": {
+   "name": "Oposti",
+   "subname": ""
+  },
+  "3511": {
+   "name": "Steven",
+   "subname": ""
+  },
+  "3512": {
+   "name": "Jimmy",
+   "subname": ""
+  },
+  "3513": {
+   "name": "Señorita Danna",
+   "subname": ""
+  },
+  "3518": {
+   "name": "Thomas Molina",
+   "subname": ""
+  },
+  "3520": {
+   "name": "Vieja Emma",
+   "subname": ""
+  },
+  "3527": {
+   "name": "Tótem Corriente de sanación",
+   "subname": ""
+  },
+  "3579": {
+   "name": "Tótem Garra de piedra",
+   "subname": ""
+  },
+  "3583": {
+   "name": "Barithras Sombra Lunar",
+   "subname": ""
+  },
+  "3586": {
+   "name": "Minero Johnson",
+   "subname": ""
+  },
+  "3626": {
+   "name": "Jenn Langston",
+   "subname": ""
+  },
+  "3629": {
+   "name": "David Langston",
+   "subname": ""
+  },
+  "3644": {
+   "name": "Cerellean Zarpablanca",
+   "subname": ""
+  },
+  "3653": {
+   "name": "Kresh",
+   "subname": ""
+  },
+  "3654": {
+   "name": "Mutanus el Devorador",
+   "subname": ""
+  },
+  "3657": {
+   "name": "Centinela Elissa Brisa Estelar",
+   "subname": ""
+  },
+  "3666": {
+   "name": "Maniveo Zumbang",
+   "subname": ""
+  },
+  "3669": {
+   "name": "Lord Cobrahn",
+   "subname": ""
+  },
+  "3670": {
+   "name": "Lord Pythas",
+   "subname": ""
+  },
+  "3671": {
+   "name": "Lady Anacondra",
+   "subname": ""
+  },
+  "3673": {
+   "name": "Lord Serpentis",
+   "subname": ""
+  },
+  "3674": {
+   "name": "Skum",
+   "subname": ""
+  },
+  "3678": {
+   "name": "Discípulo de Naralex",
+   "subname": ""
+  },
+  "3693": {
+   "name": "Terenthis",
+   "subname": ""
+  },
+  "3695": {
+   "name": "Zarpadura",
+   "subname": ""
+  },
+  "3701": {
+   "name": "Tharnariun Espinarbolado",
+   "subname": ""
+  },
+  "3841": {
+   "name": "Caylais Plumalunar",
+   "subname": ""
+  },
+  "3842": {
+   "name": "Brombar Desordar",
+   "subname": ""
+  },
+  "3843": {
+   "name": "Anaia",
+   "subname": ""
+  },
+  "3864": {
+   "name": "Corcel vil",
+   "subname": ""
+  },
+  "3872": {
+   "name": "Capitán Juramorte",
+   "subname": ""
+  },
+  "3886": {
+   "name": "Zarpador el Carnicero",
+   "subname": ""
+  },
+  "3887": {
+   "name": "Barón Filargenta",
+   "subname": ""
+  },
+  "3902": {
+   "name": "Tótem abrasador II",
+   "subname": ""
+  },
+  "3914": {
+   "name": "Rethilgore",
+   "subname": ""
+  },
+  "3927": {
+   "name": "Maestro de lobos Nandos",
+   "subname": ""
+  },
+  "3935": {
+   "name": "Toddrick",
+   "subname": ""
+  },
+  "3937": {
+   "name": "Kira Cántico",
+   "subname": ""
+  },
+  "3948": {
+   "name": "Honni Avenaurea",
+   "subname": ""
+  },
+  "3974": {
+   "name": "Maestro de canes Loksey",
+   "subname": ""
+  },
+  "3975": {
+   "name": "Herod",
+   "subname": ""
+  },
+  "3976": {
+   "name": "Comandante Escarlata Mograine",
+   "subname": ""
+  },
+  "3977": {
+   "name": "Alta inquisidora Melenablanca",
+   "subname": ""
+  },
+  "3983": {
+   "name": "Interrogador Vishas",
+   "subname": ""
+  },
+  "4075": {
+   "name": "Rata",
+   "subname": ""
+  },
+  "4081": {
+   "name": "Lomac Destrabaengranajes",
+   "subname": ""
+  },
+  "4187": {
+   "name": "Harlon Guardaspina",
+   "subname": ""
+  },
+  "4190": {
+   "name": "Kyndri",
+   "subname": ""
+  },
+  "4191": {
+   "name": "Allyndia",
+   "subname": ""
+  },
+  "4192": {
+   "name": "Taldan",
+   "subname": ""
+  },
+  "4200": {
+   "name": "Laird",
+   "subname": ""
+  },
+  "4258": {
+   "name": "Bengus Forjahonda",
+   "subname": ""
+  },
+  "4259": {
+   "name": "Thurgrum Forjahonda",
+   "subname": ""
+  },
+  "4274": {
+   "name": "Fenrus el Devorador",
+   "subname": ""
+  },
+  "4275": {
+   "name": "Archimago Arugal",
+   "subname": ""
+  },
+  "4278": {
+   "name": "Comandante Vallefont",
+   "subname": ""
+  },
+  "4279": {
+   "name": "Odo el Vigía Ciego",
+   "subname": ""
+  },
+  "4420": {
+   "name": "Señor supremo Colmicarnero",
+   "subname": ""
+  },
+  "4421": {
+   "name": "Charlga Filonavaja",
+   "subname": ""
+  },
+  "4422": {
+   "name": "Agathelos el Furioso",
+   "subname": ""
+  },
+  "4424": {
+   "name": "Aggem Malaespina",
+   "subname": ""
+  },
+  "4425": {
+   "name": "Cazador ciego",
+   "subname": ""
+  },
+  "4428": {
+   "name": "Portavoz de la muerte Jargba",
+   "subname": ""
+  },
+  "4542": {
+   "name": "Alto inquisidor Ribalimpia",
+   "subname": ""
+  },
+  "4543": {
+   "name": "Mago sangriento Thalnos",
+   "subname": ""
+  },
+  "4627": {
+   "name": "Abisario de Arugal",
+   "subname": ""
+  },
+  "4732": {
+   "name": "Randal Predatio",
+   "subname": ""
+  },
+  "4772": {
+   "name": "Ulthaan Ferrocorno",
+   "subname": ""
+  },
+  "4829": {
+   "name": "Aku'mai",
+   "subname": ""
+  },
+  "4830": {
+   "name": "Viejo Serra'kis",
+   "subname": ""
+  },
+  "4831": {
+   "name": "Lady Sarevess",
+   "subname": ""
+  },
+  "4832": {
+   "name": "Señor Crepuscular Kelris",
+   "subname": ""
+  },
+  "4842": {
+   "name": "Clamatierras Halmgar",
+   "subname": ""
+  },
+  "4854": {
+   "name": "Grimlok",
+   "subname": ""
+  },
+  "4887": {
+   "name": "Ghamoo-ra",
+   "subname": ""
+  },
+  "4959": {
+   "name": "Jorgen",
+   "subname": ""
+  },
+  "4961": {
+   "name": "Dashel Puñopiedra",
+   "subname": ""
+  },
+  "4969": {
+   "name": "Matón del Casco Antiguo",
+   "subname": ""
+  },
+  "4974": {
+   "name": "Aldwin Risante",
+   "subname": ""
+  },
+  "4981": {
+   "name": "Ben Trias",
+   "subname": ""
+  },
+  "4982": {
+   "name": "Thomas",
+   "subname": ""
+  },
+  "4995": {
+   "name": "Guardia de las Mazmorras",
+   "subname": ""
+  },
+  "4996": {
+   "name": "Guardia de la empalizada malherido",
+   "subname": ""
+  },
+  "5042": {
+   "name": "Enfermera Lillian",
+   "subname": ""
+  },
+  "5043": {
+   "name": "Alborotador Defias",
+   "subname": ""
+  },
+  "5049": {
+   "name": "Lyesa Frenteacerada",
+   "subname": ""
+  },
+  "5099": {
+   "name": "Soleil Mantopétreo",
+   "subname": ""
+  },
+  "5100": {
+   "name": "Fillius Maleje",
+   "subname": ""
+  },
+  "5101": {
+   "name": "Bryllia Ferracha",
+   "subname": ""
+  },
+  "5102": {
+   "name": "Dolman Furiacerada",
+   "subname": ""
+  },
+  "5103": {
+   "name": "Grenil Furiacerada",
+   "subname": ""
+  },
+  "5106": {
+   "name": "Bromiir Ormsen",
+   "subname": ""
+  },
+  "5107": {
+   "name": "Mangorn Martílex",
+   "subname": ""
+  },
+  "5108": {
+   "name": "Raena Martílex",
+   "subname": ""
+  },
+  "5109": {
+   "name": "Myra Tyrngaarde",
+   "subname": ""
+  },
+  "5110": {
+   "name": "Barim Jurgenstaad",
+   "subname": ""
+  },
+  "5111": {
+   "name": "Tabernero Brebefuego",
+   "subname": ""
+  },
+  "5112": {
+   "name": "Gwenna Brebefuego",
+   "subname": ""
+  },
+  "5114": {
+   "name": "Bilban Cálculo",
+   "subname": ""
+  },
+  "5116": {
+   "name": "Olmin Barbardiente",
+   "subname": ""
+  },
+  "5117": {
+   "name": "Regnus Tronagranito",
+   "subname": ""
+  },
+  "5119": {
+   "name": "Hegnar Hacharrápida",
+   "subname": ""
+  },
+  "5120": {
+   "name": "Brenwyn Ventacerado",
+   "subname": ""
+  },
+  "5121": {
+   "name": "Kelomir Manoyerro",
+   "subname": ""
+  },
+  "5122": {
+   "name": "Skolmin Furiadorada",
+   "subname": ""
+  },
+  "5123": {
+   "name": "Bretta Furiadorada",
+   "subname": ""
+  },
+  "5124": {
+   "name": "Sognar Barbarrisco",
+   "subname": ""
+  },
+  "5130": {
+   "name": "Jondor Frenteacerada",
+   "subname": ""
+  },
+  "5132": {
+   "name": "Pithwick",
+   "subname": ""
+  },
+  "5137": {
+   "name": "Reyna Ramapiedra",
+   "subname": ""
+  },
+  "5138": {
+   "name": "Gwina Ramapiedra",
+   "subname": ""
+  },
+  "5140": {
+   "name": "Edris Barbacebada",
+   "subname": ""
+  },
+  "5150": {
+   "name": "Nissa Piedra de fuego",
+   "subname": ""
+  },
+  "5157": {
+   "name": "Gimble Cardopelusa",
+   "subname": ""
+  },
+  "5158": {
+   "name": "Tilli Cardopelusa",
+   "subname": ""
+  },
+  "5159": {
+   "name": "Daryl Riknussun",
+   "subname": ""
+  },
+  "5160": {
+   "name": "Emrul Riknussun",
+   "subname": ""
+  },
+  "5164": {
+   "name": "Grumnus Forjacero",
+   "subname": ""
+  },
+  "5174": {
+   "name": "Muello Saltarín",
+   "subname": ""
+  },
+  "5175": {
+   "name": "Cortallave Volopiñón",
+   "subname": ""
+  },
+  "5177": {
+   "name": "Tally Burbubaya",
+   "subname": ""
+  },
+  "5178": {
+   "name": "Soolie Burbubaya",
+   "subname": ""
+  },
+  "5186": {
+   "name": "Tiburón Peregrino",
+   "subname": ""
+  },
+  "5193": {
+   "name": "Rebecca Risante",
+   "subname": ""
+  },
+  "5384": {
+   "name": "Brohann Barriliga",
+   "subname": ""
+  },
+  "5386": {
+   "name": "Acólito Dellis",
+   "subname": ""
+  },
+  "5392": {
+   "name": "Yarr Martillal",
+   "subname": ""
+  },
+  "5403": {
+   "name": "Semental blanco",
+   "subname": ""
+  },
+  "5406": {
+   "name": "Palomino",
+   "subname": ""
+  },
+  "5413": {
+   "name": "Furen Barbalarga",
+   "subname": ""
+  },
+  "5479": {
+   "name": "Wu Shen",
+   "subname": ""
+  },
+  "5480": {
+   "name": "Ilsa Corbin",
+   "subname": ""
+  },
+  "5482": {
+   "name": "Stephen Lomocenteno",
+   "subname": ""
+  },
+  "5483": {
+   "name": "Erika Tate",
+   "subname": ""
+  },
+  "5484": {
+   "name": "Hermano Benjamin",
+   "subname": ""
+  },
+  "5491": {
+   "name": "Arthur el Leal",
+   "subname": ""
+  },
+  "5492": {
+   "name": "Katherine la Pura",
+   "subname": ""
+  },
+  "5493": {
+   "name": "Arnold Leland",
+   "subname": ""
+  },
+  "5494": {
+   "name": "Catherine Leland",
+   "subname": ""
+  },
+  "5509": {
+   "name": "Kathrum Mano de Hacha",
+   "subname": ""
+  },
+  "5510": {
+   "name": "Thulman Riscosílex",
+   "subname": ""
+  },
+  "5511": {
+   "name": "Therum Forjahonda",
+   "subname": ""
+  },
+  "5512": {
+   "name": "Kaita Forjahonda",
+   "subname": ""
+  },
+  "5513": {
+   "name": "Gelman Petramano",
+   "subname": ""
+  },
+  "5514": {
+   "name": "Brooke Petratrenza",
+   "subname": ""
+  },
+  "5515": {
+   "name": "Einris Lanza Reluciente",
+   "subname": ""
+  },
+  "5516": {
+   "name": "Ulfir Barbaférrea",
+   "subname": ""
+  },
+  "5517": {
+   "name": "Thorfin Petrescudo",
+   "subname": ""
+  },
+  "5518": {
+   "name": "Lilliam Chispeje",
+   "subname": ""
+  },
+  "5519": {
+   "name": "Billibub Volopiñón",
+   "subname": ""
+  },
+  "5564": {
+   "name": "Simon Peletero",
+   "subname": ""
+  },
+  "5565": {
+   "name": "Jillian Peletero",
+   "subname": ""
+  },
+  "5569": {
+   "name": "Fizzlebang Bums",
+   "subname": ""
+  },
+  "5570": {
+   "name": "Bruuk Barbacebada",
+   "subname": ""
+  },
+  "5595": {
+   "name": "Guardia de Forjaz",
+   "subname": ""
+  },
+  "5605": {
+   "name": "Tisa Martine",
+   "subname": ""
+  },
+  "5607": {
+   "name": "Roger",
+   "subname": ""
+  },
+  "5608": {
+   "name": "Jamin",
+   "subname": ""
+  },
+  "5709": {
+   "name": "Sombra de Eranikus",
+   "subname": ""
+  },
+  "5710": {
+   "name": "Jammal'an el Profeta",
+   "subname": ""
+  },
+  "5711": {
+   "name": "Ogom el Desdichado",
+   "subname": ""
+  },
+  "5719": {
+   "name": "Morphaz",
+   "subname": ""
+  },
+  "5721": {
+   "name": "Segasueños",
+   "subname": ""
+  },
+  "5775": {
+   "name": "Verdan el Eterno",
+   "subname": ""
+  },
+  "5873": {
+   "name": "Tótem Piel de piedra",
+   "subname": ""
+  },
+  "5874": {
+   "name": "Tótem Fuerza de la tierra",
+   "subname": ""
+  },
+  "5893": {
+   "name": "Manifestación de fuego menor",
+   "subname": ""
+  },
+  "5912": {
+   "name": "Dragón feérico descarriado",
+   "subname": ""
+  },
+  "5913": {
+   "name": "Tótem de tremor",
+   "subname": ""
+  },
+  "5917": {
+   "name": "Clara Charles",
+   "subname": ""
+  },
+  "6030": {
+   "name": "Thorvald Forjahonda",
+   "subname": ""
+  },
+  "6031": {
+   "name": "Tormus Forjahonda",
+   "subname": ""
+  },
+  "6086": {
+   "name": "Centinela de Auberdine",
+   "subname": ""
+  },
+  "6089": {
+   "name": "Harry Burlguard",
+   "subname": ""
+  },
+  "6090": {
+   "name": "Bartleby",
+   "subname": ""
+  },
+  "6121": {
+   "name": "Remen Marcot",
+   "subname": ""
+  },
+  "6123": {
+   "name": "Espía Hierro Negro",
+   "subname": ""
+  },
+  "6124": {
+   "name": "Capitán Beld",
+   "subname": ""
+  },
+  "6145": {
+   "name": "Banco de peces",
+   "subname": ""
+  },
+  "6168": {
+   "name": "Roogug",
+   "subname": ""
+  },
+  "6169": {
+   "name": "Klockmort Palmalicate",
+   "subname": ""
+  },
+  "6171": {
+   "name": "Duthorian Rall",
+   "subname": ""
+  },
+  "6174": {
+   "name": "Stephanie Turner",
+   "subname": ""
+  },
+  "6175": {
+   "name": "John Turner",
+   "subname": ""
+  },
+  "6177": {
+   "name": "Narm Faulk",
+   "subname": ""
+  },
+  "6181": {
+   "name": "Jordan Fontana",
+   "subname": ""
+  },
+  "6228": {
+   "name": "Embajador Hierro Negro",
+   "subname": ""
+  },
+  "6229": {
+   "name": "Golpeamasa 9-60",
+   "subname": ""
+  },
+  "6235": {
+   "name": "Electrocutor 6000",
+   "subname": ""
+  },
+  "6237": {
+   "name": "Arquero de las Mazmorras",
+   "subname": ""
+  },
+  "6241": {
+   "name": "Bailor Petramano",
+   "subname": ""
+  },
+  "6243": {
+   "name": "Gelihast",
+   "subname": ""
+  },
+  "6271": {
+   "name": "Ratón",
+   "subname": ""
+  },
+  "6298": {
+   "name": "Thelgrum Rocamartillo",
+   "subname": ""
+  },
+  "6300": {
+   "name": "Elisa Mano de Acero",
+   "subname": ""
+  },
+  "6301": {
+   "name": "Gorbold Mano de Acero",
+   "subname": ""
+  },
+  "6306": {
+   "name": "Helene Desollapelambres",
+   "subname": ""
+  },
+  "6373": {
+   "name": "Dane Winslow",
+   "subname": ""
+  },
+  "6374": {
+   "name": "Cilina Negrozón",
+   "subname": ""
+  },
+  "6487": {
+   "name": "Arcanista Doan",
+   "subname": ""
+  },
+  "6488": {
+   "name": "Campeón caído",
+   "subname": ""
+  },
+  "6489": {
+   "name": "Dorsacerado",
+   "subname": ""
+  },
+  "6490": {
+   "name": "Azshir el Insomne",
+   "subname": ""
+  },
+  "6491": {
+   "name": "Ángel de la Resurrección",
+   "subname": ""
+  },
+  "6569": {
+   "name": "Gnoarn",
+   "subname": ""
+  },
+  "6579": {
+   "name": "Shoni la Shilenshiosha",
+   "subname": ""
+  },
+  "6670": {
+   "name": "Ebanista de los Páramos de Poniente",
+   "subname": ""
+  },
+  "6734": {
+   "name": "Tabernero Hogartufa",
+   "subname": ""
+  },
+  "6737": {
+   "name": "Tabernera Shaussiy",
+   "subname": ""
+  },
+  "6740": {
+   "name": "Tabernera Allison",
+   "subname": ""
+  },
+  "6749": {
+   "name": "Erma",
+   "subname": ""
+  },
+  "6778": {
+   "name": "Melika Isenzancas",
+   "subname": ""
+  },
+  "6846": {
+   "name": "Maestro de embarcadero Defias",
+   "subname": ""
+  },
+  "6887": {
+   "name": "Yalda",
+   "subname": ""
+  },
+  "6906": {
+   "name": "Baelog",
+   "subname": ""
+  },
+  "6910": {
+   "name": "Revelosh",
+   "subname": ""
+  },
+  "6927": {
+   "name": "Trabajador de embarcadero Defias",
+   "subname": "Trabajadora de embarcadero Defias"
+  },
+  "6946": {
+   "name": "Renzik \"Chafarote\"",
+   "subname": ""
+  },
+  "7023": {
+   "name": "Centinela obsidiana",
+   "subname": ""
+  },
+  "7079": {
+   "name": "Radiactivo viscoso",
+   "subname": ""
+  },
+  "7206": {
+   "name": "Vigilante de piedra anciano",
+   "subname": ""
+  },
+  "7207": {
+   "name": "Doc Mixilpixil",
+   "subname": ""
+  },
+  "7208": {
+   "name": "Noarm",
+   "subname": ""
+  },
+  "7228": {
+   "name": "Hierraya",
+   "subname": ""
+  },
+  "7232": {
+   "name": "Borgus Mano de Acero",
+   "subname": ""
+  },
+  "7267": {
+   "name": "Jefe Ukorz Cabellarena",
+   "subname": ""
+  },
+  "7271": {
+   "name": "Médico brujo Zum'rah",
+   "subname": ""
+  },
+  "7272": {
+   "name": "Theka el Mártir",
+   "subname": ""
+  },
+  "7273": {
+   "name": "Gahz'rilla",
+   "subname": ""
+  },
+  "7275": {
+   "name": "Sacerdote oscuro Sezz'ziz",
+   "subname": ""
+  },
+  "7291": {
+   "name": "Galgann Flamartillo",
+   "subname": ""
+  },
+  "7292": {
+   "name": "Dinita Mantopétreo",
+   "subname": ""
+  },
+  "7295": {
+   "name": "Shailiea",
+   "subname": ""
+  },
+  "7298": {
+   "name": "Demnul Montelejano",
+   "subname": ""
+  },
+  "7354": {
+   "name": "Morrandrajos",
+   "subname": ""
+  },
+  "7355": {
+   "name": "Tuten'kash",
+   "subname": ""
+  },
+  "7356": {
+   "name": "Faucepeste el Podrido",
+   "subname": ""
+  },
+  "7357": {
+   "name": "Mordresh Ojo de Fuego",
+   "subname": ""
+  },
+  "7358": {
+   "name": "Amnennar el Gélido",
+   "subname": ""
+  },
+  "7361": {
+   "name": "Grubbis",
+   "subname": ""
+  },
+  "7380": {
+   "name": "Siamés",
+   "subname": ""
+  },
+  "7381": {
+   "name": "Atigrado plateado",
+   "subname": ""
+  },
+  "7382": {
+   "name": "Atigrado naranja",
+   "subname": ""
+  },
+  "7384": {
+   "name": "Rex Cornualles",
+   "subname": ""
+  },
+  "7385": {
+   "name": "Bombay",
+   "subname": ""
+  },
+  "7386": {
+   "name": "Gatito blanco",
+   "subname": ""
+  },
+  "7387": {
+   "name": "Guacamayo rojo",
+   "subname": ""
+  },
+  "7389": {
+   "name": "Senegal",
+   "subname": ""
+  },
+  "7392": {
+   "name": "Gallina de pradera",
+   "subname": ""
+  },
+  "7402": {
+   "name": "Tótem abrasador VI",
+   "subname": ""
+  },
+  "7403": {
+   "name": "Tótem Fuerza de la tierra IV",
+   "subname": ""
+  },
+  "7416": {
+   "name": "Tótem Fuente de maná IV",
+   "subname": ""
+  },
+  "7484": {
+   "name": "Tótem Viento Furioso III",
+   "subname": ""
+  },
+  "7506": {
+   "name": "Maga sangrienta Lynnore",
+   "subname": ""
+  },
+  "7544": {
+   "name": "Vástago carmesí",
+   "subname": ""
+  },
+  "7556": {
+   "name": "Búho real",
+   "subname": ""
+  },
+  "7604": {
+   "name": "Sargento Bly",
+   "subname": ""
+  },
+  "7766": {
+   "name": "Tyrion",
+   "subname": ""
+  },
+  "7795": {
+   "name": "Hidromántica Velratha",
+   "subname": ""
+  },
+  "7796": {
+   "name": "Nekrum Cometripas",
+   "subname": ""
+  },
+  "7797": {
+   "name": "Ruuzlu",
+   "subname": ""
+  },
+  "7798": {
+   "name": "Hank el Martillo",
+   "subname": ""
+  },
+  "7800": {
+   "name": "Mekigeniero Termochufe",
+   "subname": ""
+  },
+  "7917": {
+   "name": "Hermano Sarno",
+   "subname": ""
+  },
+  "7937": {
+   "name": "Manitas Mayor Mekkatorque",
+   "subname": ""
+  },
+  "7950": {
+   "name": "Maestro mecánico Funditubo",
+   "subname": ""
+  },
+  "7954": {
+   "name": "Binjy Plumasilba",
+   "subname": ""
+  },
+  "7955": {
+   "name": "Milli Plumasilba",
+   "subname": ""
+  },
+  "8055": {
+   "name": "Montaraz de Thelsamar",
+   "subname": "Montaraz de Thelsamar"
+  },
+  "8127": {
+   "name": "Antu'sul",
+   "subname": ""
+  },
+  "8383": {
+   "name": "Maestro Leño",
+   "subname": ""
+  },
+  "8443": {
+   "name": "Avatar de Hakkar",
+   "subname": ""
+  },
+  "8567": {
+   "name": "Glotón",
+   "subname": ""
+  },
+  "8580": {
+   "name": "Atal'alarion",
+   "subname": ""
+  },
+  "8666": {
+   "name": "Pequeño Timmy",
+   "subname": ""
+  },
+  "8670": {
+   "name": "Subastador Chilton",
+   "subname": ""
+  },
+  "8671": {
+   "name": "Subastador Buckler",
+   "subname": ""
+  },
+  "8719": {
+   "name": "Subastador Fitch",
+   "subname": ""
+  },
+  "8720": {
+   "name": "Subastadora Musarroja",
+   "subname": ""
+  },
+  "8879": {
+   "name": "Historiadora Real Archesonus",
+   "subname": ""
+  },
+  "8923": {
+   "name": "Panzor el Invencible",
+   "subname": ""
+  },
+  "8929": {
+   "name": "Princesa Moira Barbabronce",
+   "subname": ""
+  },
+  "8931": {
+   "name": "Tabernera Heather",
+   "subname": ""
+  },
+  "8934": {
+   "name": "Christopher Hewen",
+   "subname": ""
+  },
+  "8962": {
+   "name": "Hilary",
+   "subname": ""
+  },
+  "8963": {
+   "name": "Effsee",
+   "subname": ""
+  },
+  "8965": {
+   "name": "Shawn",
+   "subname": ""
+  },
+  "8983": {
+   "name": "Señor Gólem Argelmach",
+   "subname": ""
+  },
+  "8997": {
+   "name": "Gershala Susurro Nocturno",
+   "subname": ""
+  },
+  "9016": {
+   "name": "Bael'Gar",
+   "subname": ""
+  },
+  "9017": {
+   "name": "Lord Incendius",
+   "subname": ""
+  },
+  "9018": {
+   "name": "Alta interrogadora Gerstahn",
+   "subname": ""
+  },
+  "9019": {
+   "name": "Emperador Dagran Thaurissan",
+   "subname": ""
+  },
+  "9024": {
+   "name": "Piromántico Fruto del Saber",
+   "subname": ""
+  },
+  "9025": {
+   "name": "Lord Roccor",
+   "subname": ""
+  },
+  "9027": {
+   "name": "Gorosh el Endemoniado",
+   "subname": ""
+  },
+  "9028": {
+   "name": "Grisez",
+   "subname": ""
+  },
+  "9029": {
+   "name": "Eviscerador",
+   "subname": ""
+  },
+  "9030": {
+   "name": "Ok'thor el Rompedor",
+   "subname": ""
+  },
+  "9031": {
+   "name": "Anub'shiah",
+   "subname": ""
+  },
+  "9032": {
+   "name": "Hedrum el Trepador",
+   "subname": ""
+  },
+  "9033": {
+   "name": "General Forjainquina",
+   "subname": ""
+  },
+  "9039": {
+   "name": "Condena'rel",
+   "subname": ""
+  },
+  "9041": {
+   "name": "Depositario Stilgiss",
+   "subname": ""
+  },
+  "9056": {
+   "name": "Finoso Virunegro",
+   "subname": ""
+  },
+  "9099": {
+   "name": "Sraaz",
+   "subname": ""
+  },
+  "9156": {
+   "name": "Embajador Latifuego",
+   "subname": ""
+  },
+  "9196": {
+   "name": "Alto señor Omokk",
+   "subname": ""
+  },
+  "9217": {
+   "name": "Señor Magus Cumbrerroca",
+   "subname": ""
+  },
+  "9218": {
+   "name": "Señor de batalla Cumbrerroca",
+   "subname": ""
+  },
+  "9219": {
+   "name": "Carnicero Cumbrerroca",
+   "subname": ""
+  },
+  "9236": {
+   "name": "Cazadora de las Sombras Vosh'gajin",
+   "subname": ""
+  },
+  "9237": {
+   "name": "Maestro de guerra Voone",
+   "subname": ""
+  },
+  "9296": {
+   "name": "Milly Osworth",
+   "subname": ""
+  },
+  "9319": {
+   "name": "Maestro de canes Grebmar",
+   "subname": ""
+  },
+  "9499": {
+   "name": "Plugger Aropatoso",
+   "subname": ""
+  },
+  "9502": {
+   "name": "Falange",
+   "subname": ""
+  },
+  "9537": {
+   "name": "Hurley Negrálito",
+   "subname": ""
+  },
+  "9543": {
+   "name": "Ribbly Llavenrosca",
+   "subname": ""
+  },
+  "9568": {
+   "name": "Señor supremo Vermiothalak",
+   "subname": ""
+  },
+  "9596": {
+   "name": "Bannok Hacha Macabra",
+   "subname": ""
+  },
+  "9718": {
+   "name": "Ghok Bashguud",
+   "subname": ""
+  },
+  "9736": {
+   "name": "Intendente Zigris",
+   "subname": ""
+  },
+  "9816": {
+   "name": "Piroguardia Brasadivino",
+   "subname": ""
+  },
+  "9859": {
+   "name": "Subastadora Lympkin",
+   "subname": ""
+  },
+  "9938": {
+   "name": "Magmus",
+   "subname": ""
+  },
+  "9977": {
+   "name": "Sylista",
+   "subname": ""
+  },
+  "9984": {
+   "name": "Ulbrek Manofuego",
+   "subname": ""
+  },
+  "9989": {
+   "name": "Lina Hogartufa",
+   "subname": ""
+  },
+  "10037": {
+   "name": "Guardia de Villa del Lago",
+   "subname": ""
+  },
+  "10045": {
+   "name": "Kirk Maxwell",
+   "subname": ""
+  },
+  "10080": {
+   "name": "Sandarr Asaltadunas",
+   "subname": ""
+  },
+  "10081": {
+   "name": "Ánima de polvo",
+   "subname": ""
+  },
+  "10082": {
+   "name": "Zerillis",
+   "subname": ""
+  },
+  "10085": {
+   "name": "Jaelysia",
+   "subname": ""
+  },
+  "10090": {
+   "name": "Belia Tronagranito",
+   "subname": ""
+  },
+  "10216": {
+   "name": "Gubber Blump",
+   "subname": ""
+  },
+  "10219": {
+   "name": "Gwennyth Bly'Leggonde",
+   "subname": ""
+  },
+  "10220": {
+   "name": "Halycon",
+   "subname": ""
+  },
+  "10264": {
+   "name": "Solakar Corona de Fuego",
+   "subname": ""
+  },
+  "10268": {
+   "name": "Gizrul el Esclavista",
+   "subname": ""
+  },
+  "10276": {
+   "name": "Rotgath Barbapétrea",
+   "subname": ""
+  },
+  "10277": {
+   "name": "Groum Barbapétrea",
+   "subname": ""
+  },
+  "10339": {
+   "name": "Gyth",
+   "subname": ""
+  },
+  "10363": {
+   "name": "General Drakkisath",
+   "subname": ""
+  },
+  "10376": {
+   "name": "Colmillo de cristal",
+   "subname": ""
+  },
+  "10393": {
+   "name": "Skul",
+   "subname": ""
+  },
+  "10429": {
+   "name": "Jefe de Guerra Rend Puño Negro",
+   "subname": ""
+  },
+  "10430": {
+   "name": "La Bestia",
+   "subname": ""
+  },
+  "10432": {
+   "name": "Vectus",
+   "subname": ""
+  },
+  "10433": {
+   "name": "Marduk Pozonegro",
+   "subname": ""
+  },
+  "10435": {
+   "name": "Magistrado Barthilas",
+   "subname": ""
+  },
+  "10436": {
+   "name": "Baronesa Anastari",
+   "subname": ""
+  },
+  "10437": {
+   "name": "Nerub'enkan",
+   "subname": ""
+  },
+  "10438": {
+   "name": "Maleki el Pálido",
+   "subname": ""
+  },
+  "10439": {
+   "name": "Ramstein el Empachador",
+   "subname": ""
+  },
+  "10440": {
+   "name": "Barón Osahendido",
+   "subname": ""
+  },
+  "10445": {
+   "name": "Selina Dourman",
+   "subname": ""
+  },
+  "10502": {
+   "name": "Lady Illucia Barov",
+   "subname": ""
+  },
+  "10503": {
+   "name": "Jandice Barov",
+   "subname": ""
+  },
+  "10504": {
+   "name": "Lord Alexei Barov",
+   "subname": ""
+  },
+  "10505": {
+   "name": "Instructora Malicia",
+   "subname": ""
+  },
+  "10506": {
+   "name": "Kirtonos el Heraldo",
+   "subname": ""
+  },
+  "10507": {
+   "name": "El Devorador",
+   "subname": ""
+  },
+  "10508": {
+   "name": "Ras Murmuhielo",
+   "subname": ""
+  },
+  "10509": {
+   "name": "Jed Vigía de las Runas",
+   "subname": ""
+  },
+  "10516": {
+   "name": "El Imperdonable",
+   "subname": ""
+  },
+  "10558": {
+   "name": "Cantachimeneas Forresten",
+   "subname": ""
+  },
+  "10584": {
+   "name": "Urok Aullasino",
+   "subname": ""
+  },
+  "10596": {
+   "name": "Madre Telabrasada",
+   "subname": ""
+  },
+  "10616": {
+   "name": "Supervisora Raelen",
+   "subname": ""
+  },
+  "10782": {
+   "name": "Agente Real Bathrilor",
+   "subname": ""
+  },
+  "10808": {
+   "name": "Timmy el Cruel",
+   "subname": ""
+  },
+  "10809": {
+   "name": "Pidrespina",
+   "subname": ""
+  },
+  "10811": {
+   "name": "Archivista Galford",
+   "subname": ""
+  },
+  "10813": {
+   "name": "Balnazzar",
+   "subname": ""
+  },
+  "10877": {
+   "name": "Mensajero Sentencia",
+   "subname": ""
+  },
+  "10899": {
+   "name": "Goraluk Yunquegrieta",
+   "subname": ""
+  },
+  "10901": {
+   "name": "Tradicionalista Polkelt",
+   "subname": ""
+  },
+  "10942": {
+   "name": "Nessy",
+   "subname": ""
+  },
+  "10956": {
+   "name": "Sirena naga",
+   "subname": ""
+  },
+  "10997": {
+   "name": "Maestro cañonero Willey",
+   "subname": ""
+  },
+  "11029": {
+   "name": "Trixie Clicveloz",
+   "subname": ""
+  },
+  "11032": {
+   "name": "Malor el Fanático",
+   "subname": ""
+  },
+  "11037": {
+   "name": "Jenna Lemkenilli",
+   "subname": ""
+  },
+  "11053": {
+   "name": "Suma sacerdotisa MacDonnell",
+   "subname": ""
+  },
+  "11065": {
+   "name": "Thonys Piedrapilar",
+   "subname": ""
+  },
+  "11068": {
+   "name": "Betty Quin",
+   "subname": ""
+  },
+  "11069": {
+   "name": "Jenova Petrescudo",
+   "subname": ""
+  },
+  "11096": {
+   "name": "Randal Valor",
+   "subname": ""
+  },
+  "11143": {
+   "name": "Jefe de correos Gassol",
+   "subname": ""
+  },
+  "11145": {
+   "name": "Myolor Furiahendida",
+   "subname": ""
+  },
+  "11146": {
+   "name": "Ironus Acero Frío",
+   "subname": ""
+  },
+  "11260": {
+   "name": "Campesino de Villanorte",
+   "subname": ""
+  },
+  "11261": {
+   "name": "Doctor Theolen Krastinov",
+   "subname": ""
+  },
+  "11328": {
+   "name": "Campesino de la Vega del Este",
+   "subname": ""
+  },
+  "11467": {
+   "name": "Tsu'zee",
+   "subname": ""
+  },
+  "11486": {
+   "name": "Príncipe Tortheldrin",
+   "subname": ""
+  },
+  "11487": {
+   "name": "Magister Kalendris",
+   "subname": ""
+  },
+  "11488": {
+   "name": "Illyanna Roblecuervo",
+   "subname": ""
+  },
+  "11489": {
+   "name": "Tendris Alabeo",
+   "subname": ""
+  },
+  "11490": {
+   "name": "Zevrim Pezuñahendida",
+   "subname": ""
+  },
+  "11492": {
+   "name": "Alzzin el Formaferal",
+   "subname": ""
+  },
+  "11496": {
+   "name": "Immol'thar",
+   "subname": ""
+  },
+  "11501": {
+   "name": "Rey Gordok",
+   "subname": ""
+  },
+  "11517": {
+   "name": "Ogglesílex",
+   "subname": ""
+  },
+  "11518": {
+   "name": "Jergosh el Convocador",
+   "subname": ""
+  },
+  "11519": {
+   "name": "Bazzalan",
+   "subname": ""
+  },
+  "11520": {
+   "name": "Taragaman el Hambriento",
+   "subname": ""
+  },
+  "11622": {
+   "name": "Traquesangre",
+   "subname": ""
+  },
+  "11867": {
+   "name": "Woo Ping",
+   "subname": ""
+  },
+  "11940": {
+   "name": "Merissa Fontana",
+   "subname": ""
+  },
+  "12201": {
+   "name": "Princesa Theradras",
+   "subname": ""
+  },
+  "12203": {
+   "name": "Derrumblo",
+   "subname": ""
+  },
+  "12225": {
+   "name": "Celebras el Maldito",
+   "subname": ""
+  },
+  "12236": {
+   "name": "Lord Lenguavil",
+   "subname": ""
+  },
+  "12237": {
+   "name": "Meshlok el Cosechador",
+   "subname": ""
+  },
+  "12258": {
+   "name": "Latisable",
+   "subname": ""
+  },
+  "12336": {
+   "name": "Hermano Cuerviz",
+   "subname": ""
+  },
+  "12423": {
+   "name": "Guardia Roberts",
+   "subname": ""
+  },
+  "12480": {
+   "name": "Melris Malagan",
+   "subname": ""
+  },
+  "12481": {
+   "name": "Justine Demalier",
+   "subname": ""
+  },
+  "12656": {
+   "name": "Thamarian",
+   "subname": ""
+  },
+  "12777": {
+   "name": "Capitán Martillo de Endecha",
+   "subname": ""
+  },
+  "12778": {
+   "name": "Teniente Rachel Vaccar",
+   "subname": ""
+  },
+  "12779": {
+   "name": "Archimago Gaiman",
+   "subname": ""
+  },
+  "12780": {
+   "name": "Alférez Cielosombra",
+   "subname": ""
+  },
+  "12781": {
+   "name": "Sargento primero Biggins",
+   "subname": ""
+  },
+  "12782": {
+   "name": "Capitán O'Neal",
+   "subname": ""
+  },
+  "12783": {
+   "name": "Teniente Karter",
+   "subname": ""
+  },
+  "12784": {
+   "name": "Teniente Jackspring",
+   "subname": ""
+  },
+  "12785": {
+   "name": "Alférez Clate",
+   "subname": ""
+  },
+  "12786": {
+   "name": "Guardia Quine",
+   "subname": ""
+  },
+  "12787": {
+   "name": "Guardia Hammon",
+   "subname": ""
+  },
+  "12805": {
+   "name": "Oficial Areyn",
+   "subname": ""
+  },
+  "12902": {
+   "name": "Lorgus Jett",
+   "subname": ""
+  },
+  "12922": {
+   "name": "Esbirro diablillo",
+   "subname": ""
+  },
+  "12997": {
+   "name": "Monty",
+   "subname": ""
+  },
+  "13016": {
+   "name": "Rata del subterráneo",
+   "subname": ""
+  },
+  "13017": {
+   "name": "Rata del subterráneo sometida",
+   "subname": ""
+  },
+  "13018": {
+   "name": "Niblis",
+   "subname": ""
+  },
+  "13076": {
+   "name": "Montaraz de Dun Morogh",
+   "subname": "Montaraz de Dun Morogh"
+  },
+  "13159": {
+   "name": "James Clark",
+   "subname": ""
+  },
+  "13280": {
+   "name": "Hidromilecio",
+   "subname": ""
+  },
+  "13282": {
+   "name": "Noxxion",
+   "subname": ""
+  },
+  "13283": {
+   "name": "Lord Tony Romano",
+   "subname": ""
+  },
+  "13596": {
+   "name": "Escamapodrida",
+   "subname": ""
+  },
+  "13601": {
+   "name": "Manitas Gizlock",
+   "subname": ""
+  },
+  "13843": {
+   "name": "Teniente Rotimer",
+   "subname": ""
+  },
+  "14041": {
+   "name": "Haggle",
+   "subname": ""
+  },
+  "14121": {
+   "name": "Buceador subterráneo",
+   "subname": ""
+  },
+  "14183": {
+   "name": "Artillero Sheldonore",
+   "subname": ""
+  },
+  "14271": {
+   "name": "Rompecostillas",
+   "subname": ""
+  },
+  "14321": {
+   "name": "Guardia Fengus",
+   "subname": ""
+  },
+  "14322": {
+   "name": "Vapuleador Kreeg",
+   "subname": ""
+  },
+  "14323": {
+   "name": "Guardia Slip'kik",
+   "subname": ""
+  },
+  "14324": {
+   "name": "Cho'Rush el Observador",
+   "subname": ""
+  },
+  "14325": {
+   "name": "Capitán Kromcrush",
+   "subname": ""
+  },
+  "14326": {
+   "name": "Guardia Mol'dar",
+   "subname": ""
+  },
+  "14327": {
+   "name": "Lethtendris",
+   "subname": ""
+  },
+  "14354": {
+   "name": "Pusillín",
+   "subname": ""
+  },
+  "14363": {
+   "name": "Miñón Sombonda",
+   "subname": ""
+  },
+  "14365": {
+   "name": "Miñón Montelejano",
+   "subname": ""
+  },
+  "14367": {
+   "name": "Miñón Cebatruenos",
+   "subname": ""
+  },
+  "14394": {
+   "name": "Mayor Mattingly",
+   "subname": ""
+  },
+  "14423": {
+   "name": "Oficial Jaxon",
+   "subname": ""
+  },
+  "14438": {
+   "name": "Oficial Pomeroy",
+   "subname": ""
+  },
+  "14439": {
+   "name": "Oficial Brady",
+   "subname": ""
+  },
+  "14450": {
+   "name": "Supervisora de huérfanos Ruiseñor",
+   "subname": ""
+  },
+  "14496": {
+   "name": "Huérfano de Ventormenta",
+   "subname": "Huérfano de Ventormenta"
+  },
+  "14497": {
+   "name": "Shellene",
+   "subname": ""
+  },
+  "14506": {
+   "name": "Lord Hel'nurath",
+   "subname": ""
+  },
+  "14721": {
+   "name": "Mariscal de campo Petraponte",
+   "subname": ""
+  },
+  "14722": {
+   "name": "Clavicus Knavingham",
+   "subname": ""
+  },
+  "14724": {
+   "name": "Bubulo Acerbus",
+   "subname": ""
+  },
+  "14822": {
+   "name": "Sayge",
+   "subname": ""
+  },
+  "14823": {
+   "name": "Silas Luna Negra",
+   "subname": ""
+  },
+  "14827": {
+   "name": "Burth",
+   "subname": ""
+  },
+  "14828": {
+   "name": "Gelvas Roñoso",
+   "subname": ""
+  },
+  "14829": {
+   "name": "Yebb Tesorillos",
+   "subname": ""
+  },
+  "14832": {
+   "name": "Kerri Hicks",
+   "subname": ""
+  },
+  "14833": {
+   "name": "Chronos",
+   "subname": ""
+  },
+  "14841": {
+   "name": "Rinling",
+   "subname": ""
+  },
+  "14842": {
+   "name": "Melnan Rocanegra",
+   "subname": ""
+  },
+  "14844": {
+   "name": "Sylannia",
+   "subname": ""
+  },
+  "14845": {
+   "name": "Stamp Tronacuerno",
+   "subname": ""
+  },
+  "14846": {
+   "name": "Lhara",
+   "subname": ""
+  },
+  "14847": {
+   "name": "Profesor Thaddeus Paleo",
+   "subname": ""
+  },
+  "14849": {
+   "name": "Feriante de la Feria de la Luna Negra",
+   "subname": "Feriante de la Feria de la Luna Negra"
+  },
+  "14860": {
+   "name": "Flik",
+   "subname": ""
+  },
+  "14864": {
+   "name": "Carnero de Khaz Modan",
+   "subname": ""
+  },
+  "14865": {
+   "name": "Felinni",
+   "subname": ""
+  },
+  "14866": {
+   "name": "Rana de Flik",
+   "subname": ""
+  },
+  "14867": {
+   "name": "Jubjub",
+   "subname": ""
+  },
+  "14868": {
+   "name": "Hornsley",
+   "subname": ""
+  },
+  "14869": {
+   "name": "Gallotriz pigmea",
+   "subname": ""
+  },
+  "14871": {
+   "name": "Morja",
+   "subname": ""
+  },
+  "15102": {
+   "name": "Emisaria Ala de Plata",
+   "subname": ""
+  },
+  "15187": {
+   "name": "Emisaria Cenarion Lunajade",
+   "subname": ""
+  },
+  "15218": {
+   "name": "Activador del cañón de la feria",
+   "subname": ""
+  },
+  "15303": {
+   "name": "Maxima Pimpampum",
+   "subname": ""
+  },
+  "15328": {
+   "name": "Tonque de vapor",
+   "subname": ""
+  },
+  "15368": {
+   "name": "Mina de tonque",
+   "subname": ""
+  },
+  "15384": {
+   "name": "Activador de mundo",
+   "subname": ""
+  },
+  "15659": {
+   "name": "Subastadora Jaxon",
+   "subname": ""
+  },
+  "15991": {
+   "name": "Lady Dena Kennedy",
+   "subname": ""
+  },
+  "16042": {
+   "name": "Lord Valthalak",
+   "subname": ""
+  },
+  "16059": {
+   "name": "Theldren",
+   "subname": ""
+  },
+  "16121": {
+   "name": "Mortero",
+   "subname": ""
+  },
+  "17804": {
+   "name": "Escudero Rowe",
+   "subname": ""
+  },
+  "49808": {
+   "name": "Grenhild Garfaoscura",
+   "subname": ""
+  },
+  "165189": {
+   "name": "Mascota de cazador genérica",
+   "subname": ""
+  },
+  "173754": {
+   "name": "Mayor Mattingly",
+   "subname": ""
+  },
+  "185317": {
+   "name": "Íncubo",
+   "subname": ""
+  },
+  "205153": {
+   "name": "Ada Gelhardt",
+   "subname": ""
+  },
+  "210107": {
+   "name": "Kackle",
+   "subname": ""
+  },
+  "214589": {
+   "name": "Bolsa de dormir acogedora",
+   "subname": ""
+  },
+  "228443": {
+   "name": "[DNT] Challenge",
+   "subname": ""
+  },
+  "230319": {
+   "name": "Deliana",
+   "subname": ""
+  },
+  "238374": {
+   "name": "Estibador",
+   "subname": ""
+  },
+  "245999": {
+   "name": "Anomalía Arcana",
+   "subname": ""
+  },
+  "246003": {
+   "name": "Anciano vil",
+   "subname": ""
+  },
+  "246008": {
+   "name": "Devorador de maná",
+   "subname": ""
+  },
+  "246016": {
+   "name": "Enigma arcano",
+   "subname": ""
+  },
+  "246017": {
+   "name": "Centinela inestable",
+   "subname": ""
+  },
+  "246020": {
+   "name": "Sombra del archimago",
+   "subname": ""
+  },
+  "247032": {
+   "name": "Lyn, el Ignorado",
+   "subname": ""
+  },
+  "247126": {
+   "name": "Atrexis, el Caballero de la tumba",
+   "subname": ""
+  },
+  "247195": {
+   "name": "Faucemarchita",
+   "subname": ""
+  },
+  "247198": {
+   "name": "Hocicóseo, el Irrompible",
+   "subname": ""
+  },
+  "247206": {
+   "name": "Diablaan, el Carcelero diabólico",
+   "subname": ""
+  },
+  "247207": {
+   "name": "Behemoth Faucenegra",
+   "subname": ""
+  },
+  "247209": {
+   "name": "Anciano chamán Sangremelena",
+   "subname": ""
+  },
+  "247223": {
+   "name": "Nancy Cantoflor",
+   "subname": ""
+  },
+  "247226": {
+   "name": "Kelsey Abisma",
+   "subname": ""
+  },
+  "247227": {
+   "name": "Riley Desollapelambres",
+   "subname": ""
+  },
+  "247229": {
+   "name": "Daniel",
+   "subname": ""
+  },
+  "247231": {
+   "name": "Espíritu desligado",
+   "subname": ""
+  },
+  "247234": {
+   "name": "Varrox Pezuñaumbría",
+   "subname": ""
+  },
+  "248242": {
+   "name": "Hamish Bergwort",
+   "subname": ""
+  },
+  "248265": {
+   "name": "Ormin Pelford",
+   "subname": ""
+  },
+  "248266": {
+   "name": "Hagar Lowe",
+   "subname": ""
+  },
+  "248277": {
+   "name": "Merell Ross",
+   "subname": ""
+  },
+  "248278": {
+   "name": "Croaky",
+   "subname": ""
+  },
+  "248415": {
+   "name": "Tordrin Filosevero",
+   "subname": ""
+  },
+  "248463": {
+   "name": "Estruendor",
+   "subname": ""
+  },
+  "248464": {
+   "name": "Nimsy",
+   "subname": ""
+  },
+  "248474": {
+   "name": "Geoescultor Yip",
+   "subname": ""
+  },
+  "249215": {
+   "name": "Trabajador del muelle de Ventormenta",
+   "subname": "Trabajadora del muelle de Ventormenta"
+  },
+  "250034": {
+   "name": "Matriarca tunelaraña",
+   "subname": ""
+  },
+  "250483": {
+   "name": "Marchitacolmillos",
+   "subname": ""
+  },
+  "250631": {
+   "name": "El Abandonado",
+   "subname": ""
+  },
+  "250657": {
+   "name": "Rath'mael",
+   "subname": ""
+  },
+  "250660": {
+   "name": "El barón",
+   "subname": ""
+  },
+  "251507": {
+   "name": "Josephine Carson",
+   "subname": ""
+  },
+  "253092": {
+   "name": "Alba Lunaclara",
+   "subname": ""
+  },
+  "253201": {
+   "name": "Titanosaurio",
+   "subname": ""
+  },
+  "253218": {
+   "name": "Izha'Rel",
+   "subname": ""
+  },
+  "253351": {
+   "name": "[DNT] Invisible Stalker",
+   "subname": ""
+  },
+  "253353": {
+   "name": "[DNT] Invisible Stalker",
+   "subname": ""
+  },
+  "253395": {
+   "name": "Ozwin Piñón de Hierro",
+   "subname": ""
+  },
+  "254108": {
+   "name": "Acechador",
+   "subname": ""
+  },
+  "255391": {
+   "name": "Sobrestante Wrex",
+   "subname": ""
+  },
+  "255702": {
+   "name": "Rugellamas",
+   "subname": ""
+  },
+  "255997": {
+   "name": "Ama de las mareas Ca'zass",
+   "subname": ""
+  },
+  "256035": {
+   "name": "Viktor, el Vil",
+   "subname": ""
+  },
+  "256097": {
+   "name": "Bjork",
+   "subname": ""
+  },
+  "256236": {
+   "name": "El interrogador",
+   "subname": ""
+  },
+  "256389": {
+   "name": "Tamelyn Aldridge",
+   "subname": ""
+  },
+  "256390": {
+   "name": "Marcy Baker",
+   "subname": ""
+  },
+  "256391": {
+   "name": "Elaine Compton",
+   "subname": ""
+  },
+  "256393": {
+   "name": "Mula de carga",
+   "subname": ""
+  },
+  "256399": {
+   "name": "Mula de carga fuera de servicio",
+   "subname": ""
+  },
+  "256729": {
+   "name": "Nina Fuegocertero",
+   "subname": ""
+  },
+  "256730": {
+   "name": "Stondry Martilloscuro",
+   "subname": ""
+  },
+  "256731": {
+   "name": "Kalsey Sanden",
+   "subname": ""
+  },
+  "256732": {
+   "name": "Alynsia",
+   "subname": ""
+  },
+  "256733": {
+   "name": "Fritz Fizzle",
+   "subname": ""
+  },
+  "256734": {
+   "name": "Daniel Hilvanante",
+   "subname": ""
+  },
+  "256735": {
+   "name": "Mivin Tejesombra",
+   "subname": ""
+  },
+  "256736": {
+   "name": "Huey Vallesol",
+   "subname": ""
+  },
+  "256738": {
+   "name": "Cesta de objetos de alquimia",
+   "subname": ""
+  },
+  "256739": {
+   "name": "Cajón de objetos de herrería",
+   "subname": ""
+  },
+  "256740": {
+   "name": "Cajón de suministros de encantamiento",
+   "subname": ""
+  },
+  "256741": {
+   "name": "Cesta de suministros textiles",
+   "subname": ""
+  },
+  "256742": {
+   "name": "Dianne Pisaditas",
+   "subname": ""
+  },
+  "257016": {
+   "name": "Katerina, la Limpiadora",
+   "subname": ""
+  },
+  "257597": {
+   "name": "Bruegs Sangrellamas",
+   "subname": ""
+  },
+  "258043": {
+   "name": "Norric Lagolord",
+   "subname": ""
+  },
+  "258568": {
+   "name": "Antonio Bolero",
+   "subname": ""
+  },
+  "258880": {
+   "name": "Cargamento sin inspeccionar",
+   "subname": ""
+  },
+  "258905": {
+   "name": "Zul'Alai",
+   "subname": ""
+  },
+  "258924": {
+   "name": "Var'Taka",
+   "subname": ""
+  },
+  "258930": {
+   "name": "Isaac Chan",
+   "subname": ""
+  },
+  "258934": {
+   "name": "Razón",
+   "subname": ""
+  },
+  "258964": {
+   "name": "Nar'gurk",
+   "subname": ""
+  },
+  "258966": {
+   "name": "Muelesclavos Grox",
+   "subname": ""
+  },
+  "258968": {
+   "name": "Señor supremo Mugg",
+   "subname": ""
+  },
+  "258972": {
+   "name": "Comandante Crepuscular Zarmok",
+   "subname": ""
+  },
+  "259269": {
+   "name": "Águila ratonera de las altas llanuras",
+   "subname": ""
+  },
+  "259281": {
+   "name": "Líder bélica Ashka",
+   "subname": ""
+  },
+  "259642": {
+   "name": "Acechador invisible",
+   "subname": ""
+  },
+  "259842": {
+   "name": "Saltavientos musical",
+   "subname": ""
+  },
+  "260042": {
+   "name": "Capitán Alzapavor",
+   "subname": ""
+  },
+  "260157": {
+   "name": "Leopardo de las nieves mayor",
+   "subname": ""
+  },
+  "260274": {
+   "name": "Min'loth, la Serpiente",
+   "subname": ""
+  },
+  "260300": {
+   "name": "Marcador de hoguera",
+   "subname": ""
+  },
+  "260322": {
+   "name": "Salespina",
+   "subname": ""
+  },
+  "260325": {
+   "name": "Dentumbra",
+   "subname": ""
+  },
+  "260326": {
+   "name": "Guardián de reliquias",
+   "subname": ""
+  },
+  "260468": {
+   "name": "\"Piromántico\" Braxton",
+   "subname": ""
+  },
+  "261306": {
+   "name": "Faldrim Yunquemar",
+   "subname": ""
+  },
+  "261311": {
+   "name": "Saqueador",
+   "subname": ""
+  },
+  "261319": {
+   "name": "Durgen Martillo de Endecha",
+   "subname": ""
+  },
+  "261809": {
+   "name": "Nanaya",
+   "subname": ""
+  },
+  "261812": {
+   "name": "Cascotrueno",
+   "subname": ""
+  },
+  "261813": {
+   "name": "Cimaveneno",
+   "subname": ""
+  },
+  "261974": {
+   "name": "Ceniza",
+   "subname": ""
+  },
+  "262081": {
+   "name": "Rayo",
+   "subname": ""
+  },
+  "262127": {
+   "name": "Matriarca cuernoatroz",
+   "subname": ""
+  },
+  "262297": {
+   "name": "Garranieve",
+   "subname": ""
+  },
+  "263398": {
+   "name": "Tienda de campamento",
+   "subname": ""
+  },
+  "263399": {
+   "name": "Sam Sarsaparilla",
+   "subname": ""
+  },
+  "264172": {
+   "name": "Umbra",
+   "subname": ""
+  },
+  "264177": {
+   "name": "Branquia",
+   "subname": ""
+  },
+  "264632": {
+   "name": "Hermana",
+   "subname": ""
+  },
+  "264634": {
+   "name": "Leo",
+   "subname": ""
+  },
+  "264636": {
+   "name": "Destrozador",
+   "subname": ""
+  },
+  "264638": {
+   "name": "Callie",
+   "subname": ""
+  },
+  "264639": {
+   "name": "Bebe",
+   "subname": ""
+  },
+  "264773": {
+   "name": "Jefe Toof",
+   "subname": ""
+  },
+  "264850": {
+   "name": "Halcón",
+   "subname": ""
+  },
+  "264936": {
+   "name": "Videnterra Farsen",
+   "subname": ""
+  },
+  "264937": {
+   "name": "Tótem de Farsen",
+   "subname": ""
+  },
+  "265190": {
+   "name": "Acechador",
+   "subname": ""
+  },
+  "266025": {
+   "name": "Familiar roedor",
+   "subname": ""
+  },
+  "267007": {
+   "name": "Guardia del Puerto de Ventormenta",
+   "subname": "Guardia del Puerto de Ventormenta"
+  },
+  "267064": {
+   "name": "Cañonero de Ventormenta",
+   "subname": "Cañonera de Ventormenta"
+  },
+  "267118": {
+   "name": "Gilbert Gray",
+   "subname": ""
+  },
+  "267473": {
+   "name": "Carnero marrón",
+   "subname": ""
+  },
+  "267474": {
+   "name": "Carnero blanco",
+   "subname": ""
+  },
+  "267475": {
+   "name": "Carnero gris",
+   "subname": ""
+  },
+  "267674": {
+   "name": "Caballo marrón",
+   "subname": ""
+  },
+  "267677": {
+   "name": "Yegua zaina",
+   "subname": ""
+  },
+  "267678": {
+   "name": "Pinto",
+   "subname": ""
+  },
+  "267683": {
+   "name": "Mecazancudo rojo",
+   "subname": ""
+  },
+  "267684": {
+   "name": "Mecazancudo verde",
+   "subname": ""
+  },
+  "267687": {
+   "name": "Mecazancudo azul",
+   "subname": ""
+  },
+  "267688": {
+   "name": "Mecazancudo sin pintar",
+   "subname": ""
+  },
+  "268238": {
+   "name": "Nordun Mirafirme",
+   "subname": ""
+  },
+  "268744": {
+   "name": "Familiar batracio",
+   "subname": ""
+  },
+  "269104": {
+   "name": "Errante Lunadón",
+   "subname": ""
+  },
+  "269111": {
+   "name": "Gortek, el aprendiz",
+   "subname": ""
+  },
+  "269863": {
+   "name": "Pregonero de Ventormenta",
+   "subname": ""
+  },
+  "270313": {
+   "name": "Conejillo genérico",
+   "subname": ""
+  },
+  "271867": {
+   "name": "Pachimari",
+   "subname": ""
+  },
+  "272309": {
+   "name": "Tux",
+   "subname": ""
+  },
+  "272310": {
+   "name": "Mocha",
+   "subname": ""
+  },
+  "272328": {
+   "name": "Mini Diablo",
+   "subname": ""
+  },
+  "272329": {
+   "name": "Zerguezno",
+   "subname": ""
+  },
+  "272330": {
+   "name": "Osito panda",
+   "subname": ""
+  },
+  "272561": {
+   "name": "Vitrix",
+   "subname": ""
+  },
+  "272614": {
+   "name": "Capi",
+   "subname": ""
+  },
+  "273065": {
+   "name": "Ribbly Silbegiro",
+   "subname": ""
+  },
+  "273077": {
+   "name": "Judith Carol",
+   "subname": ""
+  },
+  "273127": {
+   "name": "Finaida Perforatierra",
+   "subname": ""
+  },
+  "273391": {
+   "name": "Cría de crocolisco",
+   "subname": ""
+  },
+  "273956": {
+   "name": "Prole de cóndor",
+   "subname": ""
+  },
+  "274081": {
+   "name": "Princesa",
+   "subname": ""
+  },
+  "274334": {
+   "name": "Prole de zancaalta",
+   "subname": ""
+  },
+  "274781": {
+   "name": "Guardia regio férreo",
+   "subname": "Guardia regia férrea"
+  },
+  "274838": {
+   "name": "Maximus Warwick",
+   "subname": ""
+  },
+  "274873": {
+   "name": "Beliforja Vaelgrim",
+   "subname": ""
+  },
+  "274902": {
+   "name": "Defensor de la Ciudad de Ventormenta",
+   "subname": "Defensora de la Ciudad de Ventormenta"
+  },
+  "274905": {
+   "name": "Corvimar, el Remorrero",
+   "subname": ""
+  },
+  "274909": {
+   "name": "Eviatar Achitov",
+   "subname": ""
+  },
+  "274914": {
+   "name": "Aendaril Caucertero",
+   "subname": ""
+  },
+  "274917": {
+   "name": "Boborus Voltígrado",
+   "subname": ""
+  },
+  "274940": {
+   "name": "Annabella Juniluz",
+   "subname": ""
+  },
+  "276003": {
+   "name": "Elemental de hielo menor",
+   "subname": ""
+  },
+  "276080": {
+   "name": "Montaraz Barbahullera",
+   "subname": ""
+  },
+  "276082": {
+   "name": "Montaraz Martisol",
+   "subname": ""
+  },
+  "276318": {
+   "name": "Idrieth Musgoleda",
+   "subname": ""
+  },
+  "276591": {
+   "name": "Spoogledorf",
+   "subname": ""
+  },
+  "276734": {
+   "name": "Mecazancudo blanco presto",
+   "subname": ""
+  },
+  "276735": {
+   "name": "Mecazancudo amarillo presto",
+   "subname": ""
+  },
+  "276736": {
+   "name": "Mecazancudo verde presto",
+   "subname": ""
+  },
+  "276737": {
+   "name": "Carnero gris presto",
+   "subname": ""
+  },
+  "276740": {
+   "name": "Cedrik Petromisión",
+   "subname": ""
+  },
+  "276779": {
+   "name": "Carnero marrón presto",
+   "subname": ""
+  },
+  "276783": {
+   "name": "Carnero blanco presto",
+   "subname": ""
+  },
+  "276785": {
+   "name": "Corcel marrón presto",
+   "subname": ""
+  },
+  "276786": {
+   "name": "Palomino presto",
+   "subname": ""
+  },
+  "276787": {
+   "name": "Corcel blanco presto",
+   "subname": ""
+  },
+  "276802": {
+   "name": "Shiro Chispatrunca",
+   "subname": ""
+  },
+  "277024": {
+   "name": "Jelinek Tijeras",
+   "subname": ""
+  },
+  "277037": {
+   "name": "Donovan Barbacerada",
+   "subname": ""
+  },
+  "277062": {
+   "name": "Ancelina",
+   "subname": ""
+  },
+  "277295": {
+   "name": "Granjero Bessey",
+   "subname": ""
+  },
+  "277721": {
+   "name": "Krazore",
+   "subname": ""
+  },
+  "278088": {
+   "name": "Abigail Lawson",
+   "subname": ""
+  }
+ },
+ "objects": {
+  "36": {
+   "name": "Barrica rota"
+  },
+  "290": {
+   "name": "Guardarropa de Cejade"
+  },
+  "965": {
+   "name": "Black Smoke - scale 2"
+  },
+  "1166": {
+   "name": "Cofre de Alexston"
+  },
+  "1561": {
+   "name": "Cajón sellado"
+  },
+  "1617": {
+   "name": "Hojaplata"
+  },
+  "1618": {
+   "name": "Flor de paz"
+  },
+  "1619": {
+   "name": "Raíz de tierra"
+  },
+  "1620": {
+   "name": "Marregal"
+  },
+  "1621": {
+   "name": "Brezospina"
+  },
+  "1622": {
+   "name": "Hierba cardenal"
+  },
+  "1731": {
+   "name": "Filón de cobre"
+  },
+  "1732": {
+   "name": "Filón de estaño"
+  },
+  "1733": {
+   "name": "Filón de plata"
+  },
+  "1836": {
+   "name": "Hoguera"
+  },
+  "1837": {
+   "name": "Hoguera"
+  },
+  "1839": {
+   "name": "Hoguera"
+  },
+  "1842": {
+   "name": "Hoguera"
+  },
+  "1843": {
+   "name": "Hoguera"
+  },
+  "1844": {
+   "name": "Hoguera"
+  },
+  "1845": {
+   "name": "Hoguera"
+  },
+  "1850": {
+   "name": "Hoguera"
+  },
+  "1932": {
+   "name": "Hoguera"
+  },
+  "2045": {
+   "name": "Alga estranguladora"
+  },
+  "2693": {
+   "name": "Botella 003"
+  },
+  "2694": {
+   "name": "Botella 004"
+  },
+  "2724": {
+   "name": "Saco de avena"
+  },
+  "3662": {
+   "name": "Cajón de comida"
+  },
+  "3705": {
+   "name": "Barrica de leche"
+  },
+  "3803": {
+   "name": "Fuego acogedor"
+  },
+  "3804": {
+   "name": "Fuego acogedor"
+  },
+  "17182": {
+   "name": "Caja mecánica 827"
+  },
+  "19017": {
+   "name": "Almeja gigante"
+  },
+  "21308": {
+   "name": "Hoguera"
+  },
+  "21680": {
+   "name": "Bandera de duelo"
+  },
+  "21701": {
+   "name": "Yunque"
+  },
+  "22670": {
+   "name": "Fuego acogedor"
+  },
+  "22671": {
+   "name": "Fuego acogedor"
+  },
+  "22672": {
+   "name": "Fuego acogedor"
+  },
+  "22673": {
+   "name": "Fuego acogedor"
+  },
+  "22674": {
+   "name": "Fuego acogedor"
+  },
+  "23013": {
+   "name": "Silla de madera"
+  },
+  "23014": {
+   "name": "Silla de madera"
+  },
+  "23015": {
+   "name": "Silla de madera"
+  },
+  "35591": {
+   "name": "Corcho de pesca"
+  },
+  "63674": {
+   "name": "Santuario chamán"
+  },
+  "86492": {
+   "name": "Cajón de Elunite"
+  },
+  "92011": {
+   "name": "Yunque de Grimand"
+  },
+  "92015": {
+   "name": "Círculo de Invocación"
+  },
+  "92141": {
+   "name": "Hoguera"
+  },
+  "92489": {
+   "name": "Yunque"
+  },
+  "92490": {
+   "name": "Forja"
+  },
+  "103687": {
+   "name": "Hoguera"
+  },
+  "105174": {
+   "name": "Cofre de arcas de contención"
+  },
+  "105175": {
+   "name": "Canto de manifestación"
+  },
+  "105568": {
+   "name": "Pila de madera de campesinos"
+  },
+  "106319": {
+   "name": "Cofre maltrecho"
+  },
+  "124374": {
+   "name": "Horatio Montgomery, M.D."
+  },
+  "130666": {
+   "name": "Yunque"
+  },
+  "130667": {
+   "name": "Yunque"
+  },
+  "130668": {
+   "name": "Forja"
+  },
+  "140911": {
+   "name": "Bobina de hilo de seda verde pistacho"
+  },
+  "142111": {
+   "name": "Buzón"
+  },
+  "142961": {
+   "name": "Silla"
+  },
+  "142964": {
+   "name": "Silla"
+  },
+  "153716": {
+   "name": "Buzón"
+  },
+  "164759": {
+   "name": "Silla de madera"
+  },
+  "164760": {
+   "name": "Silla de madera"
+  },
+  "164761": {
+   "name": "Silla de madera"
+  },
+  "164762": {
+   "name": "Silla de madera"
+  },
+  "164763": {
+   "name": "Silla de madera"
+  },
+  "164764": {
+   "name": "Silla de madera"
+  },
+  "164765": {
+   "name": "Silla de madera"
+  },
+  "164766": {
+   "name": "Silla de madera"
+  },
+  "164767": {
+   "name": "Silla de madera"
+  },
+  "174862": {
+   "name": "Estufa"
+  },
+  "175207": {
+   "name": "Criatura marina varada"
+  },
+  "175320": {
+   "name": "¡Se busca: Viscoso!"
+  },
+  "175727": {
+   "name": "La Guerra de los Ancestros"
+  },
+  "175729": {
+   "name": "El Monte Hyjal y el Obsequio de Illidan"
+  },
+  "175730": {
+   "name": "El Árbol del Mundo y el Sueño Esmeralda"
+  },
+  "175733": {
+   "name": "La fundación de Quel'Thalas"
+  },
+  "175735": {
+   "name": "Los guardianes de Tirisfal"
+  },
+  "175737": {
+   "name": "Los siete reinos"
+  },
+  "175738": {
+   "name": "Aegwynn y la caza del dragón"
+  },
+  "175740": {
+   "name": "El último guardián"
+  },
+  "175746": {
+   "name": "La alianza de Lordaeron"
+  },
+  "175753": {
+   "name": "La guerra de la Araña"
+  },
+  "175756": {
+   "name": "La Plaga de Lordaeron"
+  },
+  "175758": {
+   "name": "El retorno de Archimonde y el Vuelo a Kalimdor"
+  },
+  "175761": {
+   "name": "Guerra civil en las Tierras de la Peste"
+  },
+  "175855": {
+   "name": "La caída de los imperios"
+  },
+  "176189": {
+   "name": "Tortuga marina esquelética"
+  },
+  "176244": {
+   "name": "Espuma de la Luna"
+  },
+  "176310": {
+   "name": "Costa de la Serenidad"
+  },
+  "176573": {
+   "name": "Campana de la Alianza"
+  },
+  "177187": {
+   "name": "Tharnarun's Cure"
+  },
+  "177274": {
+   "name": "Poza de la Luna"
+  },
+  "177280": {
+   "name": "Poza de la Luna"
+  },
+  "177666": {
+   "name": "Foco de hechizo de la Poza de la Luna"
+  },
+  "179706": {
+   "name": "Un tratado sobre rangos militares"
+  },
+  "179965": {
+   "name": "Darkmoon Faire Banner"
+  },
+  "180029": {
+   "name": "Feria de la Luna Negra"
+  },
+  "180030": {
+   "name": "Fortune Teller's Tent"
+  },
+  "180031": {
+   "name": "Puesto de comida"
+  },
+  "180032": {
+   "name": "Puesto de recuerdos"
+  },
+  "180034": {
+   "name": "Tienda del maestro de vales"
+  },
+  "180035": {
+   "name": "Cerca"
+  },
+  "180036": {
+   "name": "Darkmoon Faire Wagon Unloaded"
+  },
+  "180039": {
+   "name": "Tienda de adiestrador de animales"
+  },
+  "180042": {
+   "name": "Target Practice Tent"
+  },
+  "180044": {
+   "name": "Cadalso"
+  },
+  "180045": {
+   "name": "Ventormenta Gypsy Wagon"
+  },
+  "180124": {
+   "name": "Haz de luz del faro"
+  },
+  "180397": {
+   "name": "PVP HOLIDAY GENERIC SIGNPOST"
+  },
+  "180400": {
+   "name": "PVP HOLIDAY ALLIANCE CTF"
+  },
+  "180573": {
+   "name": "Objetivo del cañón"
+  },
+  "180582": {
+   "name": "Banco de bocanegras grasos"
+  },
+  "180651": {
+   "name": "Pala"
+  },
+  "180655": {
+   "name": "Restos flotando"
+  },
+  "408014": {
+   "name": "Tomo gnómico"
+  },
+  "415107": {
+   "name": "Restos quemados"
+  },
+  "421066": {
+   "name": "Estante"
+  },
+  "424010": {
+   "name": "Tabla clavada"
+  },
+  "424038": {
+   "name": "Piqueta"
+  },
+  "424101": {
+   "name": "Caja de herramientas vacía"
+  },
+  "529161": {
+   "name": "Hoguera básica"
+  },
+  "529195": {
+   "name": "S03 - Statue Stand"
+  },
+  "619896": {
+   "name": "Santuario olvidado"
+  },
+  "630865": {
+   "name": "Cámara de hermandad"
+  },
+  "642744": {
+   "name": "Buzón"
+  },
+  "644748": {
+   "name": "Botella"
+  },
+  "653109": {
+   "name": "Heno"
+  },
+  "656308": {
+   "name": "Surcanieblas"
+  },
+  "660331": {
+   "name": "Nota"
+  },
+  "660600": {
+   "name": "Puerta de la garita"
+  },
+  "660672": {
+   "name": "Estantería"
+  },
+  "660709": {
+   "name": "Puerta del sótano"
+  },
+  "660724": {
+   "name": "Cargamento de entrada"
+  },
+  "668297": {
+   "name": "Estaca sin adornar"
+  },
+  "669236": {
+   "name": "Piedra de las profundidades"
+  },
+  "673429": {
+   "name": "Biblioteca"
+  },
+  "696146": {
+   "name": "Plaza de la Catedral"
+  },
+  "696147": {
+   "name": "Barrio de los Magos"
+  },
+  "696148": {
+   "name": "Villadorada"
+  },
+  "696149": {
+   "name": "Casco Antiguo"
+  },
+  "696150": {
+   "name": "Plaza de la Catedral"
+  },
+  "696151": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696152": {
+   "name": "Casco Antiguo"
+  },
+  "696153": {
+   "name": "Casco Antiguo"
+  },
+  "696154": {
+   "name": "Distrito de los Enanos"
+  },
+  "696155": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696156": {
+   "name": "Castillo de Ventormenta"
+  },
+  "696157": {
+   "name": "Distrito de los Enanos"
+  },
+  "696158": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696159": {
+   "name": "Casco Antiguo"
+  },
+  "696160": {
+   "name": "Plaza de la Catedral"
+  },
+  "696161": {
+   "name": "Castillo de Ventormenta"
+  },
+  "696162": {
+   "name": "Distrito de los Enanos"
+  },
+  "696163": {
+   "name": "Casco Antiguo"
+  },
+  "696164": {
+   "name": "Plaza de la Catedral"
+  },
+  "696165": {
+   "name": "Distrito de los Enanos"
+  },
+  "696166": {
+   "name": "Casco Antiguo"
+  },
+  "696167": {
+   "name": "Plaza de la Catedral"
+  },
+  "696168": {
+   "name": "Distrito de los Enanos"
+  },
+  "696169": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696170": {
+   "name": "Barrio de los Magos"
+  },
+  "696171": {
+   "name": "Casco Antiguo"
+  },
+  "696172": {
+   "name": "Plaza de la Catedral"
+  },
+  "696173": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696174": {
+   "name": "El Parque"
+  },
+  "696175": {
+   "name": "Distrito de los Enanos"
+  },
+  "696176": {
+   "name": "Plaza de la Catedral"
+  },
+  "696177": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696178": {
+   "name": "El Parque"
+  },
+  "696179": {
+   "name": "Plaza de la Catedral"
+  },
+  "696180": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696181": {
+   "name": "Barrio de los Magos"
+  },
+  "696182": {
+   "name": "El Parque"
+  },
+  "696183": {
+   "name": "Plaza de la Catedral"
+  },
+  "696184": {
+   "name": "Barrio de los Magos"
+  },
+  "696185": {
+   "name": "Plaza de la Catedral"
+  },
+  "696186": {
+   "name": "El Parque"
+  },
+  "696187": {
+   "name": "Barrio de los Magos"
+  },
+  "696188": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696189": {
+   "name": "El Parque"
+  },
+  "696190": {
+   "name": "Barrio de los Magos"
+  },
+  "696191": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696192": {
+   "name": "El Parque"
+  },
+  "696193": {
+   "name": "Barrio de los Magos"
+  },
+  "696194": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696195": {
+   "name": "Plaza de la Catedral"
+  },
+  "696196": {
+   "name": "Ventormenta"
+  },
+  "696197": {
+   "name": "Villadorada"
+  },
+  "696198": {
+   "name": "Mercadería cotidiana"
+  },
+  "696199": {
+   "name": "Bibelots antiguos"
+  },
+  "696200": {
+   "name": "Herbolario Mortero"
+  },
+  "696201": {
+   "name": "El Rincón del Alquimista"
+  },
+  "696202": {
+   "name": "Componentes esenciales"
+  },
+  "696203": {
+   "name": "Pirotecnia"
+  },
+  "696204": {
+   "name": "Los Cinco Venenos Mortales"
+  },
+  "696205": {
+   "name": "Queso de Trias"
+  },
+  "696206": {
+   "name": "Contaduría de Ventormenta"
+  },
+  "696207": {
+   "name": "Centro del Viajero de Ventormenta"
+  },
+  "696208": {
+   "name": "Ayuntamiento"
+  },
+  "696209": {
+   "name": "El Alba Argenta"
+  },
+  "696210": {
+   "name": "Armas de mano pesadas"
+  },
+  "696211": {
+   "name": "Todo Mazas"
+  },
+  "696212": {
+   "name": "Bastones de Ventormenta"
+  },
+  "696213": {
+   "name": "Arsenal de Weller"
+  },
+  "696214": {
+   "name": "Filos honrados"
+  },
+  "696215": {
+   "name": "El escudo de plata"
+  },
+  "696216": {
+   "name": "Armería Corazón de León"
+  },
+  "696217": {
+   "name": "Placas virtuosas"
+  },
+  "696218": {
+   "name": "La Piel Protectora"
+  },
+  "696219": {
+   "name": "Inmunidad Limitada"
+  },
+  "696220": {
+   "name": "El Carcaj Vacío"
+  },
+  "696221": {
+   "name": "Flores Aromáticas"
+  },
+  "696222": {
+   "name": "Bodega Galina"
+  },
+  "696223": {
+   "name": "El Paño Fino"
+  },
+  "696224": {
+   "name": "Telas de Duncan"
+  },
+  "696225": {
+   "name": "Trajes y Arreglos a Medida"
+  },
+  "696226": {
+   "name": "Diseños Larson"
+  },
+  "696227": {
+   "name": "Botas de Señor Feudal"
+  },
+  "696228": {
+   "name": "El Cerdo Borracho"
+  },
+  "696230": {
+   "name": "El Cordero Degollado"
+  },
+  "696231": {
+   "name": "Banco de piedra"
+  },
+  "696232": {
+   "name": "Banco de piedra"
+  },
+  "696233": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696234": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696235": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696236": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696237": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696238": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696239": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696240": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696241": {
+   "name": "Puerta de Ventormenta"
+  },
+  "696242": {
+   "name": "Plaza de la Catedral"
+  },
+  "696243": {
+   "name": "Percha de grifo"
+  },
+  "696244": {
+   "name": "Casco Antiguo"
+  },
+  "696245": {
+   "name": "Sala de los Campeones"
+  },
+  "696246": {
+   "name": "Sala de los Campeones"
+  },
+  "696247": {
+   "name": "Sala de los Campeones"
+  },
+  "696248": {
+   "name": "Sala de los Campeones"
+  },
+  "696249": {
+   "name": "Centro de mando"
+  },
+  "696250": {
+   "name": "Centro de mando"
+  },
+  "696251": {
+   "name": "Centro de mando"
+  },
+  "696252": {
+   "name": "IV:7"
+  },
+  "696253": {
+   "name": "IV:7"
+  },
+  "696254": {
+   "name": "IV:7"
+  },
+  "696255": {
+   "name": "Centro de mando"
+  },
+  "696256": {
+   "name": "IV:7"
+  },
+  "696257": {
+   "name": "Distrito de los Enanos"
+  },
+  "696258": {
+   "name": "Distrito de los Enanos"
+  },
+  "696259": {
+   "name": "Distrito de los Enanos"
+  },
+  "696260": {
+   "name": "Casco Antiguo"
+  },
+  "696261": {
+   "name": "Casco Antiguo"
+  },
+  "696262": {
+   "name": "Casco Antiguo"
+  },
+  "696263": {
+   "name": "Casco Antiguo"
+  },
+  "696264": {
+   "name": "Buzón"
+  },
+  "696265": {
+   "name": "Buzón"
+  },
+  "696266": {
+   "name": "Buzón"
+  },
+  "696267": {
+   "name": "Buzón"
+  },
+  "696268": {
+   "name": "Buzón"
+  },
+  "696269": {
+   "name": "Buzón"
+  },
+  "696270": {
+   "name": "Buzón"
+  },
+  "696271": {
+   "name": "Buzón"
+  },
+  "696272": {
+   "name": "Buzón"
+  },
+  "696273": {
+   "name": "Buzón"
+  },
+  "696274": {
+   "name": "Buzón"
+  },
+  "696275": {
+   "name": "Buzón"
+  },
+  "696276": {
+   "name": "Buzón"
+  },
+  "696277": {
+   "name": "Buzón"
+  },
+  "696278": {
+   "name": "Buzón"
+  },
+  "696279": {
+   "name": "Buzón"
+  },
+  "696280": {
+   "name": "Buzón"
+  },
+  "696281": {
+   "name": "Buzón"
+  },
+  "696282": {
+   "name": "El Parque"
+  },
+  "696283": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696284": {
+   "name": "Distrito de los Enanos"
+  },
+  "696285": {
+   "name": "Plaza de la Catedral"
+  },
+  "696286": {
+   "name": "Plaza de la Catedral"
+  },
+  "696287": {
+   "name": "Casco Antiguo"
+  },
+  "696288": {
+   "name": "Barrio de los Magos"
+  },
+  "696289": {
+   "name": "Plaza de la Catedral"
+  },
+  "696290": {
+   "name": "El Parque"
+  },
+  "696291": {
+   "name": "Distrito de Mercaderes"
+  },
+  "696292": {
+   "name": "Plaza de la Catedral"
+  },
+  "696293": {
+   "name": "Distrito de los Enanos"
+  },
+  "696294": {
+   "name": "Plaza de la Catedral"
+  },
+  "696296": {
+   "name": "General Turalyon"
+  },
+  "696297": {
+   "name": "Capitana forestal Alleria Brisaveloz"
+  },
+  "696299": {
+   "name": "Archimago Khadgar del Kirin Tor"
+  },
+  "696300": {
+   "name": "Silla de madera"
+  },
+  "696301": {
+   "name": "Silla de madera"
+  },
+  "696302": {
+   "name": "Silla de madera"
+  },
+  "696303": {
+   "name": "Silla de madera"
+  },
+  "696304": {
+   "name": "Silla de madera"
+  },
+  "696305": {
+   "name": "Silla de madera"
+  },
+  "696306": {
+   "name": "Silla de madera"
+  },
+  "696307": {
+   "name": "Silla de madera"
+  },
+  "696308": {
+   "name": "Silla de madera"
+  },
+  "696309": {
+   "name": "Silla de madera"
+  },
+  "696310": {
+   "name": "Silla de madera"
+  },
+  "696311": {
+   "name": "Silla de madera"
+  },
+  "696312": {
+   "name": "Silla de madera"
+  },
+  "696313": {
+   "name": "Silla de madera"
+  },
+  "696314": {
+   "name": "Silla de madera"
+  },
+  "696315": {
+   "name": "Silla de madera"
+  },
+  "696316": {
+   "name": "Silla de madera"
+  },
+  "696317": {
+   "name": "Silla de madera"
+  },
+  "696318": {
+   "name": "Silla de madera"
+  },
+  "696319": {
+   "name": "Silla de madera"
+  },
+  "696320": {
+   "name": "Silla de madera"
+  },
+  "696321": {
+   "name": "Silla de madera"
+  },
+  "696322": {
+   "name": "Silla de madera"
+  },
+  "696323": {
+   "name": "Silla de madera"
+  },
+  "696324": {
+   "name": "Silla de madera"
+  },
+  "696325": {
+   "name": "Silla de madera"
+  },
+  "696326": {
+   "name": "Silla de madera"
+  },
+  "696327": {
+   "name": "Silla de madera"
+  },
+  "696328": {
+   "name": "Silla de madera"
+  },
+  "696329": {
+   "name": "Silla de madera"
+  },
+  "696330": {
+   "name": "Silla de madera"
+  },
+  "696331": {
+   "name": "Silla de madera"
+  },
+  "696332": {
+   "name": "Silla de madera"
+  },
+  "696333": {
+   "name": "Silla de madera"
+  },
+  "696334": {
+   "name": "Silla de madera"
+  },
+  "696335": {
+   "name": "Silla de madera"
+  },
+  "696336": {
+   "name": "Silla de madera"
+  },
+  "696337": {
+   "name": "Silla de madera"
+  },
+  "696338": {
+   "name": "Silla de madera"
+  },
+  "696339": {
+   "name": "Silla de madera"
+  },
+  "696340": {
+   "name": "Silla de madera"
+  },
+  "696341": {
+   "name": "Silla de madera"
+  },
+  "696342": {
+   "name": "El Parque"
+  },
+  "696343": {
+   "name": "Silla de madera"
+  },
+  "696344": {
+   "name": "Silla de madera"
+  },
+  "696345": {
+   "name": "Silla de madera"
+  },
+  "696346": {
+   "name": "Silla de madera"
+  },
+  "696347": {
+   "name": "Silla de madera"
+  },
+  "696348": {
+   "name": "Silla de madera"
+  },
+  "696349": {
+   "name": "Silla de madera"
+  },
+  "696350": {
+   "name": "Silla de madera"
+  },
+  "696351": {
+   "name": "Banco de piedra"
+  },
+  "696352": {
+   "name": "Banco de piedra"
+  },
+  "696353": {
+   "name": "Banco de piedra"
+  },
+  "696354": {
+   "name": "Banco de piedra"
+  },
+  "696355": {
+   "name": "Banco de piedra"
+  },
+  "696356": {
+   "name": "Banco de piedra"
+  },
+  "696357": {
+   "name": "Banco de piedra"
+  },
+  "696358": {
+   "name": "Banco de piedra"
+  },
+  "696359": {
+   "name": "Banco de piedra"
+  },
+  "696360": {
+   "name": "Banco de piedra"
+  },
+  "696361": {
+   "name": "Banco de piedra"
+  },
+  "696362": {
+   "name": "Banco de piedra"
+  },
+  "696363": {
+   "name": "Silla de madera"
+  },
+  "696364": {
+   "name": "Silla de madera"
+  },
+  "696365": {
+   "name": "Silla de madera"
+  },
+  "696366": {
+   "name": "Silla de madera"
+  },
+  "696367": {
+   "name": "Silla de madera"
+  },
+  "696368": {
+   "name": "Silla de madera"
+  },
+  "696369": {
+   "name": "Silla de madera"
+  },
+  "696370": {
+   "name": "Silla de madera"
+  },
+  "696371": {
+   "name": "Silla de madera"
+  },
+  "696372": {
+   "name": "Silla de madera"
+  },
+  "696373": {
+   "name": "Fogata"
+  },
+  "696374": {
+   "name": "Buzón"
+  },
+  "696375": {
+   "name": "Puerta del Oficial"
+  },
+  "696376": {
+   "name": "Rangos militares de la Alianza"
+  },
+  "696377": {
+   "name": "Sala de los Campeones"
+  },
+  "696378": {
+   "name": "IV:7"
+  },
+  "696379": {
+   "name": "Centro de Mando"
+  },
+  "696380": {
+   "name": "Banco de piedra"
+  },
+  "696381": {
+   "name": "Banco de piedra"
+  },
+  "696382": {
+   "name": "Banco de piedra"
+  },
+  "696383": {
+   "name": "Banco de piedra"
+  },
+  "696384": {
+   "name": "Banco de piedra"
+  },
+  "696385": {
+   "name": "Banco de piedra"
+  },
+  "696386": {
+   "name": "Banco de piedra"
+  },
+  "696387": {
+   "name": "Banco de piedra"
+  },
+  "696388": {
+   "name": "Banco de piedra"
+  },
+  "696389": {
+   "name": "Banco de piedra"
+  },
+  "696390": {
+   "name": "Banco de piedra"
+  },
+  "696391": {
+   "name": "Banco de piedra"
+  },
+  "696392": {
+   "name": "Arzobispo Alonsus Faol"
+  },
+  "696428": {
+   "name": "Silla de madera"
+  },
+  "696429": {
+   "name": "Silla de madera"
+  },
+  "696430": {
+   "name": "Silla de madera"
+  },
+  "696431": {
+   "name": "Silla de madera"
+  },
+  "696432": {
+   "name": "Silla de madera"
+  },
+  "696433": {
+   "name": "Silla de madera"
+  },
+  "696434": {
+   "name": "Buzón"
+  },
+  "696435": {
+   "name": "Banco de piedra"
+  },
+  "696436": {
+   "name": "Banco de piedra"
+  },
+  "696437": {
+   "name": "Banco de piedra"
+  },
+  "696438": {
+   "name": "Yunque"
+  },
+  "696439": {
+   "name": "Yunque"
+  },
+  "696440": {
+   "name": "Forja"
+  },
+  "696441": {
+   "name": "Forja"
+  },
+  "696442": {
+   "name": "Forja"
+  },
+  "696443": {
+   "name": "Forja"
+  },
+  "696444": {
+   "name": "Banco de piedra"
+  },
+  "696445": {
+   "name": "Banco de piedra"
+  },
+  "696446": {
+   "name": "Banco de piedra"
+  },
+  "696447": {
+   "name": "Banco de piedra"
+  },
+  "696448": {
+   "name": "Banco de piedra"
+  },
+  "696449": {
+   "name": "Banco de piedra"
+  },
+  "696450": {
+   "name": "Banco de piedra"
+  },
+  "696451": {
+   "name": "Banco de piedra"
+  },
+  "696452": {
+   "name": "Silla de madera"
+  },
+  "696453": {
+   "name": "Silla de madera"
+  },
+  "696454": {
+   "name": "Silla de madera"
+  },
+  "696455": {
+   "name": "Silla de madera"
+  },
+  "696456": {
+   "name": "Silla de madera"
+  },
+  "696457": {
+   "name": "Silla de madera"
+  },
+  "696458": {
+   "name": "Silla de madera"
+  },
+  "696459": {
+   "name": "Silla de madera"
+  },
+  "696460": {
+   "name": "Silla de madera"
+  },
+  "696461": {
+   "name": "Silla de madera"
+  },
+  "696462": {
+   "name": "Silla de madera"
+  },
+  "696463": {
+   "name": "Silla de madera"
+  },
+  "696464": {
+   "name": "Silla de madera"
+  },
+  "696465": {
+   "name": "Silla de madera"
+  },
+  "696466": {
+   "name": "Silla de madera"
+  },
+  "696467": {
+   "name": "Silla de madera"
+  },
+  "696468": {
+   "name": "Silla de madera"
+  },
+  "696469": {
+   "name": "Silla de madera"
+  },
+  "696470": {
+   "name": "Silla de madera"
+  },
+  "696471": {
+   "name": "Silla de madera"
+  },
+  "696472": {
+   "name": "Silla de madera"
+  },
+  "696473": {
+   "name": "Silla de madera"
+  },
+  "696474": {
+   "name": "Silla de madera"
+  },
+  "696475": {
+   "name": "Silla de madera"
+  },
+  "696476": {
+   "name": "Silla de madera"
+  },
+  "696477": {
+   "name": "Silla de madera"
+  },
+  "696478": {
+   "name": "Banco de piedra"
+  },
+  "696479": {
+   "name": "Banco de piedra"
+  },
+  "696480": {
+   "name": "Banco de piedra"
+  },
+  "696481": {
+   "name": "Banco de piedra"
+  },
+  "696482": {
+   "name": "Banco de piedra"
+  },
+  "696483": {
+   "name": "Banco de piedra"
+  },
+  "696506": {
+   "name": "Banco de madera"
+  },
+  "696507": {
+   "name": "Banco de madera"
+  },
+  "696509": {
+   "name": "Banco de madera"
+  },
+  "696510": {
+   "name": "Banco de madera"
+  },
+  "696511": {
+   "name": "Banco de madera"
+  },
+  "696512": {
+   "name": "Banco de madera"
+  },
+  "696513": {
+   "name": "Banco de madera"
+  },
+  "696514": {
+   "name": "Banco de madera"
+  },
+  "696515": {
+   "name": "Banco de madera"
+  },
+  "696516": {
+   "name": "Banco de madera"
+  },
+  "696517": {
+   "name": "Banco de madera"
+  },
+  "696518": {
+   "name": "Banco de madera"
+  },
+  "696519": {
+   "name": "Banco de madera"
+  },
+  "696520": {
+   "name": "Banco de madera"
+  },
+  "696521": {
+   "name": "Banco de madera"
+  },
+  "696522": {
+   "name": "Banco de madera"
+  },
+  "696523": {
+   "name": "Banco de madera"
+  },
+  "696524": {
+   "name": "Banco de madera"
+  },
+  "696525": {
+   "name": "Silla de respaldo alto"
+  },
+  "696526": {
+   "name": "Silla de respaldo alto"
+  },
+  "696527": {
+   "name": "Silla de respaldo alto"
+  },
+  "696528": {
+   "name": "Silla de respaldo alto"
+  },
+  "696565": {
+   "name": "Silla de madera"
+  },
+  "696566": {
+   "name": "Silla de madera"
+  },
+  "696567": {
+   "name": "Silla de madera"
+  },
+  "696568": {
+   "name": "Silla de madera"
+  },
+  "696600": {
+   "name": "Silla de respaldo alto"
+  },
+  "696601": {
+   "name": "Silla de respaldo alto"
+  },
+  "696602": {
+   "name": "Silla de madera"
+  },
+  "696603": {
+   "name": "Silla de madera"
+  },
+  "696604": {
+   "name": "Silla de madera"
+  },
+  "696605": {
+   "name": "Silla de madera"
+  },
+  "696606": {
+   "name": "Silla de madera"
+  },
+  "696607": {
+   "name": "Buzón"
+  },
+  "696608": {
+   "name": "Silla de madera"
+  },
+  "696609": {
+   "name": "Silla de madera"
+  },
+  "696610": {
+   "name": "Silla de madera"
+  },
+  "696611": {
+   "name": "Silla de madera"
+  },
+  "696612": {
+   "name": "Silla de madera"
+  },
+  "696613": {
+   "name": "Silla de madera"
+  },
+  "696614": {
+   "name": "Silla de madera"
+  },
+  "696615": {
+   "name": "Silla de madera"
+  },
+  "696616": {
+   "name": "Silla de madera"
+  },
+  "696617": {
+   "name": "Silla de madera"
+  },
+  "696618": {
+   "name": "Silla de madera"
+  },
+  "696619": {
+   "name": "Silla de madera"
+  },
+  "696620": {
+   "name": "Silla de madera"
+  },
+  "696621": {
+   "name": "Silla de madera"
+  },
+  "696622": {
+   "name": "Silla de madera"
+  },
+  "696623": {
+   "name": "Silla de madera"
+  },
+  "696624": {
+   "name": "Silla de madera"
+  },
+  "696625": {
+   "name": "Silla de madera"
+  },
+  "696626": {
+   "name": "Silla de madera"
+  },
+  "696627": {
+   "name": "Silla de madera"
+  },
+  "696628": {
+   "name": "Silla de madera"
+  },
+  "696629": {
+   "name": "Silla de madera"
+  },
+  "696630": {
+   "name": "Silla de madera"
+  },
+  "696631": {
+   "name": "Silla de madera"
+  },
+  "696632": {
+   "name": "Silla de madera"
+  },
+  "696633": {
+   "name": "Silla de madera"
+  },
+  "696634": {
+   "name": "Silla de madera"
+  },
+  "696635": {
+   "name": "Silla de madera"
+  },
+  "696636": {
+   "name": "Silla de madera"
+  },
+  "696637": {
+   "name": "Silla de madera"
+  },
+  "696638": {
+   "name": "Silla de madera"
+  },
+  "696639": {
+   "name": "Silla de madera"
+  },
+  "696640": {
+   "name": "Silla de madera"
+  },
+  "696641": {
+   "name": "Silla de madera"
+  },
+  "696642": {
+   "name": "Silla de madera"
+  },
+  "696643": {
+   "name": "Silla de madera"
+  },
+  "696644": {
+   "name": "Silla de madera"
+  },
+  "696645": {
+   "name": "Silla de madera"
+  },
+  "696646": {
+   "name": "Silla de madera"
+  },
+  "696647": {
+   "name": "Silla de madera"
+  },
+  "696648": {
+   "name": "Silla de madera"
+  },
+  "696649": {
+   "name": "Silla de madera"
+  },
+  "696650": {
+   "name": "Silla de madera"
+  },
+  "696651": {
+   "name": "Fuego caliente"
+  },
+  "696652": {
+   "name": "Fuego caliente"
+  },
+  "696653": {
+   "name": "Silla de madera"
+  },
+  "696654": {
+   "name": "Silla de madera"
+  },
+  "696655": {
+   "name": "Silla de madera"
+  },
+  "696656": {
+   "name": "Silla de madera"
+  },
+  "696657": {
+   "name": "Silla de madera"
+  },
+  "696658": {
+   "name": "Silla de madera"
+  },
+  "696659": {
+   "name": "Silla de madera"
+  },
+  "696660": {
+   "name": "Silla de madera"
+  },
+  "696661": {
+   "name": "Silla de madera"
+  },
+  "696662": {
+   "name": "Silla de madera"
+  },
+  "696663": {
+   "name": "Silla de madera"
+  },
+  "696664": {
+   "name": "Silla de madera"
+  },
+  "696665": {
+   "name": "Silla de madera"
+  },
+  "696666": {
+   "name": "Silla de madera"
+  },
+  "696667": {
+   "name": "Silla de madera"
+  },
+  "696668": {
+   "name": "Silla de madera"
+  },
+  "696669": {
+   "name": "Silla de madera"
+  },
+  "696670": {
+   "name": "Silla de madera"
+  },
+  "696671": {
+   "name": "Silla de madera"
+  },
+  "696672": {
+   "name": "Silla de madera"
+  },
+  "696673": {
+   "name": "Silla de madera"
+  },
+  "696674": {
+   "name": "Silla de madera"
+  },
+  "696675": {
+   "name": "Silla de madera"
+  },
+  "696676": {
+   "name": "Silla de madera"
+  },
+  "696677": {
+   "name": "Silla de madera"
+  },
+  "696678": {
+   "name": "Silla de madera"
+  },
+  "696679": {
+   "name": "Silla de madera"
+  },
+  "696680": {
+   "name": "Silla de madera"
+  },
+  "696681": {
+   "name": "Silla de madera"
+  },
+  "696682": {
+   "name": "Silla de madera"
+  },
+  "696683": {
+   "name": "Silla de madera"
+  },
+  "696684": {
+   "name": "Silla de madera"
+  },
+  "696685": {
+   "name": "Silla de madera"
+  },
+  "696686": {
+   "name": "Silla de madera"
+  },
+  "696687": {
+   "name": "Silla de madera"
+  },
+  "696688": {
+   "name": "Silla de madera"
+  },
+  "696689": {
+   "name": "Silla de madera"
+  },
+  "696690": {
+   "name": "Silla de madera"
+  },
+  "696691": {
+   "name": "Silla de madera"
+  },
+  "696692": {
+   "name": "Silla de madera"
+  },
+  "696693": {
+   "name": "Silla de madera"
+  },
+  "696694": {
+   "name": "Silla de madera"
+  },
+  "696695": {
+   "name": "Silla de madera"
+  },
+  "696696": {
+   "name": "Silla de madera"
+  },
+  "696697": {
+   "name": "Silla de madera"
+  },
+  "696698": {
+   "name": "Silla de madera"
+  },
+  "696699": {
+   "name": "Silla de madera"
+  },
+  "696700": {
+   "name": "Silla de madera"
+  },
+  "696701": {
+   "name": "Silla de madera"
+  },
+  "696702": {
+   "name": "Silla de madera"
+  },
+  "696703": {
+   "name": "Silla de madera"
+  },
+  "696704": {
+   "name": "Silla de madera"
+  },
+  "696705": {
+   "name": "Silla de madera"
+  },
+  "696706": {
+   "name": "Silla de madera"
+  },
+  "696707": {
+   "name": "Fuego caliente"
+  },
+  "696708": {
+   "name": "Fuego caliente"
+  },
+  "696736": {
+   "name": "Silla de madera"
+  },
+  "696737": {
+   "name": "Silla de madera"
+  },
+  "696738": {
+   "name": "Silla de madera"
+  },
+  "696739": {
+   "name": "Silla de madera"
+  },
+  "696740": {
+   "name": "Silla de madera"
+  },
+  "696741": {
+   "name": "Silla de madera"
+  },
+  "696742": {
+   "name": "Silla de madera"
+  },
+  "696743": {
+   "name": "Silla de madera"
+  },
+  "696744": {
+   "name": "Silla de madera"
+  },
+  "696745": {
+   "name": "Silla de madera"
+  },
+  "696746": {
+   "name": "Silla de madera"
+  },
+  "696747": {
+   "name": "Silla de madera"
+  },
+  "696748": {
+   "name": "Silla de madera"
+  },
+  "696749": {
+   "name": "Silla de madera"
+  },
+  "696750": {
+   "name": "La Rosa Áurea"
+  },
+  "696751": {
+   "name": "Buzón"
+  },
+  "696752": {
+   "name": "Silla de madera"
+  },
+  "696753": {
+   "name": "Silla de madera"
+  },
+  "696754": {
+   "name": "Silla de madera"
+  },
+  "696755": {
+   "name": "Silla de madera"
+  },
+  "696756": {
+   "name": "Silla de madera"
+  },
+  "696757": {
+   "name": "Silla de madera"
+  },
+  "696758": {
+   "name": "Silla de madera"
+  },
+  "696759": {
+   "name": "Silla de madera"
+  },
+  "696760": {
+   "name": "Silla de madera"
+  },
+  "696761": {
+   "name": "Silla de madera"
+  },
+  "696762": {
+   "name": "Silla de madera"
+  },
+  "696763": {
+   "name": "Silla de madera"
+  },
+  "696764": {
+   "name": "Silla de madera"
+  },
+  "696765": {
+   "name": "Silla de madera"
+  },
+  "696766": {
+   "name": "Silla de madera"
+  },
+  "696767": {
+   "name": "Silla de madera"
+  },
+  "696768": {
+   "name": "Silla de madera"
+  },
+  "696769": {
+   "name": "Silla de madera"
+  },
+  "696770": {
+   "name": "Silla de madera"
+  },
+  "696771": {
+   "name": "Asiento de peluquería"
+  },
+  "696772": {
+   "name": "Asiento de peluquería"
+  },
+  "696773": {
+   "name": "Asiento de peluquería"
+  },
+  "696774": {
+   "name": "Silla de respaldo alto"
+  },
+  "696776": {
+   "name": "Silla de respaldo alto"
+  },
+  "696777": {
+   "name": "Roca de encuentro"
+  },
+  "696778": {
+   "name": "Barrio de los Magos"
+  },
+  "696779": {
+   "name": "Barrio de los Magos"
+  },
+  "696780": {
+   "name": "Barrio de los Magos"
+  },
+  "696781": {
+   "name": "Barrio de los Magos"
+  },
+  "696782": {
+   "name": "El Parque"
+  },
+  "696783": {
+   "name": "El Parque"
+  },
+  "696784": {
+   "name": "El Parque"
+  },
+  "696785": {
+   "name": "Plaza de la Catedral"
+  },
+  "696786": {
+   "name": "Plaza de la Catedral"
+  },
+  "696787": {
+   "name": "Plaza de la Catedral"
+  },
+  "696788": {
+   "name": "Plaza de la Catedral"
+  },
+  "696789": {
+   "name": "Plaza de la Catedral"
+  },
+  "696790": {
+   "name": "Distrito de los Enanos"
+  },
+  "696791": {
+   "name": "Distrito de los Enanos"
+  },
+  "706992": {
+   "name": "Hoguera básica"
+  },
+  "716316": {
+   "name": "Collision [DNT]"
+  }
+ }
+}

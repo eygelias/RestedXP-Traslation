@@ -18,6 +18,7 @@ pyinstaller --noconfirm --onedir --windowed --name "RXP_Translator_V6" ^
     --add-data "build_database.py;." ^
     --add-data "build_database_forever.py;." ^
     --add-data "questiedb_forever.py;." ^
+    --add-data "extract_client_names.py;." ^
     --add-data "validate_output.py;." ^
     --add-data "database;database" ^
     --add-data "cache;cache" ^

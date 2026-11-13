@@ -683,6 +683,12 @@ class LocalDatabase:
         addon_raw = load_json(ADDON_PHRASES_FILE, {})
         self.addon_phrases = addon_raw.get("phrases", {}) if isinstance(addon_raw, dict) else {}
 
+        # ── Nombres reales del cliente (extract_client_names.py) ──
+        # Máxima autoridad por encima de QuestieDB/NPCnames: es la cadena exacta
+        # que el juego muestra. Basta con soltar database/client_names_<locale>.json
+        # para "capacitar" al programa sin reconstruir la base.
+        self._apply_client_names(locale)
+
         # Índice por nombre inglés
         self.by_name: Dict[str, Dict[str, list[dict]]] = {}
 
@@ -727,6 +733,38 @@ class LocalDatabase:
     def by_id(self, section: str, entity_id: str | int) -> dict | None:
         return self.sections.get(section, {}).get(str(entity_id))
 
+    def _apply_client_names(self, locale: str) -> None:
+        """Sobrescribe nombres por ID con los extraídos de la caché del cliente."""
+        path = DATABASE_DIR / f"client_names_{locale}.json"
+        if not path.exists():
+            return
+        try:
+            payload = load_json(path, {})
+        except Exception:
+            return
+        applied = 0
+        for section in ("npcs", "objects"):
+            rows = payload.get(section) or {}
+            if not isinstance(rows, dict):
+                continue
+            by_id = {
+                int(data["id"]): key
+                for key, data in self.sections.get(section, {}).items()
+                if isinstance(data, dict) and isinstance(data.get("id"), int)
+            }
+            for cid_str, info in rows.items():
+                try:
+                    cid = int(cid_str)
+                except (TypeError, ValueError):
+                    continue
+                key = by_id.get(cid)
+                name = str((info or {}).get("name") or "").strip()
+                if key and name:
+                    self.sections[section][key][locale] = name
+                    self.sections[section][key][f"client_{locale}"] = True
+                    applied += 1
+        self.client_names_applied = applied
+
     def _unique_official_match(self, candidates: list[dict]) -> dict | None:
         if not candidates:
             return None
@@ -752,14 +790,31 @@ class LocalDatabase:
                 d for d in entries
                 if str(d.get(self.locale) or d.get("es") or "").strip()
             ]
-            if not localized:
-                return entries[0]
+            pool = localized or entries
             distinct = {
                 str(d.get(self.locale) or d.get("es") or "").strip().casefold()
-                for d in localized
+                for d in pool
             }
             if len(distinct) == 1:
-                return localized[0]
+                return pool[0]
+            # Mismo nombre EN con traducciones distintas (p. ej. criatura clásica
+            # y variante custom). Se decide por prioridad, nunca se inventa:
+            #   1) corrección manual, 2) fila verificada en el cliente del usuario,
+            #   3) la que cubre más idiomas, 4) el ID más bajo (original).
+            def _rank(d: dict):
+                manual = 0 if d.get("source") == "manual_overrides" else 1
+                client = 0 if d.get(f"client_{self.locale}") else 1
+                cov = -sum(
+                    1 for loc in ("esES", "esMX", "deDE", "frFR", "ptBR",
+                                  "ruRU", "koKR", "zhCN", "zhTW")
+                    if str(d.get(loc) or "").strip()
+                )
+                try:
+                    eid = int(d.get("id")) if d.get("id") is not None else 1 << 30
+                except (TypeError, ValueError):
+                    eid = 1 << 30
+                return (manual, client, cov, eid)
+            return sorted(pool, key=_rank)[0]
         return None
 
     def by_english_name(self, section: str, name: str) -> tuple[dict | None, str]:
