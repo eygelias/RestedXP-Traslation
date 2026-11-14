@@ -515,9 +515,11 @@ class Bridge(QObject):
             skipped_count = 0
             
             def get_ui_translation(eng_text):
-                # 1. Try permanent DB
-                if eng_text in ui_db and locale in ui_db[eng_text]:
-                    return ui_db[eng_text][locale]
+                # 1. Try permanent DB (una entrada vacía NO debe bloquear el respaldo)
+                if eng_text in ui_db:
+                    val = str(ui_db[eng_text].get(locale) or "").strip()
+                    if val:
+                        return val
                 # 2. Fallback to API (Google/MyMemory)
                 return translator.translate(eng_text)
             
